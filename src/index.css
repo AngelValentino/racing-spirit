@@ -1,0 +1,87 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+button, input, textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* END OF RESET */
+
+body {
+  font-family: sans-serif;
+}
+
+/* NAV MAIN */
+
+.header-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 2px solid black;
+  font-size: 1.25rem;
+  background-color: #fff;
+}
+
+.nav-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 20px 40px;
+}
+
+.nav-main ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-main__list {
+  justify-self: center;
+}
+
+.nav-main__list a.active {
+  color: red;
+}
+
+.nav-main__cart {
+  justify-self: end;
+}
+
+/* END OF NAV MAIN */
+
+/* HOME MENU MAIN */
+
+main {
+  margin: 150px auto 0;
+  max-width: 1300px;
+  padding: 0 40px;
+}
+
+/* END OF MENU MAIN */
