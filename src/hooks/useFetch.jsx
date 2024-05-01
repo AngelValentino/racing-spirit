@@ -7,30 +7,32 @@ const useFetch = (url) => {
 
   useEffect(() => {
     const abortCont = new AbortController();
+    setLoading(true);
+    setError(null);
 
     fetch(url, { signal: abortCont.signal })
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("Couldn't fetch the products data.");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setData(data);
-        setError(null);
-        setLoading(false);
-      })
-      .catch((err) => {
-        if (err.name === 'AbortError') {
-          console.log('fetch aborted');
-          return;
-        }
-        console.log(err);
-        setError(err.message);
-        setLoading(false);
-      });
-
+    .then((res) => {
+      if (!res.ok) {
+        throw Error("Couldn't fetch the products data.");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      setData(data);
+      setError(null);
+      setLoading(false);
+    })
+    .catch((err) => {
+      if (err.name === 'AbortError') {
+        console.log('fetch aborted');
+        return;
+      }
+      console.log(err);
+      setError(err.message);
+      setLoading(false);
+    });
+    
     return () => abortCont.abort();
   }, [url]);
     
