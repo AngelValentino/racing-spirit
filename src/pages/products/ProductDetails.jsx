@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import ProductPreviewSlider from "../../components/ProductPreviewSlider/ProductPreviewSlider";
 import { Link } from "react-router-dom";
-import ProductPreviewSlider from "../../components/ProductPreviewSlider";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -11,10 +11,27 @@ const ProductDetails = () => {
       { loading && <p>Loading...</p> }
       { error && <p>{error}</p> }
       {jacket && (
-        <>
-          <p><Link to="/">Home</Link> &gt; <Link to="/jackets">Jackets</Link> &gt; { jacket.title }</p>
-          <ProductPreviewSlider data={jacket}/>
-        </>
+        <div className="product-details-container">
+          <div>
+            <p><Link to="/">Home</Link> &gt; <Link to="/jackets">Jackets</Link> &gt; { jacket.title }</p>
+            <ProductPreviewSlider data={jacket}/>
+          </div> 
+          <section className="product-details-info">
+            <h1>{jacket.title}</h1>
+            <h2>{jacket.price}$</h2>
+            <h3>size</h3>
+            <fieldset>
+              <label htmlFor="small-size">Small</label>
+              <input id="small-size" name="size" type="radio" />
+              <label htmlFor="medium-size">Medium</label>
+              <input id="medium-size" name="size" type="radio" />
+              <label htmlFor="large-size">Large</label>
+              <input id="large-size" name="size" type="radio" />
+            </fieldset>
+            <button>Add to cart</button>
+            <p>{jacket.description}</p>
+          </section>
+        </div>
       )}
     </>
   );

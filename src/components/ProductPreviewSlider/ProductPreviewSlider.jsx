@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { useState } from "react";
+import ProductImgsList from "./ProductImgsList";
+import ProductThumbsList from "./ProductThumbsList";
 
 const ProductPreviewSlider = ({data: jacket}) => {
   const carousel = useRef(null);
@@ -14,7 +16,7 @@ const ProductPreviewSlider = ({data: jacket}) => {
 
   function showPrevImage() {
     setImgIndex((index) => {
-      if (index === 0) return 0
+      if (index === 0) return 0;
       return index - 1;
     });
   }
@@ -31,26 +33,32 @@ const ProductPreviewSlider = ({data: jacket}) => {
     carousel.current.scrollLeft += firstImageWidth;
   }
 
-
   return ( 
-    <>
+    <section className="product-preview-slider">
+      <div className="product-thumbs-vertical-container">
+        <ProductThumbsList 
+          jacket={jacket}
+          imgIndex={imgIndex}
+          className={"slider-controls__grid-vertical-img"}
+          setImgIndex={setImgIndex}
+        />
+      </div>
       <div className="product-image-container">
-        {jacket.images.map((img, i) => (
-          <img aria-hidden={imgIndex !== i} style={{translate: `${-100 * imgIndex}%`}} className="product-image" key={img.regular} src={img.regular} alt={`${jacket.title} ${i + 1}`} />
-        ))}
+        <ProductImgsList jacket={jacket} imgIndex={imgIndex} />
       </div>
       <div className="slider-controls">
         <button className="slider-controls__prev-btn" aria-label="Previous image." onClick={slideLeft}>&lt;</button>
         <div ref={carousel} className="slider-controls__carousel">
-          {jacket.images.map((img, i) => (
-            <img tabIndex="0" style={{border: i === imgIndex ? '3px solid black' : null}} className="slider-controls__carousel-img" key={img.small} src={img.small} alt={`${jacket.title} preview ${i + 1}`} onClick={() => {
-              setImgIndex(i);
-            }}/>
-          ))}
+          <ProductThumbsList 
+            jacket={jacket}
+            imgIndex={imgIndex}
+            className={"slider-controls__carousel-img"}
+            setImgIndex={setImgIndex}
+          />
         </div>
         <button className="slider-controls__next-btn" aria-label="Next image." onClick={slideRight}>&gt;</button>
       </div>
-    </>
+    </section>
   );
 }
  
