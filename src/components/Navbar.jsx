@@ -18,7 +18,12 @@ const Navbar = () => {
             <NavLink to="contact">Contact</NavLink>
           </li>
         </ul>
-        <p className="nav-main__cart">CART</p>
+        <div className="nav-main__cart-container">
+          <button className="nav-main__cart">CART</button>
+          <div className="nav-main__cart-qty">
+            <p>0</p>
+          </div>
+        </div>
       </nav>
     </header>
   );

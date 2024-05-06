@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import ProductPreviewSlider from "../../components/ProductPreviewSlider/ProductPreviewSlider";
 import { Link } from "react-router-dom";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const ProductDetails = () => {
           </div> 
           <section className="product-details-info">
             <h1>{jacket.title}</h1>
-            <h2>{jacket.price}$</h2>
+            <h2>{formatCurrency(jacket.price)}</h2>
             <h3>size</h3>
             <fieldset>
               <label htmlFor="small-size">Small</label>

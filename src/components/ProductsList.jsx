@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { formatCurrency } from "../utils/formatCurrency";
 
 const ProductsList = ({ data:jackets }) => {
   return ( 
@@ -11,7 +12,7 @@ const ProductsList = ({ data:jackets }) => {
           </Link>
           <h2 className="product-preview__title">{jacket.title}</h2>
           <div className="product-preview__details-wrapper">
-            <h3>{jacket.price}$</h3>
+            <h3>{formatCurrency(jacket.price)}</h3>
           </div>
         </div> 
       ))}

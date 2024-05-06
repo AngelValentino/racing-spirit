@@ -78,7 +78,28 @@ body {
 }
 
 .nav-main__cart {
+  border-radius: 5px;
+}
+
+.nav-main__cart-container{
   justify-self: end;
+  position: relative;
+}
+
+.nav-main__cart-qty {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: lightseagreen;
+  color: #fff;
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
 }
 
 /* END OF NAV MAIN */

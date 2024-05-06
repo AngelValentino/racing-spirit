@@ -2,7 +2,6 @@ import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import ProductsList from "../../components/ProductsList";
 
-
 const ProductsPreview = () => {
   const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products';
   const [ url, setUrl ] = useState(productsUrl)
