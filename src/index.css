@@ -264,6 +264,39 @@ main {
 
 /* END OF PRODCUT DETAILS INFO */
 
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 450px;
+  padding: 30px;
+  box-shadow: -3px 0 black;
+}
+
+.modal__close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* END OF MODAL */
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 350px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .product-thumbs-vertical-container {
     display: none;

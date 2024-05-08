@@ -3,8 +3,12 @@ import useFetch from "../../hooks/useFetch";
 import ProductPreviewSlider from "../../components/ProductPreviewSlider/ProductPreviewSlider";
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+import { useModal } from "../../context/ModalContext";
 
 const ProductDetails = () => {
+  const { addToCart } = useShoppingCart();
+  const { openModal } = useModal();
   const { id } = useParams();
   const { data: jacket, loading, error } = useFetch('https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products/' + id);
   return ( 
@@ -29,7 +33,10 @@ const ProductDetails = () => {
               <label htmlFor="large-size">Large</label>
               <input id="large-size" name="size" type="radio" />
             </fieldset>
-            <button>Add to cart</button>
+            <button onClick={() => {
+              addToCart(jacket.id);
+              openModal('cart');
+            }}>Add to cart</button>
             <p>{jacket.description}</p>
           </section>
         </div>

@@ -1,6 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import { useModal } from "../context/ModalContext";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 const Navbar = () => {
+  const { openModal } = useModal();
+  const { cartQuantity } = useShoppingCart();
   return ( 
     <header className="header-nav">
       <nav className="nav-main">
@@ -19,9 +23,11 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="nav-main__cart-container">
-          <button className="nav-main__cart">CART</button>
+          <button className="nav-main__cart" onClick={() => {
+            openModal('cart')
+          }}>CART</button>
           <div className="nav-main__cart-qty">
-            <p>0</p>
+            <p>{cartQuantity}</p>
           </div>
         </div>
       </nav>
