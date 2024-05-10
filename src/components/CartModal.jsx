@@ -1,6 +1,6 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
-const CartModal = () => {
+const CartModal = ({closeBtn}) => {
   const { cartItems, removeFromCart } = useShoppingCart();
 
   return ( 
@@ -10,6 +10,7 @@ const CartModal = () => {
           <p>item id: {item.id}</p>
           <p>quantity: {item.quantity}</p>
           <button onClick={() => {
+            closeBtn.current.focus();
             removeFromCart(item.id);
           }}>remove</button>
         </div>

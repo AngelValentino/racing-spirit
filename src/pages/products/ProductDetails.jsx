@@ -11,6 +11,7 @@ const ProductDetails = () => {
   const { openModal } = useModal();
   const { id } = useParams();
   const { data: jacket, loading, error } = useFetch('https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products/' + id);
+  
   return ( 
     <>
       { loading && <p>Loading...</p> }

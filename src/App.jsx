@@ -8,14 +8,12 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { ModalProvider } from "./context/ModalContext";
-import Modal from "./components/Modal";
 
 const App = () => { 
   return (
     <BrowserRouter>
       <ShoppingCartProvider>
         <ModalProvider>
-          <Modal />
           <Navbar />
           <main>
             <Routes>
