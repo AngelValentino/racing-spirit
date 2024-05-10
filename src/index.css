@@ -295,9 +295,17 @@ main {
 
 .items-container {
   overflow-y: auto;
-  height: 100%;
+  flex: 1;
+
   padding: 30px;
   border: 2px solid red;
+}
+
+.cart-content {
+  height: 100%;
+  border: 2px solid blue;
+  display: flex;
+  flex-flow: column;
 }
 
 .modal__close-btn {

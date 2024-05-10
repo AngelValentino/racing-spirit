@@ -22,7 +22,7 @@ export function ShoppingCartProvider({children}) {
 
   const cartQuantity = cartItems.reduce((acc, item) => item.quantity + acc, 0);
 
-  function addToCart(id) {
+  function addToCart(id, title, price, imgUrl) {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id)) {
         return currItems.map((item) => {
@@ -35,7 +35,7 @@ export function ShoppingCartProvider({children}) {
         });
       } 
       else {
-        return [...currItems, { id, quantity: 1}];
+        return [...currItems, { id, quantity: 1, title, price, imgUrl}];
       }
     });
   }

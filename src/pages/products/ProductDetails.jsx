@@ -35,7 +35,7 @@ const ProductDetails = () => {
               <input id="large-size" name="size" type="radio" />
             </fieldset>
             <button onClick={() => {
-              addToCart(jacket.id);
+              addToCart(jacket.id, jacket.title, jacket.price, jacket.images[0].small);
               openModal('cart');
             }}>Add to cart</button>
             <p>{jacket.description}</p>
