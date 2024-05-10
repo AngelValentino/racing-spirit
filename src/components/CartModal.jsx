@@ -4,7 +4,7 @@ const CartModal = ({closeBtn}) => {
   const { cartItems, removeFromCart } = useShoppingCart();
 
   return ( 
-    <>
+    <div className="items-container">
      {cartItems.map((item) => (
         <div key={item.id}>
           <p>item id: {item.id}</p>
@@ -15,7 +15,7 @@ const CartModal = ({closeBtn}) => {
           }}>remove</button>
         </div>
       ))}
-    </>
+    </div>
   );
 }
  
