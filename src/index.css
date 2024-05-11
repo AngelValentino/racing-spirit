@@ -296,7 +296,6 @@ main {
 .items-container {
   overflow-y: auto;
   flex: 1;
-
   padding: 30px;
   border: 2px solid red;
 }

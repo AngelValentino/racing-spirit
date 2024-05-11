@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const ShoppingCartContext = createContext({});
@@ -8,26 +8,19 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({children}) {
-  const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useLocalStorage('cartItems', []);
 
   console.log(cartItems);
 
-  const openCart = () => {
-    setIsOpen(true);
-  }
-
-  const closeCart = () => {
-    setIsOpen(false);
-  }
-
   const cartQuantity = cartItems.reduce((acc, item) => item.quantity + acc, 0);
 
-  function addToCart(id, title, price, imgUrl) {
+  function addToCart(id, title, price, imgUrl, selectedOption) {
+    const newId = id + selectedOption;
+
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id)) {
+      if (currItems.find((item) => item.id === newId && item.selectedOption === selectedOption)) {
         return currItems.map((item) => {
-          if (item.id === id) {
+          if (item.id === newId) {
             return { ...item, quantity: item.quantity + 1 };
           } 
           else {
@@ -36,11 +29,12 @@ export function ShoppingCartProvider({children}) {
         });
       } 
       else {
-        return [...currItems, { id, quantity: 1, title, price, imgUrl}];
+        return [...currItems, { id: id + selectedOption, quantity: 1, selectedOption, title, price, imgUrl}];
       }
     });
   }
 
+  // needs work
   function decreaseCartQuantity(id) {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id).quantity === 1) {
@@ -61,6 +55,7 @@ export function ShoppingCartProvider({children}) {
 
   function removeFromCart(id) {
     setCartItems((currItems) => {
+      console.log(id)
       return currItems.filter((item) => item.id !== id);
     });
   }
@@ -73,9 +68,6 @@ export function ShoppingCartProvider({children}) {
     <ShoppingCartContext.Provider value={{ 
         cartItems, 
         cartQuantity, 
-        isOpen,
-        openCart, 
-        closeCart, 
         getItemQuantity, 
         addToCart, 
         decreaseCartQuantity, 

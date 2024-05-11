@@ -13,6 +13,7 @@ const CartModal = ({closeBtn}) => {
             <p>quantity: <strong>{item.quantity}</strong></p>
             <p>{item.title}</p>
             <p>{item.price}</p>
+            <p>{item.selectedOption}</p>
             <img src={item.imgUrl} alt="" />
             <button onClick={() => {
               closeBtn.current.focus();
