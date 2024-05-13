@@ -18,8 +18,6 @@ const ProductDetails = () => {
     setSelectedOption(e.target.value);
   }
 
-  console.log(selectedOption)
-
   return ( 
     <>
       { loading && <p>Loading...</p> }

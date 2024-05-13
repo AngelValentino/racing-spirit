@@ -34,7 +34,48 @@ export function ShoppingCartProvider({children}) {
     });
   }
 
-  // needs work
+  function editQuantity(id, quantity) {
+    setCartItems((currItems) => {
+      if (quantity < 1 && currItems.find((item) => item.id === id))  {
+        return currItems.filter((item) => item.id !== id);
+      }
+      return currItems.map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity: quantity };
+        } 
+        else {
+          return item;
+        }
+      });
+    });
+  }
+
+  function handleEditQuantity(e, item) {
+    if (item.quantity === Number(e.target.value)) {
+      // Checks if the input value is the same as the item quantity and returns early if it's true.
+      // There's no need to update the item with the same value.
+      return;
+    }
+    if (e.target.value === '') {
+      editQuantity(item.id, 1)
+      return;
+    }
+    editQuantity(item.id, Number(e.target.value))
+  }
+
+  function increaseCartQuantity(id) {
+    setCartItems((currItems) => {
+      return currItems.map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity: item.quantity + 1 };
+        } 
+        else {
+          return item;
+        }
+      });
+    })
+  }
+
   function decreaseCartQuantity(id) {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id).quantity === 1) {
@@ -55,23 +96,19 @@ export function ShoppingCartProvider({children}) {
 
   function removeFromCart(id) {
     setCartItems((currItems) => {
-      console.log(id)
       return currItems.filter((item) => item.id !== id);
     });
-  }
-
-  function getItemQuantity(id) {
-    return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
 
   return (
     <ShoppingCartContext.Provider value={{ 
         cartItems, 
         cartQuantity, 
-        getItemQuantity, 
         addToCart, 
         decreaseCartQuantity, 
-        removeFromCart 
+        removeFromCart,
+        increaseCartQuantity,
+        handleEditQuantity
       }}>
       {children}
     </ShoppingCartContext.Provider>

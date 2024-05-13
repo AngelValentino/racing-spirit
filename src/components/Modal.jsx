@@ -15,7 +15,6 @@ const Modal = () => {
   const closeBtn = useRef(null);
 
   function closeModalAtEsc(e) {
-    console.log(e)
     if (e.key === 'Escape') {
       closeModal();
     }
