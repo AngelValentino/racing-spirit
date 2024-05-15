@@ -1,3 +1,4 @@
+import '../../styles/productDetails.css'
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import ProductPreviewSlider from "../../components/ProductPreviewSlider/ProductPreviewSlider";

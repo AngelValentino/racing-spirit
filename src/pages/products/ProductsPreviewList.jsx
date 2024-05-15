@@ -1,8 +1,9 @@
+import '../../styles/productsPreviewList.css'
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import ProductsList from "../../components/ProductsList";
 
-const ProductsPreview = () => {
+const ProductsPreviewList = () => {
   const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products';
   const [ url, setUrl ] = useState(productsUrl)
   const { data: jackets, loading, error } = useFetch(url);
@@ -28,4 +29,4 @@ const ProductsPreview = () => {
   );
 }
  
-export default ProductsPreview;
+export default ProductsPreviewList;
