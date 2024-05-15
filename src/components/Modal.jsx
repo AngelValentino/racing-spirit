@@ -1,6 +1,7 @@
 import { useModal } from "../context/ModalContext";
 import CartModal from "./CartModal";
 import { useEffect, useRef } from "react";
+import Menu from "./Menu";
 
 const Modal = () => {
   const { 
@@ -69,10 +70,8 @@ const Modal = () => {
           }
         }}>
           <div ref={modalContent} className="modal-content" onKeyDown={trapFocus}>
-            <button ref={closeBtn} className="modal__close-btn" onClick={() => {
-              closeModal('cart');
-            }}>close</button>
-            { isCart && <CartModal closeBtn={closeBtn} />}
+            <button ref={closeBtn} className="modal__close-btn" onClick={closeModal}>close</button>
+            { isCart ? <CartModal closeBtn={closeBtn} /> : <Menu />}
           </div>
           <div ref={modalOverlay} className="modal-overlay"></div>
         </div>
