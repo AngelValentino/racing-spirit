@@ -14,13 +14,13 @@ export function ShoppingCartProvider({children}) {
 
   const cartQuantity = cartItems.reduce((acc, item) => item.quantity + acc, 0);
 
-  function addToCart(id, title, price, imgUrl, selectedOption) {
-    const newId = id + selectedOption;
+  function addToCart(id, title, price, imgUrl, size) {
+    const newId = id + size;
 
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === newId && item.selectedOption === selectedOption)) {
+      if (currItems.find((item) => item.variantId === newId && item.size === size)) {
         return currItems.map((item) => {
-          if (item.id === newId) {
+          if (item.variantId === newId) {
             return { ...item, quantity: item.quantity + 1 };
           } 
           else {
@@ -29,18 +29,18 @@ export function ShoppingCartProvider({children}) {
         });
       } 
       else {
-        return [...currItems, { id: id + selectedOption, quantity: 1, selectedOption, title, price, imgUrl}];
+        return [...currItems, { id, variantId: id + size, quantity: 1, size, title, price, imgUrl}];
       }
     });
   }
 
   function editQuantity(id, quantity) {
     setCartItems((currItems) => {
-      if (quantity < 1 && currItems.find((item) => item.id === id))  {
-        return currItems.filter((item) => item.id !== id);
+      if (quantity < 1 && currItems.find((item) => item.variantId === id))  {
+        return currItems.filter((item) => item.variantId !== id);
       }
       return currItems.map((item) => {
-        if (item.id === id) {
+        if (item.variantId === id) {
           return { ...item, quantity: quantity };
         } 
         else {
@@ -50,23 +50,23 @@ export function ShoppingCartProvider({children}) {
     });
   }
 
-  function handleEditQuantity(e, item) {
-    if (item.quantity === Number(e.target.value)) {
+  function handleEditQuantity(e, id, quantity) {
+    if (quantity === Number(e.target.value)) {
       // Checks if the input value is the same as the item quantity and returns early if it's true.
       // There's no need to update the item with the same value.
       return;
     }
     if (e.target.value === '') {
-      editQuantity(item.id, 1)
+      editQuantity(id, 1)
       return;
     }
-    editQuantity(item.id, Number(e.target.value))
+    editQuantity(id, Number(e.target.value))
   }
 
   function increaseCartQuantity(id) {
     setCartItems((currItems) => {
       return currItems.map((item) => {
-        if (item.id === id) {
+        if (item.variantId === id) {
           return { ...item, quantity: item.quantity + 1 };
         } 
         else {
@@ -78,12 +78,12 @@ export function ShoppingCartProvider({children}) {
 
   function decreaseCartQuantity(id) {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id).quantity === 1) {
-        return currItems.filter((item) => item.id !== id);
+      if (currItems.find((item) => item.variantId === id).quantity === 1) {
+        return currItems.filter((item) => item.variantId !== id);
       } 
       else {
         return currItems.map((item) => {
-          if (item.id === id) {
+          if (item.variantId === id) {
             return { ...item, quantity: item.quantity - 1 };
           } 
           else {
@@ -96,7 +96,7 @@ export function ShoppingCartProvider({children}) {
 
   function removeFromCart(id) {
     setCartItems((currItems) => {
-      return currItems.filter((item) => item.id !== id);
+      return currItems.filter((item) => item.variantId !== id);
     });
   }
 

@@ -45,8 +45,8 @@ const ProductDetails = () => {
                   id="small-size" 
                   name="size" 
                   type="radio" 
-                  value="s" 
-                  checked={selectedOption === 's'} 
+                  value="S" 
+                  checked={selectedOption === 'S'} 
                   onChange={handleChange}
                 />
                 <label htmlFor="medium-size">Medium</label>
@@ -55,8 +55,8 @@ const ProductDetails = () => {
                   id="medium-size" 
                   name="size" 
                   type="radio" 
-                  value="m" 
-                  checked={selectedOption === 'm'} 
+                  value="M" 
+                  checked={selectedOption === 'M'} 
                   onChange={handleChange}
                 />
                 <label htmlFor="large-size">Large</label>
@@ -65,8 +65,8 @@ const ProductDetails = () => {
                   id="large-size" 
                   name="size" 
                   type="radio" 
-                  value="l" 
-                  checked={selectedOption === 'l'} 
+                  value="L" 
+                  checked={selectedOption === 'L'} 
                   onChange={handleChange}
                 />
               </fieldset>

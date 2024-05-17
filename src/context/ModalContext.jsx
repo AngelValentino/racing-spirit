@@ -25,16 +25,12 @@ export function ModalProvider({children}) {
     }
   }
 
-  const closeModal = (modalType) => {
+  const closeModal = () => {
     document.body.style.overflow = 'auto';
     modalContent.current.style.right = '-500px';
     modalOverlay.current.style.opacity = 0;
     timeoutId.current = setTimeout(() => {
       setIsOpen(false);
-      // if (modalType === 'cart') {
-      //   console.log('cart')
-      //   setIsCart(false);
-      // }
       lastFocusableLm.current.focus();
     }, 500);
   }
