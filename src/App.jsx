@@ -5,7 +5,7 @@ import Contact from "./pages/Contact";
 import ProductsPreviewList from "./pages/products/ProductsPreviewList";
 import ProductDetails from "./pages/products/ProductDetails";
 import NotFound from "./pages/NotFound";
-import Navbar from "./components/Navbar";
+import Navbar from "./layouts/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { ModalProvider } from "./context/ModalContext";
 

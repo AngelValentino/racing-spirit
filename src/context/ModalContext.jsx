@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useRef } from "react";
-import Modal from "../components/Modal";
+import Modal from "../layouts/Modal";
 
 const ModalContext = createContext({});
 

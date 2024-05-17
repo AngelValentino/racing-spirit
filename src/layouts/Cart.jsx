@@ -10,8 +10,7 @@ const CartModal = ({closeBtn}) => {
   } = useShoppingCart();
 
   return ( 
-    <div className="cart-content">
-      <div>Cart</div>
+    <>
       <div className="items-container">
       {cartItems.length === 0 ? <p>Your cart is currently empty.</p> : cartItems.slice().reverse().map((item) => (
           <div key={item.id}>
@@ -47,8 +46,8 @@ const CartModal = ({closeBtn}) => {
           </div>
         ))}
       </div>
-      <div>total: {cartItems.reduce((acc, currItem) => acc + currItem.price * currItem.quantity, 0)}</div>
-    </div>
+      <div className="cart-total">total: {cartItems.reduce((acc, currItem) => acc + currItem.price * currItem.quantity, 0)}</div>
+    </>
   );
 }
  
