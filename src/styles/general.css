@@ -122,22 +122,24 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 4px;
+  transition: opacity .15s;
 }
 
 .menu-btn__icon {
   width: 30px;
 }
 
-.nav-menu__cart-icon {
-  width: 30px;
-  color: #000;
-}
 
 .nav-menu__cart-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.nav-menu__cart-icon {
+  width: 30px;
+  transition: opacity .15s;
 }
 
 .nav-menu__cart-notif-icon {
@@ -216,11 +218,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #4a4d4d;
+  transition: color .15s;
 }
 
 .modal__close-icon {
   width: 20px;
-  color: #4a4d4d;
 }
 
 /* END OF MODAL */
@@ -304,8 +307,10 @@ main {
 .cart-item__remove-qty-btn, 
 .cart-item__add-qty-btn {
   position: absolute;
-  padding: 0 6px;
+  padding: 0 8px;
   line-height: 0;
+  background-color: #fff;
+  transition: background-color .15s, color .15s;
 }
 
 .cart-item__remove-qty-btn svg, 
@@ -328,6 +333,7 @@ main {
 .cart-item__remove-item-btn {
   width: 15px;
   line-height: 0;
+  transition: color .15s;
 }
 
 .cart-item__price {
@@ -394,25 +400,23 @@ main {
   font-weight: 500;
 }
 
-.cart-footer__dicount-code-btn:hover {
-  opacity: 0.90;
-}
-
 .cart-footer__total-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 0 20px;
+  gap: 20px;
 }
 
 .cart-total__title {
   font-size: 1.25em;
-
 }
 
 .cart-total__price {
   font-size: 1.25em;
   font-weight: normal;
+  display: inline-block;
+  word-break: break-word;
 }
 
 .cart-footer__small-text {
@@ -485,13 +489,23 @@ main {
 /* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
+  /* MODAL */
+    .modal__close-btn:hover {
+      color: #ff4f33;
+    }
+  /* END OF MODAL  */
+
   /* NAVIGATION MENU */
   .nav-menu__links a:hover {
     color: #008000;
   }
 
-  .nav-menu__cart-btn:hover .nav-menu__cart-icon {
-    color: #494949;
+  .menu-btn:hover {
+    opacity: 0.7;
+  } 
+
+  .nav-menu__cart-btn:hover svg {
+    opacity: 0.7;
   }
   /* END OF NAVIGATION MENU */
 
@@ -516,6 +530,26 @@ main {
     color: #FF0000;
   }
   /* END OF SLIDE MENU */
+
+  /* CART */
+  .cart-item__remove-qty-btn:hover, 
+  .cart-item__add-qty-btn:hover {
+    background-color: #e8e8e1;
+    color: #fff;
+  }
+
+  .cart-item__remove-item-btn:hover {
+    color: #ff4f33;
+  }
+
+  .cart-footer__dicount-code-btn:hover {
+    opacity: 0.9;
+  }
+
+  .cart-footer__checkout-btn:hover {
+    opacity: 0.9;
+  }
+  /* END OF CART */
 }
 
 /* END OF HOVER CAPABLE DEVICES */
