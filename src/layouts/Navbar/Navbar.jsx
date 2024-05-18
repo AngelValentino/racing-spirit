@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import { useModal } from "../context/ModalContext";
-import { useShoppingCart } from "../context/ShoppingCartContext";
-import MenuButton from "../components/NavMenuButtons/MenuButton";
-import CartButton from "../components/NavMenuButtons/CartButton";
+import { useModal } from "../../context/ModalContext";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+import MenuButton from "./components/MenuButton";
+import CartButton from "./components/CartButton";
 
 const Navbar = () => {
   const { openModal } = useModal();

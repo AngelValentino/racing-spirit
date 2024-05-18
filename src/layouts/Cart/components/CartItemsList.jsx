@@ -1,9 +1,9 @@
-import { useModal } from "../context/ModalContext";
-import { useShoppingCart } from "../context/ShoppingCartContext";
-import { formatCurrency } from "../utils/formatCurrency";
+import { useModal } from "../../../context/ModalContext";
+import { useShoppingCart } from "../../../context/ShoppingCartContext";
+import { formatCurrency } from "../../../utils/formatCurrency";
 import { Link } from "react-router-dom";
 import CartItemQty from "./CartItemQty";
-import OrderNote from "./OrderNote";
+import OrderNote from "../../../components/OrderNote";
 
 const CartItemsList = ({ closeBtn }) => {
   const { 

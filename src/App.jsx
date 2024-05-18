@@ -5,9 +5,10 @@ import Contact from "./pages/Contact";
 import ProductsPreviewList from "./pages/products/ProductsPreviewList";
 import ProductDetails from "./pages/products/ProductDetails";
 import NotFound from "./pages/NotFound";
-import Navbar from "./layouts/Navbar";
+import Navbar from "./layouts/Navbar/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { ModalProvider } from "./context/ModalContext";
+import Footer from "./layouts/Footer";
 
 const App = () => { 
   return (
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="*" element={<NotFound/>}/>
             </Routes>
           </main>
+          <Footer />
         </ModalProvider>
       </ShoppingCartProvider>
     </BrowserRouter>

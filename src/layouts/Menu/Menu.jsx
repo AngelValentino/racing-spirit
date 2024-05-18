@@ -1,6 +1,6 @@
-import { useModal } from "../context/ModalContext";
-import SlideMenuLink from "../components/SlideMenuLinks/SlideMenuLink";
-import SlideMenuSocialLinks from "../components/SlideMenuLinks/SlideMenuSocialLinks";
+import { useModal } from "../../context/ModalContext";
+import SlideMenuLink from "./components/SlideMenuLink";
+import SlideMenuSocialLinks from "./components/SlideMenuSocialLinks";
 
 const Menu = () => {
   const { closeModal } = useModal();

@@ -1,7 +1,7 @@
 import { useModal } from "../context/ModalContext";
-import Cart from "./Cart";
+import Cart from "./Cart/Cart";
 import { useEffect, useRef } from "react";
-import Menu from "./Menu";
+import Menu from "./Menu/Menu";
 import { Link } from "react-router-dom";
 
 const Modal = () => {

@@ -1,4 +1,4 @@
-import { useShoppingCart } from "../context/ShoppingCartContext";
+import { useShoppingCart } from "../../../context/ShoppingCartContext";
 
 const CartItemQty = ({ quantity, variantId }) => {
   const { 
