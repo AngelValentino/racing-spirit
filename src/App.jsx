@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./layouts/Navbar/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { ModalProvider } from "./context/ModalContext";
-import Footer from "./layouts/Footer";
+import Footer from "./layouts/Footer/Footer";
 
 const App = () => { 
   return (

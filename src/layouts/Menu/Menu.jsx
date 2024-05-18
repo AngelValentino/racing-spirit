@@ -1,6 +1,6 @@
 import { useModal } from "../../context/ModalContext";
 import SlideMenuLink from "./components/SlideMenuLink";
-import SlideMenuSocialLinks from "./components/SlideMenuSocialLinks";
+import SocialIconsList from "../../components/SocialIconsList";
 
 const Menu = () => {
   const { closeModal } = useModal();
@@ -14,7 +14,7 @@ const Menu = () => {
         </ul>
       </section>
       <section className="slide-menu-social-icons">
-        <SlideMenuSocialLinks />
+        <SocialIconsList listClass="slide-menu__social-links"/>
       </section>
     </>
   );
