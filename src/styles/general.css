@@ -341,13 +341,13 @@ main {
   justify-content: space-between;
 }
 
-.cart-note__label {
+.order-note__label {
   display: block;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
 
-.cart-note__textarea {
+.order-note__textarea {
   width: 100%;
   display: block;
   resize: vertical;
@@ -357,7 +357,7 @@ main {
   min-height: 125px;
 }
 
-.cart-note__textarea:focus {
+.order-note__textarea:focus {
   outline: 1px solid black;
 }
 
