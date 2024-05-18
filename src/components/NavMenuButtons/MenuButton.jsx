@@ -1,6 +1,6 @@
 const MenuButton = ({ openModal, menuType }) => {
   return ( 
-    <button aria-label="Open menu." className="menu-btn" onClick={() => {
+    <button title="Menu" aria-label="Open menu." className="menu-btn" onClick={() => {
       openModal(menuType);
     }}>
       <svg className="menu-btn__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

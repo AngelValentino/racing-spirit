@@ -14,8 +14,9 @@ const CartItemsList = ({ closeBtn }) => {
 
   return ( 
     <>
+      <ul>
       {cartItems.slice().reverse().map(({id, variantId, imgUrl, title, size, price, quantity }) => (
-        <div className="cart-item" key={variantId}>
+        <li className="cart-item" key={variantId}>
           <Link className="cart-item__product-img-link" to={`/jackets/${id}`} onClick={closeModal}>
             <img className="cart-item__product-img" src={imgUrl} alt={title} />
           </Link>
@@ -39,8 +40,9 @@ const CartItemsList = ({ closeBtn }) => {
               <h3 className="cart-item__price">{formatCurrency(price)}</h3>
             </div>
           </div>
-        </div>
+        </li>
       ))}
+      </ul>
       <OrderNote />
     </>
   );

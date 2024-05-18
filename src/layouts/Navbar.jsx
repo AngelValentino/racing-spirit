@@ -16,8 +16,8 @@ const Navbar = () => {
       <header className="header-nav">
         <nav className="nav-menu">
           <h2 className="nav-menu__title">
-            <Link to="/">
-              <img title="home" className="nav-menu__logo" src="../images/racing-spirit-logo.png" alt="" />
+            <Link title="Home" to="/">
+              <img className="nav-menu__logo" src="../images/racing-spirit-logo.png" alt="" />
             </Link>
           </h2>
           <ul className="nav-menu__links">

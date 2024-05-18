@@ -170,7 +170,7 @@ main {
 .modal-container {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 100;
   font-size: 1rem;
 }
 
@@ -190,7 +190,7 @@ main {
   bottom: 0;
   width: 450px;
   transition: right 0.5s;
-  z-index: 500;
+  z-index: 150;
   display: flex;
   flex-flow: column;
   --modal-content-sides-margin: 40px;
@@ -234,6 +234,10 @@ main {
   flex: 1;
   overflow-y: auto;
   padding: 40px var(--modal-content-sides-margin);
+}
+
+.items-container ul {
+  list-style-type: none;
 }
 
 .cart-item {
@@ -438,7 +442,7 @@ main {
 
 /* SLIDE MENU */
 
-.slide-menu-links {
+.slide-menu-links ul {
   list-style-type: none;
   margin: 0 var(--modal-content-sides-margin);
   padding: 20px 0;
@@ -465,17 +469,19 @@ main {
   font-weight: 700;
 }
 
-.slide-menu-social-icons {
+.slide-menu-social-icons ul {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 20px 0;
   margin: 0 var(--modal-content-sides-margin);
+  list-style-type: none;
 }
 
 .slide-menu-social-icons a {
   color: inherit;
   line-height: 0;
+  display: block
 }
 
 .slide-menu-social-icons svg {
@@ -570,13 +576,13 @@ main {
   }
 }
 
-@media screen and (max-height: 465px) {
+@media screen and (max-height: 500px) {
   .modal-content {
     overflow-y: auto;
   }
 }
 
-@media screen and (max-height: 350px) {
+@media screen and (max-height: 500px) {
   .items-container {
     overflow: visible;
   }

@@ -7,12 +7,12 @@ const CartModal = ({closeBtn}) => {
 
   return ( 
     <>
-      <div className="items-container">
+      <section className="items-container">
         {cartItems.length === 0 
           ? <p>Your cart is currently empty.</p> 
           : <CartItemsList closeBtn={closeBtn} /> }
-      </div>
-      <div className="cart-footer">
+      </section>
+      <section className="cart-footer">
         <div className="cart-footer__dicount-code-container">
           <div>
             <label className="visually-hidden" htmlFor="cart-footer__discount-code-input">Discount Code</label>
@@ -26,7 +26,7 @@ const CartModal = ({closeBtn}) => {
         </div>
         <small className="cart-footer__small-text">Shipping, taxes, and discount codes calculated at checkout.</small>
         <button className="cart-footer__checkout-btn">Check out</button>
-      </div>
+      </section>
     </>
   );
 }

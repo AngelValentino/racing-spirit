@@ -6,14 +6,16 @@ const Menu = () => {
   const { closeModal } = useModal();
   return ( 
     <>
-      <ul className="slide-menu-links">
-        <SlideMenuLink url="jackets" closeModal={closeModal}>Jackets</SlideMenuLink>
-        <SlideMenuLink url="about" closeModal={closeModal}>About us</SlideMenuLink>
-        <SlideMenuLink url="contact" closeModal={closeModal}>Contact</SlideMenuLink>
-      </ul>
-      <div className="slide-menu-social-icons">
+      <section className="slide-menu-links">
+        <ul>
+          <SlideMenuLink url="jackets" closeModal={closeModal}>Jackets</SlideMenuLink>
+          <SlideMenuLink url="about" closeModal={closeModal}>About us</SlideMenuLink>
+          <SlideMenuLink url="contact" closeModal={closeModal}>Contact</SlideMenuLink>
+        </ul>
+      </section>
+      <section className="slide-menu-social-icons">
         <SlideMenuSocialLinks />
-      </div>
+      </section>
     </>
   );
 }
