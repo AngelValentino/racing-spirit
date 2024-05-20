@@ -1,11 +1,11 @@
-import '../../styles/productDetails.css'
+import '../styles/productDetails.css'
 import { useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import ProductPreviewSlider from "../../components/ProductPreviewSlider/ProductPreviewSlider";
+import useFetch from "../hooks/useFetch";
+import ProductPreviewSlider from "../components/ProductPreviewSlider/ProductPreviewSlider";
 import { Link } from "react-router-dom";
-import { formatCurrency } from "../../utils/formatCurrency";
-import { useShoppingCart } from "../../context/ShoppingCartContext";
-import { useModal } from "../../context/ModalContext";
+import { formatCurrency } from "../utils/formatCurrency";
+import { useShoppingCart } from "../context/ShoppingCartContext";
+import { useModal } from "../context/ModalContext";
 import { useState } from "react";
 
 const ProductDetails = () => {

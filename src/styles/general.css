@@ -159,7 +159,7 @@ body {
 /* MAIN */
 
 main {
-  margin: 50px auto 0;
+  margin: 60px auto;
   max-width: 1300px;
   padding: 0 40px;
   min-height: 100vh;
@@ -172,13 +172,14 @@ main {
 footer {
   background-color: #1c1d1d;
   color: #fff;
-  padding: 80px 40px 40px;
+  padding: 80px 0 40px;
   font-size: 1rem;
 }
 
 .footer-content-wrapper {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 footer h2 {

@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import ProductsPreviewList from "./pages/products/ProductsPreviewList";
-import ProductDetails from "./pages/products/ProductDetails";
+import ProductsCollection from "./pages/ProductsCollection/ProductsCollection";
+import ProductDetails from "./pages/ProductDetails";
 import NotFound from "./pages/NotFound";
 import Navbar from "./layouts/Navbar/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
@@ -12,14 +12,13 @@ import Footer from "./layouts/Footer/Footer";
 
 const App = () => { 
   return (
-    <BrowserRouter>
       <ShoppingCartProvider>
         <ModalProvider>
           <Navbar />
           <main>
             <Routes>
               <Route index element={<Home />}/>
-              <Route path="jackets" element={<ProductsPreviewList/>}/>
+              <Route path="jackets" element={<ProductsCollection />}/>
               <Route path="about" element={<About />}/>
               <Route path="contact" element={<Contact />}/>
               <Route path="jackets/:id" element={<ProductDetails />}/>
@@ -29,7 +28,6 @@ const App = () => {
           <Footer />
         </ModalProvider>
       </ShoppingCartProvider>
-    </BrowserRouter>
   );
 }
  
