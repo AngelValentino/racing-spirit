@@ -3,7 +3,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import ProductsCollection from "./pages/ProductsCollection/ProductsCollection";
-import ProductDetails from "./pages/ProductDetails";
+import ProductDetails from "./pages/ProductsDetails/ProductDetails";
 import NotFound from "./pages/NotFound";
 import Navbar from "./layouts/Navbar/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";

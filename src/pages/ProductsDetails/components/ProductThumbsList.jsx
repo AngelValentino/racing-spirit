@@ -5,7 +5,7 @@ const ProductThumbsList = ({jacket, imgIndex, className, setImgIndex}) => {
       <img 
         tabIndex="0" 
         className={className}
-        style={{border: i === imgIndex ? '3px solid black' : null}}
+        style={{border: i === imgIndex ? '2px solid #000' : null}}
         key={img.small} 
         src={img.small} 
         alt={`${jacket.title} preview ${i + 1}`} 

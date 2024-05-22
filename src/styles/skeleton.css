@@ -12,13 +12,13 @@
     background-color: #eee;
   }
   to {
-    background-color: #fafafa ;
+    background-color: #fafafa;
   }
 }
 
 @keyframes shimmer {
   to {
-     background-position-x: 0%
+     background-position-x: 0%;
   }
 }
 
