@@ -10,29 +10,31 @@ const useFetch = (url) => {
     setLoading(true);
     setError(null);
 
-    fetch(url, { signal: abortCont.signal })
-    .then((res) => {
-      if (!res.ok) {
-        throw Error("Couldn't fetch the products data.");
-      }
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-      setData(data);
-      setError(null);
-      setLoading(false);
-    })
-    .catch((err) => {
-      if (err.name === 'AbortError') {
-        console.log('fetch aborted');
-        return;
-      }
-      console.log(err);
-      setError(err.message);
-      setLoading(false);
-    });
-    
+    setTimeout(() => {
+      fetch(url, { signal: abortCont.signal })
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Couldn't fetch the products data.");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setData(data);
+        setError(null);
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (err.name === 'AbortError') {
+          console.log('fetch aborted');
+          return;
+        }
+        console.log(err);
+        setError(err.message);
+        setLoading(false);
+      });
+    }, 1500)
+ 
     return () => abortCont.abort();
   }, [url]);
     

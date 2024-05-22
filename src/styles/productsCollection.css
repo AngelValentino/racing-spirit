@@ -116,6 +116,10 @@
 
 /* END OF PRODUCTS COLLECTION */
 
+/* LOADER */
+
+/* END OF LOADER */
+
 @media screen and (hover: hover) {
   .product-preview a:is(:hover, :focus) .product-preview__image-secondary {
     opacity: 1;

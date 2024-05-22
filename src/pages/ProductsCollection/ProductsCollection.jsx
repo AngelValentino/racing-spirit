@@ -3,6 +3,7 @@ import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import ProductsList from "./componenets/ProductsList";
 import SortBy from './componenets/SortBy';
+import SkeletonProductsList from '../../skeletons/SkeletonProductsList';
 
 const ProductsCollection = () => {
   const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products';
@@ -18,7 +19,7 @@ const ProductsCollection = () => {
         <SortBy setUrl={setUrl} productsUrl={productsUrl}/>
       </div>
       { error && <p>error</p> }
-      { loading && <div>loading...</div> }
+      { loading && <SkeletonProductsList /> }
       { jackets && <ProductsList data={jackets} />}
     </>
   );
