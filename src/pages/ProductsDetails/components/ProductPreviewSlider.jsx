@@ -42,6 +42,7 @@ const ProductPreviewSlider = ({data: jacket}) => {
           className={"product-slider__vertical-thumb"}
           setImgIndex={setImgIndex}
         />
+
       </div>
       <div className="product-slider__main-img">
         <ProductImgsList jacket={jacket} imgIndex={imgIndex} />
