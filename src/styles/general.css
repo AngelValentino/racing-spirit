@@ -85,11 +85,6 @@ body {
   background-color: #fff;
 }
 
-.nav-menu a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .nav-menu__logo {
   width: 200px;
 }
@@ -105,6 +100,14 @@ body {
 
 .nav-menu__links a {
   transition: color .15s;
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(#008000, #008000);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out, color 0.15s;
 }
 
 .nav-menu__links a.active {
@@ -646,77 +649,79 @@ footer h2 {
 
 @media screen and (hover: hover) {
   /* MODAL */
-    .modal__close-btn:hover {
+    .modal__close-btn:is(:hover, :focus-visible) {
       color: #ff4f33;
     }
   /* END OF MODAL  */
 
   /* NAVIGATION MENU */
-  .slide-menu-links a:hover {
+  .slide-menu-links a:is(:hover, :focus-visible) {
     color: #008000;
   }
-  .nav-menu__links a:hover {
+
+  .nav-menu__links a:is(:hover, :focus-visible) {
     color: #008000;
+    background-size: 100% 0.1em;
   }
 
   .menu-btn:hover {
     opacity: 0.7;
   } 
 
-  .nav-menu__cart-btn:hover svg {
+  .nav-menu__cart-btn:is(:hover, :focus-visible) svg {
     opacity: 0.7;
   }
   /* END OF NAVIGATION MENU */
 
   /* FOOTER */
-  .footer-links__list a:hover {
+  .footer-links__list a:is(:hover, :focus-visible) {
     background-size: 100% 0.1em;
   }
-  .footer-newsletter__btn:hover {
+  .footer-newsletter__btn:is(:hover, :focus-visible) {
     background-color: #ff4f33;
     color: #fff;
   }
 
-  .footer__social-links a:hover {
+  .footer__social-links a:is(:hover, :focus-visible) {
     transform: translateY(-5px);
     opacity: 0.9;
   }
   /* END OF FOOTER */
 
   /* SLIDE MENU */
-  .slide-menu__social-links .social-icons__instagram-link:hover svg {
+  .slide-menu__social-links .social-icons__instagram-link:is(:hover, :focus-visible) svg {
     color: #fbad50;
   }
   
-  .slide-menu__social-links .social-icons__facebook-link:hover svg {
+  .slide-menu__social-links .social-icons__facebook-link:is(:hover, :focus-visible) svg {
     color: #316FF6;
   }
   
-  .slide-menu__social-links .social-icons__twitter-link:hover svg {
+  .slide-menu__social-links .social-icons__twitter-link:is(:hover, :focus-visible) svg {
     color: #1DA1F2;
   }
   
-  .slide-menu__social-links .social-icons__youtube-link:hover svg {
+  .slide-menu__social-links .social-icons__youtube-link:is(:hover, :focus-visible) svg {
     color: #FF0000;
   }
   /* END OF SLIDE MENU */
 
   /* CART */
-  .cart-item__remove-qty-btn:hover, 
-  .cart-item__add-qty-btn:hover {
+  .cart-item__remove-qty-btn:is(:hover, :focus-visible), 
+  .cart-item__add-qty-btn:is(:hover, :focus-visible) {
     background-color: #e8e8e1;
     color: #fff;
   }
 
-  .cart-item__remove-item-btn:hover {
+  .cart-item__remove-item-btn:is(:hover, :focus-visible) {
     color: #ff4f33;
   }
 
-  .cart-footer__dicount-code-btn:hover {
+  .cart-footer__dicount-code-btn:is(:hover, :focus-visible) {
     opacity: 0.9;
   }
 
-  .cart-footer__checkout-btn:hover {
+  .cart-footer__checkout-btn:is(:hover, :focus-visible) {
     opacity: 0.9;
   }
   /* END OF CART */
@@ -726,12 +731,11 @@ footer h2 {
 
 /* ACTIVE */
 
-.footer-links__list a:focus-visible,
-.footer-links__list a:active {
+.footer-links__list a:is(:focus-visible, :active) {
   background-size: 100% 0.1em;
 }
 
-/* END FO ACTIVE */
+/* END OF ACTIVE */
 
 /* MEDIA QUERIES */
 
