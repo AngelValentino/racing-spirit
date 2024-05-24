@@ -317,11 +317,87 @@
   color: inherit;
 }
 
-.product-details__description {
+.accordion__description {
+  margin: 0 0 25px;
+}
+
+.accordion__text {
   font-size: 1.075em;
   line-height: 1.6em;
   letter-spacing: 0.025em;
 }
+
+.accordion__sizes-chart-img {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: block;
+  image-rendering: -moz-crisp-edges;
+ 
+}
+.accordion__wash-care-list {
+  list-style: none
+}
+
+.accordion__wash-care-list svg {
+  width: 1.65em;
+}
+
+.accordion__wash-care-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 5px;
+}
+
+.accordion {
+  max-width: 600px;
+}
+
+.accordion__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1c1c1c;
+  padding: 10px;
+  width: 100%;
+  padding: 22px 0;
+}
+
+.accordion__title h2 {
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  font-weight: 900;
+}
+
+.accordion__chevron {
+  width: 15px;
+  transition: transform 0.25s;
+}
+
+.open-chevron {
+  transform: rotate(180deg);
+} 
+
+.accordion-content-wrapper {
+  display: grid; 
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s;
+  border-bottom: 1px solid #e8e8e1;
+}
+
+.accordion-content-wrapper > div {
+  overflow: hidden;
+}
+
+.open-section {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content {
+  padding: 0 0 20px;
+}
+
 
 /* END OF PRODCUT DETAILS INFO */
 
