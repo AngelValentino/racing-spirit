@@ -141,6 +141,8 @@
   border-radius: 3px;
   max-height: 125px;
   transition: border 0.15s;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .slider-controls__carousel::-webkit-scrollbar {
