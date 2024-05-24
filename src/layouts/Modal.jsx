@@ -69,7 +69,6 @@ const Modal = () => {
           if (e.target.matches('.modal-overlay')) {
             closeModal();
           }
-          console.log(e.target)
         }}>
           <div ref={modalContent} className="modal-content" onKeyDown={trapFocus}>
             <section className="modal-header">

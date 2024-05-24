@@ -21,6 +21,16 @@
   font-size: 1.075em;
 }
 
+.product-breadcrumb a {
+  background-image: linear-gradient(#d99a5a, #d99a5a);
+  background-size: 100% 0.1em;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  color: inherit;
+  text-decoration: none;
+}
+
 .product-breadcrumb li {
   display: inline;
 }
@@ -56,6 +66,7 @@
   cursor: pointer;
   border: 2px solid #fff;
   border-radius: 3px;
+  transition: border 0.15s;
 }
 
 .product-slider__main-img {
@@ -89,6 +100,7 @@
   justify-content: center;
   color: #242424;
   border-radius: 2px;
+  transition: background-color 0.15s, color 0.15s;
 }
 
 .slider-controls__prev-btn svg, 
@@ -125,6 +137,7 @@
   border: 2px solid #fff;
   border-radius: 3px;
   max-height: 125px;
+  transition: border 0.15s;
 }
 
 .slider-controls__carousel::-webkit-scrollbar {
@@ -154,6 +167,17 @@
   padding: 0 0 25px;
   border-bottom: 1px solid #e8e8e1;
   font-size: 0.95em;
+}
+
+.product-details__policies-shipping-link {
+  background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
+  background-size: 0% 0.1em, 100% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
 }
 
 .product-details__size-form {
@@ -241,13 +265,23 @@
   margin-left: 5px;
 }
 
-.product-details__more-payments {
+.product-details__more-payments-container {
   text-align: center;
-  display: block;
-  font-size: 1.075em;
 }
 
-.prodctu-details__description {
+.product-details__more-payments-link {
+  font-size: 1.075em;
+  background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
+  background-size: 0% 0.1em, 100% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-details__description {
   font-size: 1.075em;
   line-height: 1.6em;
   letter-spacing: 0.025em;
@@ -256,12 +290,52 @@
 /* END OF PRODCUT DETAILS INFO */
 
 
+
+/* ACTIVE */
+
+  .slider-controls__prev-btn:active, 
+  .slider-controls__next-btn:active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* PRODUCT DETAILS */
+  .product-breadcrumb a:active {
+    background-size: 100% 100%;
+  }
+
+  .product-details__policies-shipping-link:active {
+    background-size: 100% 0.1em, 100% 0.1em;
+  }
+  .product-details__more-payments-link:active {
+    background-size: 100% 0.1em, 100% 0.1em;
+    background-position-x: 0%;
+  }
+  /* END OF PRODUCT DETAILS */
+
+
+/* END OF ACTIVE */
+
 @media screen and (hover: hover) {
   .slider-controls__prev-btn:is(:hover, :focus-visible), 
   .slider-controls__next-btn:is(:hover, :focus-visible) {
     background-color: #000;
     color: #fff;
   }
+
+  /* PRODUCT DETAILS */
+  .product-breadcrumb a:is(:hover, :focus-visible) {
+    background-size: 100% 100%;
+  }
+  
+  .product-details__policies-shipping-link:is(:hover, :focus-visible) {
+    background-size: 100% 0.1em, 100% 0.1em;
+  }
+  .product-details__more-payments-link:is(:hover, :focus-visible) {
+    background-size: 100% 0.1em, 100% 0.1em;
+    background-position-x: 0%;
+  }
+  /* END OF PRODUCT DETAILS */
 }
 
 @media screen and (max-width: 1000px) {

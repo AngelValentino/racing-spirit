@@ -31,7 +31,9 @@ const ProductDetails = () => {
             <div className="product-details-info">
               <h1 className="product-details__title">{jacket.title}</h1>
               <h2 className="product-details__price">{formatCurrency(jacket.price)}</h2>
-              <p className="product-details__policies">Tax included. <Link to="/about">Shipping</Link> calculated at checkout.</p>
+              <p className="product-details__policies">
+                Tax included. <Link className="product-details__policies-shipping-link" to="/about">Shipping</Link> calculated at checkout.
+              </p>
               <form className='product-details__size-form' onSubmit={(e) => {
                 e.preventDefault();
                 addToCart(jacket.id, jacket.title, jacket.price, jacket.images[0].small, selectedOption);
@@ -93,10 +95,12 @@ const ProductDetails = () => {
                     <img className='product-details__payment-img' src="../../images/paypal-logo.png" alt="" />
                   </span>
                 </button>
-                <a className='product-details__more-payments' href="#">More payment options</a>
+                <div className='product-details__more-payments-container'>
+                  <a className='product-details__more-payments-link' href="#">More payment options</a>
+                </div>
               </form>
            
-              <p className='prodctu-details__description'>{jacket.description}</p>
+              <p className='product-details__description'>{jacket.description}</p>
             </div>
           </div>
         </>
