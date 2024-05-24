@@ -26,9 +26,10 @@
   background-size: 100% 0.1em;
   background-position-y: 100%;
   background-repeat: no-repeat;
-  transition: background-size 0.2s ease-in-out;
+  transition: background-size 0.2s ease-in-out, color 0.2s, padding 0.2s;
   color: inherit;
   text-decoration: none;
+  padding: 2px 5px;
 }
 
 .product-breadcrumb li {
@@ -184,7 +185,7 @@
   margin: 25px 0 30px;
 }
 
-.product-details__size {
+.product-details__size-input {
   height: 0;
   width: 0;
   margin: 0;
@@ -207,19 +208,27 @@
   font-weight: 900;
 }
 
-.product-details__size:focus-visible + .product-details__size-label {
-  outline: 2px solid black
-}
-
-.product-details__size:checked + .product-details__size-label {
-  border: 2px solid red;
-}
-
 .product-details__size-label {
   padding: 7px 15px;
   border: 1px solid #e8e8e1;
   font-size: 1.075em;
   cursor: pointer;
+  transition: background-color 0.15s, outline 0.15s;
+  outline: 2px solid #fff;
+}
+
+.product-details__size-label:hover {
+  outline: 2px solid #000;
+  background-color: #f7f7f7;
+}
+
+.product-details__size-input:focus + .product-details__size-label {
+  outline: 2px solid #000;
+  background-color: #f7f7f7;
+}
+
+.product-details__size-input:checked + .product-details__size-label {
+  outline: 2px solid #000;
 }
 
 .product-details__icon-and-text {
@@ -326,6 +335,8 @@
   /* PRODUCT DETAILS */
   .product-breadcrumb a:is(:hover, :focus-visible) {
     background-size: 100% 100%;
+    color: #fff;
+
   }
   
   .product-details__policies-shipping-link:is(:hover, :focus-visible) {

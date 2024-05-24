@@ -7,6 +7,7 @@ import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { useModal } from "../../context/ModalContext";
 import { useState } from "react";
 import ProductBreadcrumbs from './components/ProductBreadcrumbs';
+import SizeButton from './components/SizeButton';
 
 const ProductDetails = () => {
   const { addToCart } = useShoppingCart();
@@ -38,46 +39,27 @@ const ProductDetails = () => {
                 e.preventDefault();
                 addToCart(jacket.id, jacket.title, jacket.price, jacket.images[0].small, selectedOption);
                 openModal('cart');
-                console.log(e.target)
               }}>
                 <fieldset className='product-details-sizes'>
                   <legend>SIZE</legend>
-                  <input
-                    className='product-details__size' 
-                    required 
-                    id="small-size" 
-                    name="size" 
-                    type="radio" 
+                  <SizeButton 
+                    id="product-details__small-size-input" 
                     value="S" 
-                    checked={selectedOption === 'S'} 
-                    onChange={handleChange}
+                    selectedOption={selectedOption}
+                    handleChange={handleChange}
                   />
-                  <label className='product-details__size-label' htmlFor="small-size">S</label>
-
-                  <input
-                    className='product-details__size' 
-                    required 
-                    id="medium-size" 
-                    name="size" 
-                    type="radio" 
+                  <SizeButton 
+                    id="product-details__medium-size-input" 
                     value="M" 
-                    checked={selectedOption === 'M'} 
-                    onChange={handleChange}
+                    selectedOption={selectedOption}
+                    handleChange={handleChange}
                   />
-                  <label className='product-details__size-label' htmlFor="medium-size">M</label>
-                  
-                  <input 
-                    className='product-details__size' 
-                    required 
-                    id="large-size" 
-                    name="size" 
-                    type="radio" 
+                  <SizeButton 
+                    id="product-details__large-size-input" 
                     value="L" 
-                    checked={selectedOption === 'L'} 
-                    onChange={handleChange}
+                    selectedOption={selectedOption}
+                    handleChange={handleChange}
                   />
-                  <label className='product-details__size-label' htmlFor="large-size">L</label>
-
                 </fieldset>
                 <div className="product-details__icon-and-text">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -99,7 +81,6 @@ const ProductDetails = () => {
                   <a className='product-details__more-payments-link' href="#">More payment options</a>
                 </div>
               </form>
-           
               <p className='product-details__description'>{jacket.description}</p>
             </div>
           </div>
