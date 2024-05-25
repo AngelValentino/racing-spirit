@@ -7,7 +7,7 @@ const SkeletonProduct = () => {
     <div>
       <SkeletonElement type="thumbnail"/>
       <SkeletonElement type="title"/>
-      <SkeletonElement type="text" addClass="first-skeleton-text"/>
+      <SkeletonElement type="text" width="15%"/>
     </div>
   );
 }

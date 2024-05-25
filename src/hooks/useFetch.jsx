@@ -29,13 +29,14 @@ const useFetch = (url) => {
           console.log('fetch aborted');
           return;
         }
-        console.log(err);
+        console.error(err);
         setError(err.message);
         setLoading(false);
       });
-    }, 1500)
+    }, 1250)
  
     return () => abortCont.abort();
+
   }, [url]);
     
   return { data, loading, error };

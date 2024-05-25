@@ -10,6 +10,8 @@ import ProductBreadcrumbs from './components/ProductBreadcrumbs';
 import SizeButton from './components/SizeButton';
 import Accordion from '../../components/Accordion';
 import { ProductDetailsFacts } from '../../data/ProductDetailsFacts';
+import SkeletonProductDetails from '../../skeletons/SkeletonProductDetails';
+import ErrorMessage from '../../components/ErrorMessage';
 
 const ProductDetails = () => {
   const { addToCart } = useShoppingCart();
@@ -24,9 +26,9 @@ const ProductDetails = () => {
 
   return ( 
     <div className='product-details-wrapper'>
-      { loading && <p>Loading...</p> }
-      { error && <p>{error}</p> }
-      {jacket && (
+      { loading && <SkeletonProductDetails />}
+      { error && <ErrorMessage error={error}/>}
+      { jacket && (
         <>
           <ProductBreadcrumbs jacket={jacket}/>
           <div className="product-details-container">

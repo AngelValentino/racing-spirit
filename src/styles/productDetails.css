@@ -493,7 +493,11 @@
     margin: 0 auto;
   }
 
-  .product-slider {
-    margin: 0 0 50px;
+  .product-details-info {
+    padding-left: 50px 0 0;
   }
+
+/*   .product-slider {
+    margin: 0 0 50px;
+  } */
 }
