@@ -332,8 +332,6 @@
   max-width: 480px;
   margin: 0 auto;
   display: block;
-  image-rendering: -moz-crisp-edges;
- 
 }
 .accordion__wash-care-list {
   list-style: none
@@ -352,6 +350,7 @@
 
 .accordion {
   max-width: 600px;
+  list-style: none;
 }
 
 .accordion__title {
@@ -496,8 +495,4 @@
   .product-details-info {
     padding-left: 50px 0 0;
   }
-
-/*   .product-slider {
-    margin: 0 0 50px;
-  } */
 }

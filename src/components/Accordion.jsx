@@ -8,9 +8,9 @@ const Accordion = ({ description, factsData }) => {
   }
   
   return ( 
-    <div className='accordion'>
+    <ul className='accordion'>
       {factsData.map((fact, i) => (
-        <div key={i} className={`accordion__section-${fact.title}`}>
+        <li key={i} className={`accordion__section-${fact.title}`}>
           <button aria-expanded={selected === i ? true : false} aria-controls={`accordion__section-${fact.title}`} className='accordion__title' onClick={() => toggle(i)}>
             <h2>{fact.title.toUpperCase()}</h2>
             <svg className={selected === i ? 'accordion__chevron  open-chevron' : 'accordion__chevron '} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -24,9 +24,9 @@ const Accordion = ({ description, factsData }) => {
               </div>
             </div>
           </div>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
  

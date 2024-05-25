@@ -64,7 +64,7 @@ export const ProductDetailsFacts = [
     title:'shipping information',
     renderContent() {
       return (
-        <p className='accordion__text'>We sew and despatch all products in house ourselves. We expect all orders to ship within 3 business days and we use tracked shipping services worldwide.</p>
+        <p className='accordion__text'>We sew and despatch all products in house ourselves. All orders are expected to ship within 3 business days and are worldwide tracked.</p>
       );
     }
   }, {

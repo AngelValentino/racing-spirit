@@ -6,7 +6,6 @@ import SortBy from './componenets/SortBy';
 import SkeletonProductsList from '../../skeletons/SkeletonProductsList';
 import ErrorMessage from '../../components/ErrorMessage';
 
-
 const ProductsCollection = () => {
   const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products';
   const [ url, setUrl ] = useState(productsUrl)
@@ -22,7 +21,7 @@ const ProductsCollection = () => {
       </div>
       { error && <ErrorMessage error={error} /> }
       { loading && <SkeletonProductsList /> }
-      { jackets && <ProductsList data={jackets} />}
+      { jackets && <ProductsList data={jackets} /> }
     </>
   );
 }
