@@ -3,6 +3,7 @@ import Cart from "./Cart/Cart";
 import { useEffect, useRef } from "react";
 import Menu from "./Menu/Menu";
 import { Link } from "react-router-dom";
+import '../styles/modal.css'
 
 const Modal = () => {
   const { 
