@@ -11,7 +11,7 @@ const CartItemQty = ({ quantity, variantId }) => {
     <div className="cart-item__qty-wrapper">
       <label className="visually-hidden" htmlFor={`cart-item__qty-input-${variantId}`}>Edit quantity</label>
       <input 
-        className="cart-item__edit-qty" 
+        className="cart-item__qty-input" 
         type="number" 
         id={`cart-item__qty-input-${variantId}`}
         name="quantity" 

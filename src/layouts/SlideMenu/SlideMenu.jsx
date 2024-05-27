@@ -2,7 +2,7 @@ import { useModal } from "../../context/ModalContext";
 import SlideMenuLink from "./components/SlideMenuLink";
 import SocialIconsList from "../../components/SocialIconsList";
 
-const Menu = () => {
+const SlideMenu = () => {
   const { closeModal } = useModal();
   return ( 
     <>
@@ -20,4 +20,4 @@ const Menu = () => {
   );
 }
  
-export default Menu;
+export default SlideMenu;

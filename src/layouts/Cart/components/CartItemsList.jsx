@@ -26,7 +26,7 @@ const CartItemsList = ({ closeBtn }) => {
             </Link>
             <h3 className="cart-item__size"><strong>Size:</strong> {size}</h3>
             <div className="cart-item__qty-price">
-              <div className="cart-item__edit-qty-container">
+              <div className="cart-item__qty-input-container">
                 <CartItemQty quantity={quantity} variantId={variantId}/>
                 <button title="Delete item" className="cart-item__remove-item-btn" onClick={() => {
                   closeBtn.current.focus();

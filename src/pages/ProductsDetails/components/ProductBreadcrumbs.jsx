@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ProductBreadcrumbs = ({ jacket }) => {
   return (  
     <nav aria-label="Breadcrumb">
-      <ul className='product-breadcrumb'>
+      <ul className="product-breadcrumbs">
         <li>
           <Link to="/">Home</Link>
         </li>

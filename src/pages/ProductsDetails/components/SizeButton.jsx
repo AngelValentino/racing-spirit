@@ -11,7 +11,7 @@ const SizeButton = ({ id, value, selectedOption, handleChange }) => {
         checked={selectedOption === value} 
         onChange={handleChange}
       />
-      <label className='product-details__size-label' htmlFor={id}>{value}</label>
+      <label className="product-details__size-label" htmlFor={id}>{value}</label>
     </>
   );
 }

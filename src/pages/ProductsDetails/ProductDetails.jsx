@@ -1,4 +1,5 @@
 import '../../styles/productDetails.css'
+import '../../styles/acordion.css'
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import SkeletonProductDetails from '../../skeletons/SkeletonProductDetails';
@@ -10,7 +11,7 @@ const ProductDetails = () => {
   const { data: jacket, loading, error } = useFetch('https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products/' + id);
 
   return ( 
-    <div className='product-details-wrapper'>
+    <div className="product-details-wrapper">
       { loading && <SkeletonProductDetails /> }
       { error && <ErrorMessage error={error} /> }
       { jacket && <ProductInfo jacket={jacket} /> } 

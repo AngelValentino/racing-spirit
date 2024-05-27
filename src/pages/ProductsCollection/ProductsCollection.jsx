@@ -14,9 +14,9 @@ const ProductsCollection = () => {
   return ( 
     <>
       <header>
-        <h1 className='products-collection-title'>Jackets</h1> 
+        <h1 className="products-collection-title">Jackets</h1> 
       </header>
-      <div className='products-collection-filters'>
+      <div className="products-collection-filters">
         <SortBy setUrl={setUrl} productsUrl={productsUrl}/>
       </div>
       { error && <ErrorMessage error={error} /> }

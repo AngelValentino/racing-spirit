@@ -6,7 +6,6 @@
   margin:  0 0 50px 0;
   font-weight: 900;
   letter-spacing: 0.025rem;
-  color: #1c1d1d;
 }
 
 /* SORT BY */
@@ -52,7 +51,7 @@
 }
 
 .sort-by__arrow-icon {
-  width: 12px;
+  width: 0.75em;
 }
 
 /* END OF SORT BY */
@@ -100,14 +99,13 @@
   margin: 0 0 10px;
   font-weight: 500;
   font-size: 1.25em;
-  color: #1c1d1d;
 }
 
 .product-preview__price {
   font-weight: 400;
   font-size: 1.05em;
-  color: #1c1d1d;
 }
+
 .product-preview__details-wrapper {
   display: flex;
   align-items: center;
@@ -117,15 +115,17 @@
 
 /* END OF PRODUCTS COLLECTION */
 
-/* LOADER */
-
-/* END OF LOADER */
+/* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
   .product-preview a:is(:hover, :focus) .product-preview__image-secondary {
     opacity: 1;
   }
 }
+
+/* END OF HOVER CAPABLE DEVICES */
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 1000px) {
   .products-list-container {
@@ -167,3 +167,5 @@
     display: block;
   }
 }
+
+/* END OF MEDIA QUERIES */
