@@ -57,12 +57,15 @@
 /* END OF SORT BY */
 
 .products-list-container {
+  list-style-type: none;
+}
+
+.products-list-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 50px;
   column-gap: 30px;
   margin: 20px 0 0;
-  list-style-type: none;
 }
 
 .product-preview {
@@ -99,6 +102,7 @@
   margin: 0 0 10px;
   font-weight: 500;
   font-size: 1.25em;
+  white-space: wrap;
 }
 
 .product-preview__price {
@@ -118,7 +122,7 @@
 /* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
-  .product-preview a:is(:hover, :focus) .product-preview__image-secondary {
+  .product-preview a:is(:hover, :focus-visible) .product-preview__image-secondary {
     opacity: 1;
   }
 }
@@ -128,9 +132,8 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1000px) {
-  .products-list-container {
+  .products-list-grid {
     grid-template-columns: repeat(3, 1fr);
-
   }
 
   .products-collection-filters {
@@ -145,7 +148,7 @@
 }
 
 @media screen and (max-width: 750px) {
-  .products-list-container {
+  .products-list-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -159,7 +162,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .products-list-container {
+  .products-list-grid {
     grid-template-columns: 1fr;
   }
 

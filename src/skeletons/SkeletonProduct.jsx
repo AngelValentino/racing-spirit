@@ -4,11 +4,11 @@ import '../styles/skeleton.css'
 
 const SkeletonProduct = () => {
   return ( 
-    <div>
+    <li>
       <SkeletonElement type="thumbnail"/>
       <SkeletonElement type="title"/>
       <SkeletonElement type="text" width="15%"/>
-    </div>
+    </li>
   );
 }
  

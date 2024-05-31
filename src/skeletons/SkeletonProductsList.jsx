@@ -1,14 +1,26 @@
 import SkeletonProduct from "./SkeletonProduct";
 
-const SkeletonProductsList = () => {
-  const testArr = [1, 2, 3, 4, 5, 6, 7, 8];
+const SkeletonProductsList = ({ carousel, addClass }) => {
+
+  let testArr = addClass === 'products-list-grid' 
+    ? [...Array(8).keys()] 
+    : [...Array(6).keys()]
   
   return (
-  <div className="products-list-container">
-    {testArr.map((n) => (
-      <SkeletonProduct key={n}/>
-    ))}
-  </div>
+  <>
+    {carousel 
+      ? <>
+          {testArr.map((n) => (
+            <SkeletonProduct key={n} carousel={carousel}/>
+          ))}
+        </>
+      : <ul className={`products-list-container ${addClass}`}>
+          {testArr.map((n) => (
+            <SkeletonProduct key={n} carousel={carousel}/>
+          ))}
+        </ul>
+    }
+  </>
   );
 }
  

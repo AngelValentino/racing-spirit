@@ -1,6 +1,6 @@
-const ErrorMessage = ({ error }) => {
+const ErrorMessage = ({ error, carousel }) => {
   return ( 
-    <div className="error__container">
+    <div style={carousel ? {marginTop: '0'} : {marginTop: '50px'}}>
       <p className="error__message">{error}</p> 
     </div>
    );
