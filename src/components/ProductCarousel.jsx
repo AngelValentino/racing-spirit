@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import '../styles/carousel.css';
+import Products from "./Products";
 
-const ProductCarousel = ({ recommended, children }) => {
+const ProductCarousel = ({ hidden }) => {
   const carousel = useRef(null);
   const prevBtn = useRef(null);
   const nextBtn = useRef(null);
+  const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products?_page=1&_limit=6';
 
   function slideRight() {
     carousel.current.scrollLeft += carousel.current.children[0].offsetWidth + 30;
@@ -26,7 +28,7 @@ const ProductCarousel = ({ recommended, children }) => {
         nextBtn.current.style.display = 'none';
     } 
     else if (currentScrollLeft < maxScrollLeft) {
-      nextBtn.current.style.display = 'initial';
+      nextBtn.current.style.display = 'flex';
     }
 
     if (currentScrollLeft === 0) {
@@ -34,17 +36,24 @@ const ProductCarousel = ({ recommended, children }) => {
         prevBtn.current.style.display = 'none';
     } 
     else if (currentScrollLeft !== 0)
-      prevBtn.current.style.display = 'initial';
+      prevBtn.current.style.display = 'flex';
   }
 
   return ( 
-    <div className={recommended ? 'carousel recommended-products-carousel' : 'carousel'}>
-      <button ref={prevBtn} className="carousel__btn carousel__prev-btn" id="prev-btn" onClick={slideLeft}>left</button>
+    <div className={hidden ? 'carousel recommended-products-carousel' : 'carousel'}>
+      <button ref={prevBtn} className="carousel__btn carousel__prev-btn" id="prev-btn" onClick={slideLeft}>
+        <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="currentColor" fillRule="evenodd" d="m16.75 17l-7.5-5l7.5-5a.901.901 0 1 0-1-1.5l-8.502 5.668a1 1 0 0 0 0 1.664L15.75 18.5a.901.901 0 1 0 1-1.5" />
+        </svg>
+      </button>
       <ul ref={carousel} className="carousel__slider" onScroll={handleScroll}>
-        {/* <Products url={productsUrl} carousel={true}/> */}
-        {children}
+        <Products url={productsUrl} carousel={true}/>
       </ul>
-      <button ref={nextBtn} className="carousel__btn carousel__next-btn" id="next-btn" onClick={slideRight}>right</button>
+      <button ref={nextBtn} className="carousel__btn carousel__next-btn" id="next-btn" onClick={slideRight}>
+        <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="currentColor" fillRule="evenodd" d="m7.25 17l7.5-5l-7.5-5a.901.901 0 1 1 1-1.5l8.502 5.668a1 1 0 0 1 0 1.664L8.25 18.5a.901.901 0 1 1-1-1.5" />
+        </svg>
+      </button>
     </div>
   );
 }

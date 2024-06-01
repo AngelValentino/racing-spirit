@@ -19,10 +19,7 @@ const Home = () => {
     <>
     <h1>home</h1>
     <div className="main-home__content">
-      <ProductCarousel>
-        <Products url={productsUrl} carousel={true}/>
-      </ProductCarousel>
-      
+      <ProductCarousel />
     </div>
     </>
   );

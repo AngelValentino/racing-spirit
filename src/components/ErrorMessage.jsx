@@ -1,6 +1,6 @@
-const ErrorMessage = ({ error, carousel }) => {
+const ErrorMessage = ({ error, addClass }) => {
   return ( 
-    <div style={carousel ? {marginTop: '0'} : {marginTop: '50px'}}>
+    <div className={addClass === 'recommended-products-list-grid' ? 'error__container hidden-error-message' : 'error__container'}>
       <p className="error__message">{error}</p> 
     </div>
    );

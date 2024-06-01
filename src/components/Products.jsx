@@ -28,7 +28,7 @@ const Products = ({ url, carousel, addClass }) => {
  
   return ( 
     <>
-      { error && <ErrorMessage error={error} carousel={carousel} /> }
+      { error && <ErrorMessage error={error} carousel={carousel} addClass={addClass}/> }
       { loading && <SkeletonProductsList carousel={carousel} addClass={addClass}/> }
       { (!loading && !error) && <ProductsList data={jackets} carousel={carousel} addClass={addClass} /> }
     </>

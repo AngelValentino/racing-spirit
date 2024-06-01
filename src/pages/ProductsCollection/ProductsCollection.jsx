@@ -1,16 +1,11 @@
 import '../../styles/productsCollection.css'
 import { useState } from "react";
-import useFetch from "../../hooks/useFetch";
-import ProductsList from "../../components/ProductsList";
 import SortBy from './componenets/SortBy';
-import SkeletonProductsList from '../../skeletons/SkeletonProductsList';
-import ErrorMessage from '../../components/ErrorMessage';
 import Products from '../../components/Products';
 
 const ProductsCollection = () => {
   const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products';
   const [ url, setUrl ] = useState(productsUrl)
- /*  const { data: jackets, loading, error } = useFetch(url); */
 
   return ( 
     <>
@@ -21,9 +16,6 @@ const ProductsCollection = () => {
         <SortBy setUrl={setUrl} productsUrl={productsUrl} />
       </div>
       <Products url={url} addClass="products-list-grid"/>
-      {/* { error && <ErrorMessage error={error} /> }
-      { loading && <SkeletonProductsList /> }
-      { jackets && <ProductsList data={jackets} /> } */}
     </>
   );
 }
