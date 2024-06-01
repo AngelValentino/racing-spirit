@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 import ProductCarousel from "../components/ProductCarousel";
-import Products from "../components/Products";
-
 
 const Home = () => {
-  const productsUrl = 'https://my-json-server.typicode.com/AngelValentino/racing-spirit-test-api/products?_page=1&_limit=6';
 
   useEffect(() => {
     console.log('on render');

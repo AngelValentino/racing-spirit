@@ -368,11 +368,20 @@
 /* END OF RECOMMENDED PRODUCTS */
 
 @media screen and (hover: hover) {
+  
+  /* SLIDER CONTROLS */
   .slider-controls__prev-btn:is(:hover, :focus-visible), 
   .slider-controls__next-btn:is(:hover, :focus-visible) {
     background-color: #000;
     color: #fff;
   }
+
+  .product-slider__vertical-thumb:focus-visible,
+  .slider-controls__carousel-img:focus-visible {
+    border: 2px solid #000;
+    outline: none;
+  }
+  /* SLIDER CONTROLS */
 
   /* PRODUCT DETAILS */
   .product-breadcrumbs a:is(:hover, :focus-visible) {
