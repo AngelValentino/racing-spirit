@@ -19,11 +19,9 @@ const Products = ({ url, carousel, addClass }) => {
     return array;
   }
 
-  if (jackets && addClass !== 'products-list-grid') {
-    if (!shuffle.current) {
-      shuffleArray(jackets);
-      shuffle.current = true;
-    }
+  if (jackets && addClass !== 'products-list-grid' && !shuffle.current) {
+    shuffleArray(jackets);
+    shuffle.current = true;
   };
  
   return ( 
