@@ -12,9 +12,9 @@ const Products = ({ url, carousel, addClass }) => {
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       // Generate a random index from 0 to i
-      const j = Math.floor(Math.random() * (i + 1));
-      // Swap elements array[i] and array[j]
-      [array[i], array[j]] = [array[j], array[i]];
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      // Swap array[i] and array[randomIndex]
+      [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
     }
     return array;
   }

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ProductImgsList from "./ProductImgsList";
 import ProductThumbsList from "./ProductThumbsList";
 
-const ProductPreviewSlider = ({data: jacket}) => {
+const ProductPreviewSlider = ({ data: jacket }) => {
   const prevBtn = useRef(null);
   const nextBtn = useRef(null);
   const carousel = useRef(null);
@@ -10,20 +10,21 @@ const ProductPreviewSlider = ({data: jacket}) => {
 
   useEffect(() => {
     if (imgIndex === carousel.current.children.length - 1) {
-      console.log('end')
+      // Reached the end of the slider
       nextBtn.current.style.display = 'none';
     } 
     else if (imgIndex === 0) {
-      console.log('start')
+      // Reached the start of the slider
       prevBtn.current.style.display = 'none';
     } 
     else {
+      // Currently scrolling
       prevBtn.current.style.display = 'flex';
       nextBtn.current.style.display = 'flex';
     }
   }, [imgIndex])
 
-  let lastScrollLeft = 0;
+  let lastScrollLeft = carousel.current ? carousel.current.scrollLeft : 0;
 
   function handleScroll() {
     const currentScrollLeft = carousel.current.scrollLeft;
@@ -40,8 +41,7 @@ const ProductPreviewSlider = ({data: jacket}) => {
       nextBtn.current.style.display = 'flex';
     }
 
-    /* Catches scroll bug where the buttons don't disappear 
-    owing to the interlinked behaviour of imgIndex and handleScroll() */
+    // Edge cases
     if (
       currentScrollLeft < lastScrollLeft && 
       currentScrollLeft === 0 && 
