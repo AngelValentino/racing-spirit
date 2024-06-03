@@ -1,0 +1,82 @@
+.hero-slider {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  margin: 0 0 50px;
+}
+
+.hero-slider__main-img-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slider__main-img-container img {
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-slider__arrow-btns-container {
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  z-index: 2;
+}
+
+.hero-slider__navigation-btns-container {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.hero-slider__navigation-btns-list {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.hero-slider__navigation-btn {
+  border: 2px solid #000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.hero-slider__navigation-btn:focus-visible {
+  outline: 1px solid #000;
+}
+
+.hero-slider__navigation-btn:is(:hover, :focus-visible) {
+  transform: scale(1.1);
+}
+
+.hero-slider__prev-btn, 
+.hero-slider__next-btn {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.hero-slider__prev-btn {
+  margin-right: 10px;
+}
+
+.hero-slider__arrow-btns-container button:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 750px) {
+  .hero-slider__navigation-btns-list {
+    padding: 0 20px;
+  }
+}

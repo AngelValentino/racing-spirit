@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import ProductImgsList from "./ProductImgsList";
 import ProductThumbsList from "./ProductThumbsList";
+import useSwipe from "../../../hooks/useSwipe";
 
 const ProductPreviewSlider = ({ data: jacket }) => {
   const prevBtn = useRef(null);
@@ -21,6 +22,14 @@ const ProductPreviewSlider = ({ data: jacket }) => {
       // Currently scrolling
       prevBtn.current.style.display = 'flex';
       nextBtn.current.style.display = 'flex';
+    }
+
+    // Scrolls to right or left if the user has swaped to the last item main image.
+    if (imgIndex === carousel.current.children.length - 1) {
+      carousel.current.scrollTo(carousel.current.scrollWidth, 0);
+    } 
+    else if (imgIndex === 0) {
+      carousel.current.scrollTo(0, 0);
     }
   }, [imgIndex])
 
@@ -64,15 +73,19 @@ const ProductPreviewSlider = ({ data: jacket }) => {
 
   function showNextImage() {
     setImgIndex((index) => {
+      console.log(index)
       if (index === carousel.current.children.length - 1) return carousel.current.children.length - 1;
       return index + 1;
     });
   }
 
   function showPrevImage() {
+
     setImgIndex((index) => {
+      console.log(index)
       if (index === 0) return 0;
       return index - 1;
+      
     });
   }
 
@@ -88,6 +101,8 @@ const ProductPreviewSlider = ({ data: jacket }) => {
     carousel.current.scrollLeft += firstImageWidth;
   }
 
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(showNextImage, showPrevImage);
+
   return ( 
     <div className="product-slider">
       <ul className="product-slider__vertical-thumbs-container">
@@ -98,7 +113,12 @@ const ProductPreviewSlider = ({ data: jacket }) => {
           setImgIndex={setImgIndex}
         />
       </ul>
-      <div className="product-slider__main-img">
+      <div 
+        className="product-slider__main-img"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <ProductImgsList jacket={jacket} imgIndex={imgIndex} />
       </div>
       <div className="slider-controls">
