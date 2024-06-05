@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ProductCarousel from "../../components/ProductCarousel";
 import HeroSlider from "./HeroSlider";
+import '../../styles/home.css'
 
 const Home = () => {
   useEffect(() => {
