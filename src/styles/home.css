@@ -26,7 +26,7 @@
   position: absolute;
   bottom: -20px;
   right: 40px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-slider__navigation-btns-container {
@@ -34,6 +34,7 @@
   bottom: 10px;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 .hero-slider__navigation-btns-list {
@@ -73,6 +74,38 @@
 
 .hero-slider__arrow-btns-container button:hover {
   background-color: red;
+}
+
+.hero-slider__progress-bar-container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;;
+  z-index: 1;
+  height: 50px;
+}
+
+.hero-slider__progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 0;
+  transition: width 5s linear;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hero-slider__progress-bar-inital {
+  transition: none;
+  width: 0%;
+}
+
+.hero-slider__progress-bar-animation {
+  transition: width 5s linear;
+  width: 105%;
 }
 
 @media screen and (max-width: 750px) {

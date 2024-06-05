@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import '../../styles/home.css'
 import useSwipe from "../../hooks/useSwipe";
 
 const HeroSlider = () => {
   const [imgIndex, setImgIndex] = useState(0);
+  const intervalTim = useRef(null);
+  const progressRef = useRef(null);
+  const autoplay = false
 
   const heroImgs = [
     'https://placehold.co/1920x1080?text=1',
@@ -12,22 +15,41 @@ const HeroSlider = () => {
   ]
 
   function showPrevImage() {
-    setImgIndex((index) => {
-      return index === 0
-      ? heroImgs.length - 1
-      : index - 1;
-    });
+    setImgIndex((index) =>  index === 0 ? heroImgs.length - 1 : index - 1);
   }
 
   function showNextImage() {
-    setImgIndex((index) => {
-      return index === heroImgs.length - 1
-        ? 0
-        : index + 1
-    })
+    setImgIndex((index) => index === heroImgs.length - 1 ? 0 : index + 1);
   }
 
   const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(showNextImage, showPrevImage);
+
+  console.log(imgIndex)
+
+  const resetProgressBar = () => {
+    if (progressRef.current) {
+      progressRef.current.style.transition = 'none';
+      progressRef.current.style.width = '0%';
+      setTimeout(() => {
+        progressRef.current.style.transition = 'width 5s linear';
+        progressRef.current.style.width = '105%';
+      }, 25); // Delay to allow the browser to reset the width
+    }
+  };
+
+  useEffect(() => {
+    resetProgressBar();
+    console.log('interval render')
+    intervalTim.current = autoplay && setInterval(() => {
+      showNextImage();
+      resetProgressBar();
+    }, 5000);
+
+    return () => {
+      console.log('clear')
+      clearInterval(intervalTim.current)
+    };
+  }, [imgIndex]);
 
   return ( 
     <section>
@@ -68,6 +90,10 @@ const HeroSlider = () => {
           <button aria-label="Show previous image." className="hero-slider__prev-btn" onClick={showPrevImage}>left</button>
           <button aria-label="Show next image." className="hero-slider__next-btn" onClick={showNextImage}>right</button>
         </div>
+        <div className="hero-slider__progress-bar-container">
+          <div className="hero-slider__progress-bar" ref={progressRef}></div>
+        </div>
+
       </div>
     </section>
   );
