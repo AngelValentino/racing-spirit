@@ -9,8 +9,7 @@ const HeroSlider = () => {
   const intervalTim = useRef(null);
   const progressRef = useRef(null);
   const progressBarTim = useRef(null);
-  const heroTitle = useRef([]);
-  const heroBtn = useRef([]);
+  const checkCurrentSlide = useRef(0);
 
   const autoplay = false;
 
@@ -35,43 +34,18 @@ const HeroSlider = () => {
     }, 1500); 
  /* Delay to allow the browser to reset the width, also appears 
     just after the hero button. 
-    500ms to show and 1000 to start the button opacity animation */
+    1500ms - HeroTittle(500ms) + HeroButton(1500ms)* Both timers start 
+    at the same time so it finnally becomes 1500ms */
   };
   
   useEffect(() => {
-    //resetProgressBar();
-    let btnTim;
-    heroBtn.current[imgIndex].style.visibility = 'hidden';
-
-    // Hero title appears after 500ms, hero button after 1500s
-    const heroTextContainerTim = setTimeout(() => {
-      heroTitle.current[imgIndex].style.transition = 'bottom 1s';
-      heroTitle.current[imgIndex].style.bottom = 0;
-      btnTim = setTimeout(() => {
-        heroBtn.current[imgIndex].style.visibility = 'visible';
-        heroBtn.current[imgIndex].style.transition = 'opacity 1s, background-color 0.25s, color 0.25s, padding-right 0.25s';
-        heroBtn.current[imgIndex].style.opacity = 1;
-      }, 1000)
-    }, 500)
-
+    resetProgressBar();
     // 5000ms + 1500ms to wait for the hero title and progress bar to appear
     intervalTim.current = autoplay && setInterval(() => {
       showNextImage();
     }, 6500);
   
-    return () => {
-      clearInterval(intervalTim.current);
-      clearTimeout(btnTim);
-      clearTimeout(heroTextContainerTim);
-      if (heroTitle.current[imgIndex]) {
-        heroTitle.current[imgIndex].style.bottom = '-200px';
-        heroTitle.current[imgIndex].style.transition = 'none';
-      };
-      if (heroBtn.current[imgIndex]) {
-        heroBtn.current[imgIndex].style.opacity = 0;
-        heroBtn.current[imgIndex].style.transition = 'none';
-      };
-    };
+    return () => clearInterval(intervalTim.current);
   }, [imgIndex]);
 
   return ( 
@@ -83,7 +57,7 @@ const HeroSlider = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <HeroImgs imgIndex={imgIndex} heroTitle={heroTitle} heroBtn={heroBtn} />
+          <HeroImgs checkCurrentSlide={checkCurrentSlide} imgIndex={imgIndex} />
         </div>
         <div className="hero-slider__navigation-btns-container">
           <NavigationBtns imgIndex={imgIndex} setImgIndex={setImgIndex} />

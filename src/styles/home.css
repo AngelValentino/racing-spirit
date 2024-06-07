@@ -41,9 +41,9 @@
 }
 
 .hero-slider__hero-text {
-  max-width: 1300px;
+  max-width: var(--base-max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: var(--base-desktop-padding);
   display: flex;
   flex-flow: column;
   align-items: start;
@@ -79,6 +79,8 @@
 }
 
 .hero-slider__hero-btn {
+  color: inherit;
+  text-decoration: none;
   border: 3px solid #000;
   font-size: 1em;
   opacity: 0;
@@ -102,19 +104,6 @@
   transition: right 0.25s;
 }
 
-.hero-slider__hero-btn:hover {
-  background-color: red;
-  color: white;
-  padding-right: 55px;
-  opacity: 1;
-  transition: opacity 1s, background-color 0.5s, color 0.5s, padding-right 0.5s !important;
-}
-
-.hero-slider__hero-btn:hover::after {
-  right: 16px;
-  transition: right 0.5s;
-}
-
 .hero-slider__arrow-btns-container {
   position: absolute;
   bottom: -20px;
@@ -131,9 +120,9 @@
 }
 
 .hero-slider__navigation-btns-list {
-  max-width: 1300px;
+  max-width: var(--base-max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: var(--base-desktop-padding);
   display: flex;
   gap: 10px;
   list-style: none;
@@ -151,10 +140,6 @@
   outline: 1px solid #000;
 }
 
-.hero-slider__navigation-btn:is(:hover, :focus-visible) {
-  transform: scale(1.1);
-}
-
 .hero-slider__prev-btn, 
 .hero-slider__next-btn {
   background-color: black;
@@ -164,10 +149,6 @@
 
 .hero-slider__prev-btn {
   margin-right: 10px;
-}
-
-.hero-slider__arrow-btns-container button:hover {
-  background-color: red;
 }
 
 .hero-slider__progress-bar-container {
@@ -241,17 +222,6 @@
   transition: right 0.25s;
 }
 
-.main-home__carousel-section-btn:hover {
-  padding-right: 55px;
-  opacity: 1;
-  transition: opacity 1s, background-color 0.3s, color 0.3s, padding-right 0.3s;
-}
-
-.main-home__carousel-section-btn:hover::after {
-  right: 16px;
-  transition: right 0.3s;
-}
-
 /* END OF CAROUSEL */
 
 /* GRID PRODUCTS LINKS */
@@ -288,25 +258,77 @@
   transition: background-size 0.25s ease-in-out, transform 0.5s;
 }
 
-.main-home__grid-product-link:hover .main-home__grid-product-link-title {
-  background-size: var(--slide-underline-hover);
-  transform: translateY(-10px);
-}
-
 
 /* END OF GRID PRODUCTS LINKS */
 
-@media screen and (max-width: 750px) {
+/* HOVER CAPABLE DEVICES */
+
+@media screen and (hover: hover) {
+  /* HERO SLIDER */
+  .hero-slider__hero-btn:is(:hover, :focus-visible) {
+    background-color: red;
+    color: white;
+    padding-right: 55px;
+    opacity: 1;
+    transition: opacity 1s, background-color 0.5s, color 0.5s, padding-right 0.5s !important;
+  }
+  
+  .hero-slider__hero-btn:is(:hover, :focus-visible)::after {
+    right: 16px;
+    transition: right 0.5s;
+  }
+
+  .hero-slider__navigation-btn:is(:hover, :focus-visible) {
+    transform: scale(1.1);
+  }
+
+  .hero-slider__arrow-btns-container button:is(:hover, :focus-visible) {
+    background-color: red;
+  }
+  /*END OF HERO SLIDER */
+
+  /* MAIN HOME CAROUSEL */
+  .main-home__carousel-section-btn:is(:hover, :focus-visible) {
+    padding-right: 55px;
+    opacity: 1;
+    transition: opacity 1s, background-color 0.3s, color 0.3s, padding-right 0.3s;
+  }
+  
+  .main-home__carousel-section-btn:is(:hover, :focus-visible)::after {
+    right: 16px;
+    transition: right 0.3s;
+  }
+  /* END OF MAIN HOME CAROUSEL */ 
+
+  /* PRODUCTS LINKS GRID */
+  .main-home__grid-product-link:is(:hover, :focus-visible) .main-home__grid-product-link-title {
+    background-size: var(--slide-underline-hover);
+    transform: translateY(-10px);
+  }
+  /* END OF PRODUCTS LINKS GRID */
+}
+
+/* END OF HOVER CAPABLE DEVICES */
+
+
+@media screen and (max-width: 600px) {
   .hero-slider__navigation-btns-list {
-    padding: 0 20px;
+    padding: var(--base-mobile-padding);
   }
 
   .hero-slider__hero-text {
-    padding: 0 20px;
+    padding: var(--base-mobile-padding)
   }
-}
 
-@media screen and (max-width: 600px) {
+  .hero-slider__hero-title {
+    font-size: 2.85em;
+  }
+
+  .hero-slider__hero-btn {
+    font-size: 0.9em;
+    line-height: initial;
+  }
+
   .main-home__grid-products-links {
     display: grid;
     grid-template-columns: 1fr;

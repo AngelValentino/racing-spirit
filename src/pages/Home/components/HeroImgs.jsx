@@ -8,6 +8,7 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle }) => {
       {heroImgsData.map(({ url, alt, title, btnText }, i) => (
         <div 
           aria-hidden={imgIndex !== i} 
+          inert={imgIndex !== i ? 'true' : null}
           style={{transform: `translateX(${-100 * imgIndex}%)`}} 
           key={url} 
           className="hero-slider__main-img-container"
@@ -23,6 +24,7 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle }) => {
             right={i % 2 !== 0}
             heroBtn={heroBtn} 
             heroTitle={heroTitle} 
+            imgIndex={imgIndex}
             i={i}
           />
         </div>

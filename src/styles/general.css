@@ -33,11 +33,16 @@ fieldset {
 html {
   font-size: 16px;
   --text-main-color: #1c1d1d;
+  --base-max-width: 1300px;
+  --base-desktop-padding: 0 40px;
+  --base-mobile-padding: 0 20px;
   --base-font-size: 1.075em;
   --base-line-height: 1.6;
   --base-letter-spaceing: 0.025em;
   --base-transition-duration: 0.15s;
   --base-underline-transition-duration: 0.20s;
+  
+  
   --slide-in-and-back: 0% 100% / 0% 0.1em no-repeat;
   --slide-middle-out: 50% 100% / 0% 0.1em no-repeat;
   
@@ -194,18 +199,18 @@ main {
 }
 
 .main-home__content {
-  max-width: 1300px;
+  max-width: var(--base-max-width);
   margin: 100px auto;
-  padding: 0 40px;
+  padding: var(--base-desktop-padding);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   main {
-    padding: 0 20px;
+    padding: var(--base-mobile-padding);
   }
 
   .main-home__content {
-    padding: 0 20px;
+    padding: var(--base-mobile-padding);
   }
 }
 
@@ -459,13 +464,11 @@ footer h2 {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   .nav-menu {
     padding: 15px 20px;
   }
-}
 
-@media screen and (max-width: 600px) {
   .footer-info {
     grid-template-columns: 1fr;
     justify-items: center;
