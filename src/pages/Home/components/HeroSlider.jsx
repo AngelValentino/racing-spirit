@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import useSwipe from "../../hooks/useSwipe";
+import useSwipe from "../../../hooks/useSwipe";
+import HeroText from "./HeroText";
 
 const HeroSlider = () => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -12,9 +13,24 @@ const HeroSlider = () => {
   const autoplay = false;
 
   const heroImgs = [
-    'https://placehold.co/1920x1080?text=1',
-    'https://placehold.co/1920x1080?text=2',
-    'https://placehold.co/1920x1080?text=3'
+    {
+      url: 'https://placehold.co/1920x1080?text=1',
+      alt: 'text',
+      title: 'title',
+      btnText: 'shop'
+    },
+    {
+      url: 'https://placehold.co/1920x1080?text=2',
+      alt: 'text',
+      title: 'title',
+      btnText: 'shop'
+    }, 
+    {
+      url: 'https://placehold.co/1920x1080?text=3',
+      alt: 'text',
+      title: 'title',
+      btnText: 'shop'
+    }
   ]
 
   function showPrevImage() {
@@ -50,7 +66,7 @@ const HeroSlider = () => {
       heroTitle.current[imgIndex].style.transition = 'bottom 1s';
       heroTitle.current[imgIndex].style.bottom = 0;
       btnTim = setTimeout(() => {
-        heroBtn.current[imgIndex].style.transition = 'opacity 1s';
+        heroBtn.current[imgIndex].style.transition = 'opacity 1s, background-color 0.25s, color 0.25s, padding-right 0.25s';
         heroBtn.current[imgIndex].style.opacity = 1;
       }, 1000)
     }, 500)
@@ -65,7 +81,7 @@ const HeroSlider = () => {
       clearTimeout(btnTim);
       clearTimeout(heroTextContainerTim);
       if (heroTitle.current[imgIndex]) {
-        heroTitle.current[imgIndex].style.bottom = '-100px';
+        heroTitle.current[imgIndex].style.bottom = '-200px';
         heroTitle.current[imgIndex].style.transition = 'none';
       };
       if (heroBtn.current[imgIndex]) {
@@ -84,30 +100,26 @@ const HeroSlider = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {heroImgs.map((imgUrl, i) => (
+          {heroImgs.map(({ url, alt, title, btnText }, i) => (
             <div 
               aria-hidden={imgIndex !== i} 
               style={{transform: `translateX(${-100 * imgIndex}%)`}} 
-              key={imgUrl} 
+              key={url} 
               className="hero-slider__main-img-container"
             >
               <img 
                 className="hero-slider__main-img"
-                src={imgUrl} 
-                alt={`img ${i + 1}`} 
+                src={url} 
+                alt={`${alt} ${i + 1}`} 
               />
-              <div className="hero-slider__hero-text-container">
-                <div className="hero-slider__hero-text">
-                  <div className="hero-slider__hero-title-container">
-                    <h1 ref={(el) => {
-                      heroTitle.current[i] = el
-                    }} className="hero-slider__hero-title">Title</h1>
-                  </div>
-                  <button ref={(el) => {
-                    heroBtn.current[i] = el
-                  }} className="hero-slider__hero-btn">shop</button>
-                </div>
-              </div>
+              <HeroText 
+                title={title}
+                btnText={btnText}
+                right={i % 2 !== 0}
+                heroBtn={heroBtn} 
+                heroTitle={heroTitle} 
+                i={i}
+              />
             </div>
           ))}
         </div>
