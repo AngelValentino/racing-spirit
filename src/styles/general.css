@@ -38,6 +38,11 @@ html {
   --base-letter-spaceing: 0.025em;
   --base-transition-duration: 0.15s;
   --base-underline-transition-duration: 0.20s;
+  --slide-in-and-back: 0% 100% / 0% 0.1em no-repeat;
+  --slide-middle-out: 50% 100% / 0% 0.1em no-repeat;
+  
+  --slide-underline-hover: 100% 0.1em;
+
 }
 
 body {
@@ -190,7 +195,7 @@ main {
 
 .main-home__content {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 0 40px;
 }
 

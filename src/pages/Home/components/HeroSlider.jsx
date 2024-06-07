@@ -39,7 +39,7 @@ const HeroSlider = () => {
   };
   
   useEffect(() => {
-    resetProgressBar();
+    //resetProgressBar();
     let btnTim;
     heroBtn.current[imgIndex].style.visibility = 'hidden';
 
@@ -75,7 +75,7 @@ const HeroSlider = () => {
   }, [imgIndex]);
 
   return ( 
-    <section>
+    <header>
       <div className="hero-slider">
         <div 
           className="hero-slider__main-img-slider-container"     
@@ -96,7 +96,7 @@ const HeroSlider = () => {
           <div className="hero-slider__progress-bar" ref={progressRef}></div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
  
