@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import useSwipe from "../../../hooks/useSwipe";
 import HeroImgs from "./HeroImgs";
 import { heroImgsData } from "../../../data/heroImgsData";
+import NavigationBtns from "./NavigationBtns";
 
 const HeroSlider = () => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -82,21 +83,8 @@ const HeroSlider = () => {
         >
           <HeroImgs imgIndex={imgIndex} heroTitle={heroTitle} heroBtn={heroBtn} />
         </div>
-        <div className="hero-slider__navigation-btns-container"> 
-          <ul className="hero-slider__navigation-btns-list">
-            {heroImgsData.map((_, i) => (
-              <li key={i}>
-                <button 
-                  aria-label={`Show image ${i + 1}`}
-                  style={i === imgIndex ? {backgroundColor: 'black'} : {backgroundColor: 'white'}}
-                  className="hero-slider__navigation-btn" 
-                  onClick={() => {
-                    setImgIndex(i)
-                  }}>
-                </button>
-              </li>
-            ))}
-          </ul>
+        <div className="hero-slider__navigation-btns-container">
+          <NavigationBtns imgIndex={imgIndex} setImgIndex={setImgIndex} />
         </div>
         <div className="hero-slider__arrow-btns-container">
           <button aria-label="Show previous image." className="hero-slider__prev-btn" onClick={showPrevImage}>left</button>
