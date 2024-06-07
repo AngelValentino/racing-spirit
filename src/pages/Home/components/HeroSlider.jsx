@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import useSwipe from "../../../hooks/useSwipe";
-import HeroText from "./HeroText";
+import HeroImgs from "./HeroImgs";
+import { heroImgsData } from "../../../data/heroImgsData";
 
 const HeroSlider = () => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -12,33 +13,12 @@ const HeroSlider = () => {
 
   const autoplay = false;
 
-  const heroImgs = [
-    {
-      url: 'https://placehold.co/1920x1080?text=1',
-      alt: 'text',
-      title: 'title',
-      btnText: 'shop'
-    },
-    {
-      url: 'https://placehold.co/1920x1080?text=2',
-      alt: 'text',
-      title: 'title',
-      btnText: 'shop'
-    }, 
-    {
-      url: 'https://placehold.co/1920x1080?text=3',
-      alt: 'text',
-      title: 'title',
-      btnText: 'shop'
-    }
-  ]
-
   function showPrevImage() {
-    setImgIndex((index) =>  index === 0 ? heroImgs.length - 1 : index - 1);
+    setImgIndex((index) =>  index === 0 ? heroImgsData.length - 1 : index - 1);
   }
 
   function showNextImage() {
-    setImgIndex((index) => index === heroImgs.length - 1 ? 0 : index + 1);
+    setImgIndex((index) => index === heroImgsData.length - 1 ? 0 : index + 1);
   }
 
   const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(showNextImage, showPrevImage);
@@ -100,32 +80,11 @@ const HeroSlider = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {heroImgs.map(({ url, alt, title, btnText }, i) => (
-            <div 
-              aria-hidden={imgIndex !== i} 
-              style={{transform: `translateX(${-100 * imgIndex}%)`}} 
-              key={url} 
-              className="hero-slider__main-img-container"
-            >
-              <img 
-                className="hero-slider__main-img"
-                src={url} 
-                alt={`${alt} ${i + 1}`} 
-              />
-              <HeroText 
-                title={title}
-                btnText={btnText}
-                right={i % 2 !== 0}
-                heroBtn={heroBtn} 
-                heroTitle={heroTitle} 
-                i={i}
-              />
-            </div>
-          ))}
+          <HeroImgs imgIndex={imgIndex} heroTitle={heroTitle} heroBtn={heroBtn} />
         </div>
         <div className="hero-slider__navigation-btns-container"> 
           <ul className="hero-slider__navigation-btns-list">
-            {heroImgs.map((_, i) => (
+            {heroImgsData.map((_, i) => (
               <li key={i}>
                 <button 
                   aria-label={`Show image ${i + 1}`}
