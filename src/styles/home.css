@@ -106,12 +106,13 @@
   background-color: red;
   color: white;
   padding-right: 55px;
-  transition: background-color 0.5s, color 0.5s, padding-right 0.5s !important;
+  opacity: 1;
+  transition: opacity 1s, background-color 0.5s, color 0.5s, padding-right 0.5s !important;
 }
 
 .hero-slider__hero-btn:hover::after {
   right: 16px;
-  transition: right 0.50s;
+  transition: right 0.5s;
 }
 
 .hero-slider__arrow-btns-container {

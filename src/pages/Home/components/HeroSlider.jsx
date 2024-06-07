@@ -41,12 +41,14 @@ const HeroSlider = () => {
   useEffect(() => {
     resetProgressBar();
     let btnTim;
+    heroBtn.current[imgIndex].style.visibility = 'hidden';
 
     // Hero title appears after 500ms, hero button after 1500s
     const heroTextContainerTim = setTimeout(() => {
       heroTitle.current[imgIndex].style.transition = 'bottom 1s';
       heroTitle.current[imgIndex].style.bottom = 0;
       btnTim = setTimeout(() => {
+        heroBtn.current[imgIndex].style.visibility = 'visible';
         heroBtn.current[imgIndex].style.transition = 'opacity 1s, background-color 0.25s, color 0.25s, padding-right 0.25s';
         heroBtn.current[imgIndex].style.opacity = 1;
       }, 1000)
