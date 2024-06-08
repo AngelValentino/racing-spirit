@@ -30,7 +30,7 @@ const HeroText = ({ i, right, title, btnText, imgIndex }) => {
             style={imgIndex === i && isTitleStyled ? {bottom: 0} : {visibility: 'hidden'}} 
             className={right ? 'hero-slider__hero-title hero-slider__hero-title-right' : 'hero-slider__hero-title'}
           >
-            {title.toUpperCase()}
+            {i === 0 && new Date().getFullYear()} {title.toUpperCase()}
           </h1>
         </div>
         <Link

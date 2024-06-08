@@ -16,7 +16,7 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo }) => {
           {i === 0 
           ? <video onClick={() => console.log('click')} className="hero-slider__main-img" autoPlay muted loop src={url} ref={heroVideo}/> 
           : <img 
-              className="hero-slider__main-img"
+              className="hero-slider__main-img hero-slider__main-img-displaced"
               src={url} 
               alt={`${alt} ${i + 1}`} 
             />

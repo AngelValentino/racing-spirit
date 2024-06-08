@@ -10,7 +10,7 @@ const HeroSlider = () => {
   const heroVideo = useRef(null);
   const [isProgressBarStyled, setIsProgressBarStyled] = useState(false);
 
-  const autoplay = true;
+  const autoplay = false;
 
   function showPrevImage() {
     setImgIndex((index) => index === 0 ? heroImgsData.length - 1 : index - 1);
@@ -28,7 +28,7 @@ const HeroSlider = () => {
       return {width: '105%'};
     } 
     else if (isProgressBarStyled) {
-      return {width: '104%', transition: 'width 11s linear'};
+      return {width: '103%', transition: 'width 11s linear'};
     } 
     else {
       return {width: 0, transition: 'none'};

@@ -1,20 +1,20 @@
 export const heroImgsData = [
   {
-    url: 'https://i.imgur.com/yBN8L1W.mp4',
+    url: 'https://i.imgur.com/xp5W88T.mp4',
     alt: 'text',
-    title: 'title',
+    title: 'Motocross inspired collection',
     btnText: 'shop'
   },
   {
-    url: 'https://placehold.co/1920x1080?text=2',
-    alt: 'text',
-    title: 'title',
+    url: 'https://i.imgur.com/rsms2Uk.jpg',
+    alt: 'A woman, dressed in red leather, standing next to a horse.',
+    title: 'Lead the way',
     btnText: 'shop'
   }, 
   {
-    url: 'https://placehold.co/1920x1080?text=3',
-    alt: 'text',
-    title: 'title',
+    url: 'https://i.imgur.com/EdQotu2.jpeg',
+    alt: 'A couple riding on a motorcycle while being partially hidden by trees.',
+    title: 'Break free',
     btnText: 'shop'
   }
 ];
