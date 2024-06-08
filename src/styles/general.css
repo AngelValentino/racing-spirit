@@ -41,13 +41,13 @@ html {
   --base-letter-spacing: 0.025em;
   --base-transition-duration: 0.15s;
   --base-underline-transition-duration: 0.20s;
-  
-  
   --slide-in-and-back: 0% 100% / 0% 0.1em no-repeat;
+  --slide-in-and-back-visible: 0% 100% / 0% 0.1em no-repeat, 0% 100% / 100% 0.1em no-repeat;
   --slide-middle-out: 50% 100% / 0% 0.1em no-repeat;
-  
+  --slide-in-and-out-visible: 100% 100% / 0% 0.1em no-repeat, 100% 100% / 100% 0.1em no-repeat;
+  --slide-to-top: 0% 100% / 100% 0.1em no-repeat;
   --slide-underline-hover: 100% 0.1em;
-
+  --slide-to-top-underline-hover: 100% 100%;
 }
 
 body {
@@ -124,11 +124,8 @@ body {
   transition: color var(--base-transition-duration);
   color: inherit;
   text-decoration: none;
+  background: var(--slide-middle-out);
   background-image: linear-gradient(#008000, #008000);
-  background-size: 0% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
   transition: background-size var(--base-underline-transition-duration) ease-in-out, color var(--base-transition-duration);
 }
 
@@ -275,11 +272,8 @@ footer h2 {
   text-decoration: none;
   font-size: var(--footer-medium-text);
   margin-bottom: 14px;
+  background: var(--slide-in-and-back);
   background-image: linear-gradient(#fff, #fff);
-  background-size: 0% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 0%;
-  background-repeat: no-repeat;
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
 }
 
@@ -374,7 +368,7 @@ footer h2 {
   /* NAVIGATION MENU */
   .nav-menu__links a:is(:hover, :focus-visible) {
     color: #008000;
-    background-size: 100% 0.1em;
+    background-size: var(--slide-underline-hover)
   }
 
   .menu-btn:is(:hover, :focus-visible) {
@@ -388,7 +382,7 @@ footer h2 {
 
   /* FOOTER */
   .footer-links__list a:is(:hover, :focus-visible) {
-    background-size: 100% 0.1em;
+    background-size: var(--slide-underline-hover);
   }
 
   .footer-newsletter__btn:is(:hover, :focus-visible) {

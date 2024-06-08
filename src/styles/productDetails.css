@@ -22,13 +22,12 @@
 }
 
 .product-breadcrumbs a {
+  background: var(--slide-to-top);
   background-image: linear-gradient(#d99a5a, #d99a5a);
-  background-size: 100% 0.1em;
-  background-position-y: 100%;
-  background-repeat: no-repeat;
-  transition: background-size var(--base-underline-transition-duration) ease-in-out, 
-  color var(--base-underline-transition-duration), 
-  padding var(--base-underline-transition-duration);
+  transition: 
+    background-size var(--base-underline-transition-duration) ease-in-out, 
+    color var(--base-underline-transition-duration), 
+    padding var(--base-underline-transition-duration);
   color: inherit;
   text-decoration: none;
   padding: 2px 5px;
@@ -193,11 +192,8 @@
 }
 
 .product-details__policies-shipping-link {
+  background: var(--slide-in-and-back-visible);
   background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
-  background-size: 0% 0.1em, 100% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 0%;
-  background-repeat: no-repeat;
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;
   color: inherit;
@@ -324,15 +320,14 @@
 
 .product-details__more-payments-link {
   font-size: var(--base-font-size);
+  background: var(--slide-in-and-out-visible);
   background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
-  background-size: 0% 0.1em, 100% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 100%;
-  background-repeat: no-repeat;
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;
   color: inherit;
 }
+
+
 
 /* END OF PRODCUT DETAILS INFO */
 
@@ -385,12 +380,12 @@
 
   /* PRODUCT DETAILS */
   .product-breadcrumbs a:is(:hover, :focus-visible) {
-    background-size: 100% 100%;
+    background-size: var(--slide-to-top-underline-hover);
     color: #fff;
   }
   
   .product-details__policies-shipping-link:is(:hover, :focus-visible) {
-    background-size: 100% 0.1em, 100% 0.1em;
+    background-size: var(--slide-underline-hover), var(--slide-underline-hover);
   }
 
   .product-details__submit-size-btn:is(:hover, :focus-visible)::after {
@@ -403,7 +398,7 @@
   }
 
   .product-details__more-payments-link:is(:hover, :focus-visible) {
-    background-size: 100% 0.1em, 100% 0.1em;
+    background-size: var(--slide-underline-hover), var(--slide-underline-hover);
     background-position-x: 0%;
   }
   /* END OF PRODUCT DETAILS */
