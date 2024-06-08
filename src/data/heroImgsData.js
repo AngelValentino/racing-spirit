@@ -1,6 +1,6 @@
 export const heroImgsData = [
   {
-    url: 'https://placehold.co/1920x1080?text=1',
+    url: 'https://i.imgur.com/yBN8L1W.mp4',
     alt: 'text',
     title: 'title',
     btnText: 'shop'

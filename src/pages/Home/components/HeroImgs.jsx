@@ -1,7 +1,7 @@
 import HeroText from "./HeroText";
 import { heroImgsData } from "../../../data/heroImgsData";
 
-const HeroImgs = ({ imgIndex, heroBtn, heroTitle }) => {
+const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo }) => {
 
   return ( 
     <>
@@ -13,11 +13,14 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle }) => {
           key={url} 
           className="hero-slider__main-img-container"
         >
-          <img 
-            className="hero-slider__main-img"
-            src={url} 
-            alt={`${alt} ${i + 1}`} 
-          />
+          {i === 0 
+          ? <video onClick={() => console.log('click')} className="hero-slider__main-img" autoPlay muted loop src={url} ref={heroVideo}/> 
+          : <img 
+              className="hero-slider__main-img"
+              src={url} 
+              alt={`${alt} ${i + 1}`} 
+            />
+          }
           <HeroText 
             title={title}
             btnText={btnText}
