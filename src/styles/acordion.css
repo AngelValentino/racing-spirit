@@ -10,7 +10,7 @@
 .accordion__text {
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
-  letter-spacing: var(--base-letter-spaceing);
+  letter-spacing: var(--base-letter-spacing);
 }
 
 .accordion__title {

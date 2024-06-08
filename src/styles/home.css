@@ -86,7 +86,7 @@
   opacity: 0;
   overflow: hidden;
   font-weight: 900;
-  letter-spacing: var(--base-letter-spaceing);
+  letter-spacing: var(--base-letter-spacing);
   padding: 11px 20px;
   line-height: var(--base-line-height);
   position: relative;
@@ -203,7 +203,7 @@
   color: white;
   overflow: hidden;
   font-weight: 700;
-  letter-spacing: var(--base-letter-spaceing);
+  letter-spacing: var(--base-letter-spacing);
   padding: 11px 20px;
   line-height: var(--base-line-height);
   position: relative;
@@ -252,7 +252,7 @@
   bottom: 25px;
   font-size: 1.65em;
   font-weight: 900;
-  letter-spacing: var(--base-letter-spaceing);
+  letter-spacing: var(--base-letter-spacing);
   background: var(--slide-in-and-back);
   background-image: linear-gradient(#d99a5a, #d99a5a);
   transition: background-size 0.25s ease-in-out, transform 0.5s;

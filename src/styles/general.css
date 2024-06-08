@@ -38,7 +38,7 @@ html {
   --base-mobile-padding: 0 20px;
   --base-font-size: 1.075em;
   --base-line-height: 1.6;
-  --base-letter-spaceing: 0.025em;
+  --base-letter-spacing: 0.025em;
   --base-transition-duration: 0.15s;
   --base-underline-transition-duration: 0.20s;
   
@@ -261,7 +261,7 @@ footer h2 {
 .footer-title__desc {
   color: #e8e8e1;
   line-height: var(--base-line-height);
-  letter-spacing: var(--base-letter-spaceing);
+  letter-spacing: var(--base-letter-spacing);
   font-size: var(--footer-base-text);
 }
 
@@ -285,7 +285,7 @@ footer h2 {
 
 .footer-newsletter__desc {
   line-height: var(--base-line-height);
-  letter-spacing: var(--base-letter-spaceing);
+  letter-spacing: var(--base-letter-spacing);
   margin: 0 0 20px 0;
   font-size: var(--footer-base-text);
 }

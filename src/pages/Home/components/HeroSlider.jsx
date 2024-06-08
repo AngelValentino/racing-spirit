@@ -14,7 +14,7 @@ const HeroSlider = () => {
   const autoplay = false;
 
   function showPrevImage() {
-    setImgIndex((index) =>  index === 0 ? heroImgsData.length - 1 : index - 1);
+    setImgIndex((index) => index === 0 ? heroImgsData.length - 1 : index - 1);
   }
 
   function showNextImage() {
