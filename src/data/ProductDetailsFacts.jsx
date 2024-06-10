@@ -1,5 +1,6 @@
 export const ProductDetailsFacts = [
   {
+    id: '13a9442c-a13c-41d5-8ae0-099aba4394a7',
     title:'description',
     renderContent(description) {
       return (
@@ -9,14 +10,18 @@ export const ProductDetailsFacts = [
         </>
       );
     } 
-  }, {
+  }, 
+  {
+    id: 'f1973843-45a5-4ce6-b005-4be0fedc7392',
     title:'composition',
     renderContent() {
       return (
         <p className="accordion__text">Hand-sewn garmet made locally, only with the finest materials and the greatest tailors.</p>
       );
     } 
-  }, {
+  }, 
+  {
+    id: '1f30f67e-488f-462d-acb0-3f2dccb47da1',
     title:'washing care',
     renderContent() {
       return (
@@ -60,14 +65,18 @@ export const ProductDetailsFacts = [
         </ul>
       );
     } 
-  }, {
+  }, 
+  {
+    id: 'a6a7bfab-b4d3-43a5-b469-d8d944219724',
     title:'shipping information',
     renderContent() {
       return (
         <p className="accordion__text">We sew and despatch all products in house ourselves. All orders are expected to ship within 3 business days and are worldwide tracked.</p>
       );
     }
-  }, {
+  }, 
+  {
+    id: '5181735f-5372-4ad6-aa0c-3bce71b96452',
     title:'ask a question',
     renderContent() {
       return (

@@ -30,8 +30,12 @@
 }
 
 .accordion__chevron {
-  width: 15px;
+  width: 0.9em;
   transition: transform 0.25s;
+  /* Without this the rotate animation looks weird, 
+  still doesn't look the best on firefox though. */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .open-chevron {

@@ -10,7 +10,7 @@ const HeroSlider = () => {
   const heroVideo = useRef(null);
   const [isProgressBarStyled, setIsProgressBarStyled] = useState(false);
 
-  const autoplay = false;
+  const autoplay = true;
 
   function showPrevImage() {
     setImgIndex((index) => index === 0 ? heroImgsData.length - 1 : index - 1);

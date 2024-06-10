@@ -264,6 +264,7 @@
   background: var(--slide-in-and-back);
   background-image: linear-gradient(#d99a5a, #d99a5a);
   transition: background-size 0.25s ease-in-out, transform 0.5s;
+  will-change: transform;
 }
 
 /* END OF GRID PRODUCTS LINKS */
