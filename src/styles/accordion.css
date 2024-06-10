@@ -3,8 +3,14 @@
 }
 
 .accordion {
-  max-width: 600px;
   list-style: none;
+}
+
+.accordion-faqs {
+  max-width: 920px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .accordion__text {
@@ -18,15 +24,39 @@
   align-items: center;
   justify-content: space-between;
   color: #1c1c1c;
+  width: 100%;
+}
+
+.accordion__product-details-title {
   padding: 10px;
   width: 100%;
   padding: 22px 0;
 }
 
-.accordion__title h2 {
+.accordion__product-details-title h2 {
   letter-spacing: 0.1em;
   font-size: 0.9em;
   font-weight: 900;
+}
+
+.accordion__faqs-title {
+  padding: 24px;
+  background-color: #fafafa;
+  transition: background-color var(--base-transition-duration);
+}
+
+.accordion__faqs-title h2 {
+  font-size: 1.19em;
+  letter-spacing: var(--base-letter-spacing);
+  font-weight: 700;
+}
+
+.accordion-faqs li:first-child .accordion__faqs-title {
+  border-radius: 10px 10px 0 0;
+}
+
+.accordion-faqs li:last-child .accordion__faqs-title {
+  border-radius: 0 0 10px 10px;
 }
 
 .accordion__chevron {
@@ -35,18 +65,42 @@
   /* Without this the rotate animation looks weird, 
   still doesn't look the best on firefox though. */
   will-change: transform;
-  backface-visibility: hidden;
 }
 
 .open-chevron {
   transform: rotate(180deg);
 } 
 
+.accordion__faqs-title:hover .accordion__plus-icon {
+  opacity: 1;
+}
+
+.accordion__plus-icon {
+  width: 1.35em;
+  transition: transform 0.25s, opacity 0.25s;
+  /* Without this the rotate animation looks weird, 
+  still doesn't look the best on firefox though. */
+  will-change: transform;
+  opacity: 0.4;
+}
+
+.open-plus-icon {
+  transform: rotate(45deg);
+}
+
 .accordion-content-wrapper {
   display: grid; 
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.25s;
   border-bottom: 1px solid #e8e8e1;
+}
+
+.accordion-faqs .accordion-content-wrapper {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-faqs li:last-child .accordion-content-wrapper {
+  border: none;
 }
 
 .accordion-content-wrapper > div {
@@ -56,6 +110,10 @@
 .open-section {
   grid-template-rows: 1fr;
 }
+
+.accordion-faqs .accordion-content {
+  padding: 0 26px 30px;
+} 
 
 .accordion-content {
   padding: 0 0 20px;

@@ -1,5 +1,4 @@
 import '../../styles/productDetails.css'
-import '../../styles/acordion.css'
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import SkeletonProductDetails from '../../skeletons/SkeletonProductDetails';

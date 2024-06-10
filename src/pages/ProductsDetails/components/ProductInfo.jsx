@@ -19,7 +19,13 @@ const ProductInfo = ({ jacket }) => {
             Tax included. <Link className="product-details__policies-shipping-link" to="/about">Shipping</Link> calculated at checkout.
           </p>
           <ProductSizeForm jacket={jacket}/>
-          <Accordion keepOthersOpen={true} description={jacket.description} factsData={ProductDetailsFacts} />
+          <Accordion 
+            keepOthersOpen={true} 
+            description={jacket.description} 
+            factsData={ProductDetailsFacts} 
+            btnClass="accordion__product-details-title"
+            ulClass="accordion__product-details"
+          />
         </div>
       </div>
     </>
