@@ -6,20 +6,21 @@
   list-style: none;
 }
 
+.accordion-product-details {
+  font-size: 1rem;
+}
+
 .accordion-faqs {
   max-width: 920px;
   border: 1px solid #ddd;
   margin: 0 auto;
   border-radius: 10px;
+  font-size: 1rem;
 }
 
-.accordion__text {
-  font-size: var(--base-font-size);
-  line-height: var(--base-line-height);
-  letter-spacing: var(--base-letter-spacing);
-}
+/* ACCORDION TITLE */
 
-.accordion__title {
+.accordion__title-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,25 +28,25 @@
   width: 100%;
 }
 
-.accordion__product-details-title {
+.accordion__product-details-title-btn {
   padding: 10px;
   width: 100%;
   padding: 22px 0;
 }
 
-.accordion__product-details-title h2 {
+.accordion__product-details-title-btn h2 {
   letter-spacing: 0.1em;
   font-size: 0.9em;
   font-weight: 900;
 }
 
-.accordion__faqs-title {
+.accordion__faqs-title-btn {
   padding: 24px;
   background-color: #fafafa;
   transition: background-color var(--base-transition-duration);
 }
 
-.accordion__faqs-title h2 {
+.accordion__faqs-title-btn h2 {
   font-size: 1.19em;
   letter-spacing: var(--base-letter-spacing);
   font-weight: 700;
@@ -59,6 +60,10 @@
   border-radius: 0 0 10px 10px;
 }
 
+/* END OF ACCORDION TITLE  */
+
+/* ACCORDION ICON */
+
 .accordion__chevron {
   width: 0.9em;
   transition: transform 0.25s;
@@ -67,13 +72,9 @@
   will-change: transform;
 }
 
-.open-chevron {
+.accordion__chevron--open {
   transform: rotate(180deg);
 } 
-
-.accordion__faqs-title:hover .accordion__plus-icon {
-  opacity: 1;
-}
 
 .accordion__plus-icon {
   width: 1.35em;
@@ -84,39 +85,53 @@
   opacity: 0.4;
 }
 
-.open-plus-icon {
+.accordion__plus-icon--open {
   transform: rotate(45deg);
 }
 
-.accordion-content-wrapper {
+/* END OF ACCORDION ICON */
+
+/* ACCORDION CONTENT */
+
+.accordion__content-container {
   display: grid; 
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.25s;
   border-bottom: 1px solid #e8e8e1;
 }
 
-.accordion-faqs .accordion-content-wrapper {
+.accordion-faqs .accordion__content-container {
   border-bottom: 1px solid #ddd;
 }
 
-.accordion-faqs li:last-child .accordion-content-wrapper {
+.accordion-faqs li:last-child .accordion__content-container {
   border: none;
 }
 
-.accordion-content-wrapper > div {
+.accordion__content-wrapper {
   overflow: hidden;
 }
 
-.open-section {
+.open-accordion-section {
   grid-template-rows: 1fr;
 }
 
-.accordion-faqs .accordion-content {
+.accordion-faqs .accordion__content {
   padding: 0 26px 30px;
 } 
 
-.accordion-content {
+.accordion__content {
   padding: 0 0 20px;
+}
+
+/* END OF ACCORDION CONTENT */
+
+/* PRODUCT DETAILS */
+
+.accordion__details-text {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  letter-spacing: var(--base-letter-spacing);
 }
 
 .accordion__sizes-chart-img {
@@ -140,3 +155,17 @@
   gap: 10px;
   margin: 0 0 5px;
 }
+
+/* END OF PRODUCT DETAILS */
+
+/* HOVER CAPABLE DEVICES */
+
+@media screen and (hover: hover) {
+  /* FAQ'S */
+  .accordion__faqs-title-btn:hover .accordion__plus-icon {
+    opacity: 1;
+  }
+  /* END OF FAQ'S */
+}
+
+/* END OF HOVER CAPABLE DEVICES */

@@ -23,8 +23,8 @@ const ProductInfo = ({ jacket }) => {
             keepOthersOpen={true} 
             description={jacket.description} 
             factsData={ProductDetailsFacts} 
-            btnClass="accordion__product-details-title"
-            ulClass="accordion__product-details"
+            btnClass="accordion__product-details-title-btn"
+            ulClass="accordion-product-details"
           />
         </div>
       </div>

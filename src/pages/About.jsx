@@ -10,7 +10,7 @@ const About = () => {
         keepOthersOpen={false} 
         isFaqs={true} 
         ulClass="accordion-faqs"
-        btnClass="accordion__faqs-title"
+        btnClass="accordion__faqs-title-btn"
       />
     </>
   );

@@ -33,18 +33,18 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
           <button 
             aria-expanded={fact.toggled} 
             aria-controls={`accordion__section-${fact.title}`} 
-            className={`accordion__title ${btnClass}`} 
+            className={`accordion__title-btn ${btnClass}`} 
             style={getButtonStyle(fact)}
             onClick={() => toggle(fact)}
           >
             <h2>{isFaqs ? fact.title : fact.title.toUpperCase()}</h2>
             {isFaqs 
               ?
-                <svg className={fact.toggled ? 'accordion__plus-icon open-plus-icon' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <svg className={fact.toggled ? 'accordion__plus-icon accordion__plus-icon--open' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                 </svg>
               :
-                <svg className={fact.toggled ? 'accordion__chevron open-chevron' : 'accordion__chevron'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg className={fact.toggled ? 'accordion__chevron accordion__chevron--open' : 'accordion__chevron'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                 </svg>
             }
@@ -53,10 +53,10 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
             role="region" 
             id={`accordion__section-${fact.title}`} 
             aria-hidden={!fact.toggled} 
-            className={fact.toggled ? 'accordion-content-wrapper open-section' : 'accordion-content-wrapper'}
+            className={fact.toggled ? 'accordion__content-container open-accordion-section' : 'accordion__content-container'}
           >
-            <div>
-              <div className="accordion-content">
+            <div className="accordion__content-wrapper">
+              <div className="accordion__content">
                 {fact.renderContent(description)}
               </div>
             </div>
