@@ -1,4 +1,4 @@
-export const ProductDetailsFacts = [
+export const productDetailsFacts = [
   {
     id: '13a9442c-a13c-41d5-8ae0-099aba4394a7',
     title:'description',

@@ -15,7 +15,6 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
         )) 
       ]);
     }
-
   }, [factsData]);
 
   const checkToggled = (clickedItem, fact) => clickedItem.id === fact.id ? !fact.toggled : !keepOthersOpen ? false : fact.toggled;

@@ -52,11 +52,11 @@
   font-weight: 700;
 }
 
-.accordion-faqs li:first-child .accordion__faqs-title {
+.accordion-faqs li:first-child .accordion__faqs-title-btn {
   border-radius: 10px 10px 0 0;
 }
 
-.accordion-faqs li:last-child .accordion__faqs-title {
+.accordion-faqs li:last-child .accordion__faqs-title-btn {
   border-radius: 0 0 10px 10px;
 }
 

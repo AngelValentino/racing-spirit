@@ -4,7 +4,7 @@ import { formatCurrency } from "../../../utils/formatCurrency";
 import { Link } from "react-router-dom";
 import ProductSizeForm from "./ProductSizeForm";
 import Accordion from "../../../components/Accordion";
-import { ProductDetailsFacts } from "../../../data/ProductDetailsFacts";
+import { productDetailsFacts } from "../../../data/productDetailsFacts";
 
 const ProductInfo = ({ jacket }) => {
   return ( 
@@ -22,7 +22,7 @@ const ProductInfo = ({ jacket }) => {
           <Accordion 
             keepOthersOpen={true} 
             description={jacket.description} 
-            factsData={ProductDetailsFacts} 
+            factsData={productDetailsFacts} 
             btnClass="accordion__product-details-title-btn"
             ulClass="accordion-product-details"
           />
