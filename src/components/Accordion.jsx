@@ -8,8 +8,12 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
 
   useEffect(() => {
     if (factsData) {
-      // Returns toggled proptery for all items, first is defaulted to true
-      setAccordionItems([ ...factsData.map((fact, i) => ({ ...fact, toggled: isFaqs ? false : i === 0})) ]);
+      // Returns toggled proptery for all facts, first is defaulted to true if isFaqs is false
+      setAccordionItems([ 
+        ...factsData.map((fact, i) => (
+          { ...fact, toggled: isFaqs ? false : i === 0}
+        )) 
+      ]);
     }
 
   }, [factsData]);
@@ -18,12 +22,16 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
 
   // Opens or closes the current item and checks if it has to keep the others open or not
   function toggle(clickedItem) {
-    setAccordionItems([ ...accordionItems.map(fact => ({ ...fact, toggled: checkToggled(clickedItem, fact) })) ]);
+    setAccordionItems([ 
+      ...accordionItems.map(fact => (
+        { ...fact, toggled: checkToggled(clickedItem, fact)}
+      )) 
+    ]);
   }
 
   const getButtonStyle = (fact) => {
-    if (fact.toggled) return { backgroundColor: 'white' };
-    return isFaqs ? { backgroundColor: '#fafafa' } : { backgroundColor: 'white' };
+    if (fact.toggled) return { backgroundColor: '#fff' };
+    return isFaqs ? { backgroundColor: '#fafafa' } : { backgroundColor: '#fff' };
   };
 
   return ( 
