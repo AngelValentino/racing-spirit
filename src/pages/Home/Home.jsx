@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { gridProductsImagesData } from "../../data/gridProductsImagesData";
 
 const Home = () => {
-  
+
   useEffect(() => {
     document.body.querySelector('main').classList.add('main-home');
     return () => document.body.querySelector('main').classList.remove('main-home');
@@ -19,7 +19,7 @@ const Home = () => {
       <section className="main-home__carousel-section">
         <ProductCarousel />
         <div className="main-home__carousel-section-btn-container">
-          <Link className="main-home__carousel-section-btn">View all</Link>
+          <Link to="/jackets" className="main-home__carousel-section-btn">View all</Link>
         </div>
       </section>
       <section className="main-home__grid-products-links">

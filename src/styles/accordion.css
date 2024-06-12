@@ -191,6 +191,10 @@
 
 .faqs-address {
   margin-bottom: 30px;
+  font-size: inherit;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-main-color);
 }
 
 /* END OF FAQ'S */
