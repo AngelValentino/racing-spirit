@@ -201,6 +201,10 @@ main {
   padding: var(--base-desktop-padding);
 }
 
+.main-about {
+  max-width: 920px;
+}
+
 @media screen and (max-width: 600px) {
   main {
     padding: var(--base-mobile-padding);

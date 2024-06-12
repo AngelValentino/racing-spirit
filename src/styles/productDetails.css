@@ -362,6 +362,8 @@
 
 /* END OF RECOMMENDED PRODUCTS */
 
+/* HOVER CAPABLE DEVICES */
+
 @media screen and (hover: hover) {
   
   /* SLIDER CONTROLS */
@@ -403,6 +405,8 @@
   }
   /* END OF PRODUCT DETAILS */
 }
+
+/* END OF HOVER CAPABLE DIVCES */
 
 /* ACTIVE */
 

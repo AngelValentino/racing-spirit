@@ -44,7 +44,7 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
             style={getButtonStyle(fact)}
             onClick={() => toggle(fact)}
           >
-            <h2>{isFaqs ? fact.title : fact.title.toUpperCase()}</h2>
+            {isFaqs ? <h3 className="accordion__faqs-title">{fact.title}</h3> : <h2 className="accordion__product-details-title">{fact.title.toUpperCase()}</h2>}
             {isFaqs 
               ?
                 <svg className={fact.toggled ? 'accordion__plus-icon accordion__plus-icon--open' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

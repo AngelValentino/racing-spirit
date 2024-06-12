@@ -7,8 +7,10 @@ export const frequentAskedQuestions = {
         return (
           <>
             <p>
-              We print and despatch all orders ourselves to orders, this can take 2-5 working days depending how busy we are at any time. We do our best to work as fast as we can so you get your order quickly, efficiently and of the best quality
+              We print and despatch all orders ourselves to orders, this can take 2-5 working days depending how busy we are at any time. We do our best to work as fast as we can so you get your order quickly, efficiently and of the best quality.
             </p>
+            <p>Thanks</p>
+            <p>Racing Spirit</p>
           </>
         );
       } 
@@ -26,6 +28,7 @@ export const frequentAskedQuestions = {
             </p>
             <p>
               UK Shipping is Free on orders over £100
+              <br />
               Orders below £100 Shipping is charged at £3.45 for standard 2-3 day delivery.
             </p>
             <p>
@@ -48,13 +51,14 @@ export const frequentAskedQuestions = {
               We ship all EU orders via Whistl.
             <br />
               You Should have a email with a tracking number, clicking the number should take you directly to the tracking link. If for some reason it doesn't, you can track your order here
+              <br />
               <a href="https://web.parcelhub.net/tracking/">https://web.parcelhub.net/tracking/</a>
             </p>
             <p>
               Once in your country Whistl will hand it to a national courier service to deliver to your door, this can also be found on the tracking link above.
             </p>
             <p>
-              We Pre-Pay EU orders import VAT and Duties via our IOSS number. So you will not need to pay anything in the EU.
+              <strong>We Pre-Pay EU orders import VAT and Duties via our IOSS number. So you will not need to pay anything in the EU.</strong>
             </p>
             <p>
               EU Shipping is Free on orders above €120
@@ -78,9 +82,9 @@ export const frequentAskedQuestions = {
               All USA orders are dispatched via Whistl and given to USPS to deliver to your door.
             </p>
             <p>
-              Tracking can be found in your dispatch email with a tracking number, click that or track it Here:
+              Tracking can be found in your dispatch email with a tracking number, click that or track it here
               <br />
-              <a href="https://web.parcelhub.net/tracking/"> https://web.parcelhub.net/tracking/</a>
+              <a href="https://web.parcelhub.net/tracking/">https://web.parcelhub.net/tracking/</a>
             </p>
             <p>
               Deliveries usually take 4-9 working days.
@@ -88,9 +92,9 @@ export const frequentAskedQuestions = {
               You will NOT be charged any import fees for USA.
             </p>
             <p>
-              Spend over £100 / $128 to get Free Shipping.
+              Spend over £100 / $128 to get Free Shipping
               <br />
-              Orders up to £100 / $128 are charged at £8.95/ $12.
+              Orders up to £100 / $128 are charged at £8.95/ $12
             </p>
             <p>
               While most orders are processed the next working day, please allow us 1-3 days to print, pack and despatch your order! We always work as fast as we can to get your orders out our door and in your hands.
@@ -192,6 +196,7 @@ export const frequentAskedQuestions = {
               See more details at
               <br />
               <a href="https://www.klarna.com/">Klarna</a>
+              <br />
               <a href="https://www.clearpay.com/">Clearpay</a>
             </p>
           </>
@@ -242,17 +247,16 @@ export const frequentAskedQuestions = {
             <p>
             Please post your order/ or item back to us with a note of your order number and if you would like a refund or state what item and size you would like to exchange it for and we will send out asa
             </p>
-            <address>
-              Our returns address is
-              <br />
+            <p>Our returns address is</p>
+            <address className="faqs-address">
               High Dive Apparel
-              <br />
+              <hr className="address__text-spacing" />
               Unit C
-              <br />
+              <hr className="address__text-spacing" />
               5 Harrow Road
-              <br />
+              <hr className="address__text-spacing" />
               Hereford
-              <br />
+              <hr className="address__text-spacing" />
               HR4 0EH
             </address>
             <p>We recommend using a tracked service if you are outside the UK.
@@ -275,10 +279,10 @@ export const frequentAskedQuestions = {
               We are very sorry to hear this, we ready to help with anything!
             </p>
             <p>
-              for DoomsdayCo Email jamie@doomsdayco.com
+              for DoomsdayCo Email <a href="">jamie@doomsdayco.com</a>
             </p>
             <p>
-              For High Dive Apparel Email jamie@highdiveapparel.com
+              For High Dive Apparel Email <a href="">jamie@highdiveapparel.com</a>
             </p>
             <p>
               and we will resolve anything needed as quickly as possible.
@@ -297,10 +301,10 @@ export const frequentAskedQuestions = {
               We are ready to help with anything!
             </p>
             <p>
-              for DoomsdayCo Email jamie@doomsdayco.com
+              for DoomsdayCo Email <a href="">jamie@doomsdayco.com</a>
             </p>
             <p>
-              For High Dive Apparel Email jamie@highdiveapparel.com
+              For High Dive Apparel Email <a href="">jamie@highdiveapparel.com</a>
             </p>
             <p>
               and we will resolve anything needed as quickly as possible.

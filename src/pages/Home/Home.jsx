@@ -6,14 +6,10 @@ import { Link } from "react-router-dom";
 import { gridProductsImagesData } from "../../data/gridProductsImagesData";
 
 const Home = () => {
+  
   useEffect(() => {
-    console.log('on render');
     document.body.querySelector('main').classList.add('main-home');
-
-    return () => {
-      console.log('on dismount');
-      document.body.querySelector('main').classList.remove('main-home');
-    }
+    return () => document.body.querySelector('main').classList.remove('main-home');
   }, [])
 
   return ( 

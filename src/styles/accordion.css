@@ -1,7 +1,3 @@
-.accordion__description {
-  margin: 0 0 25px;
-}
-
 .accordion {
   list-style: none;
 }
@@ -11,7 +7,6 @@
 }
 
 .accordion-faqs {
-  max-width: 920px;
   border: 1px solid #ddd;
   margin: 0 auto;
   border-radius: 10px;
@@ -34,7 +29,7 @@
   padding: 22px 0;
 }
 
-.accordion__product-details-title-btn h2 {
+.accordion__product-details-title {
   letter-spacing: 0.1em;
   font-size: 0.9em;
   font-weight: 900;
@@ -46,9 +41,8 @@
   transition: background-color var(--base-transition-duration);
 }
 
-.accordion__faqs-title-btn h2 {
+.accordion__faqs-title {
   font-size: 1.19em;
-  letter-spacing: var(--base-letter-spacing);
   font-weight: 700;
 }
 
@@ -128,6 +122,10 @@
 
 /* PRODUCT DETAILS */
 
+.accordion__description {
+  margin: 0 0 25px;
+}
+
 .accordion__details-text {
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
@@ -157,6 +155,45 @@
 }
 
 /* END OF PRODUCT DETAILS */
+
+/* FAQ's */
+
+.accordion-faqs p {
+  color: #646464;
+  line-height: var(--base-line-height);
+  letter-spacing: var(--base-letter-spacing);
+}
+
+.accordion-faqs p:not(:last-of-type, :first-of-type) {
+  margin: 30px 0;
+}
+
+.accordion-faqs a {
+  color: inherit;
+  text-decoration: none;
+  background: var(--slide-in-and-back-visible);
+  background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
+  /* if em is used instead of px, weird bugs will happen with the
+  underline width at resizing */
+  background-size: 0% 2px, 100% 2px;
+  transition: background-size 0.25s ease-in-out;
+  background-position-x: 0%;
+}
+
+.accordion-faqs a:hover {
+  background-size: 100% 2px, 100% 2px;
+}
+
+.address__text-spacing {
+  margin: 5px 0;
+  border: none;
+}
+
+.faqs-address {
+  margin-bottom: 30px;
+}
+
+/* END OF FAQ'S */
 
 /* HOVER CAPABLE DEVICES */
 
