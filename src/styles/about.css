@@ -64,7 +64,6 @@
   transition: opacity var(--base-transition-duration);
 }
 
-
 .faqs-title__close-icon-btn:hover svg {
   opacity: 1;
 }

@@ -1,3 +1,5 @@
+import ContactForm from "../components/ContactForm";
+
 export const productDetailsFacts = [
   {
     id: '13a9442c-a13c-41d5-8ae0-099aba4394a7',
@@ -80,9 +82,7 @@ export const productDetailsFacts = [
     title:'ask a question',
     renderContent() {
       return (
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, perspiciatis?
-      </p>
+        <ContactForm />
       );
     }
   }

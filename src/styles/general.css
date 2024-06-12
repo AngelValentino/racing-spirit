@@ -184,7 +184,7 @@ main {
   margin: 60px auto;
   max-width: 1300px;
   padding: 0 40px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .main-home {
@@ -208,10 +208,12 @@ main {
 @media screen and (max-width: 600px) {
   main {
     padding: var(--base-mobile-padding);
+    margin: 30px auto;
   }
 
   .main-home__content {
     padding: var(--base-mobile-padding);
+    margin: 60px auto 30px;
   }
 }
 
@@ -481,9 +483,7 @@ footer h2 {
   .footer-social {
     align-self: start;
   }
-}
 
-@media screen and (max-width: 500px) {
   html {
     font-size: 15px;
   }

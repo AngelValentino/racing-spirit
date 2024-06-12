@@ -1,0 +1,91 @@
+.contact-form {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.contact-form__name-email-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contact-form__name-input,
+.contact-form__email-input,
+.contact-form__message-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 0 0 30px;
+  border: 1px solid #e8e8e1;
+  line-height: var(--base-line-height);
+}
+
+
+.contact-form__name-input:focus,
+.contact-form__email-input:focus,
+.contact-form__message-textarea:focus {
+  outline: none;
+  border: 1px solid #1c1d1d;
+}
+
+.contact-form__name-label,
+.contact-form__email-label,
+.contact-form__message-label {
+  font-size: var(--base-font-size);
+  margin: 0 0 10px;
+  display: inline-block;
+  line-height: var(--base-line-height);
+}
+
+.contact-form__message-textarea {
+  min-height: 150px;
+}
+
+.contact-form__submit-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  font-weight: 900;
+  letter-spacing: var(--base-letter-spacing);
+  padding: 11px 22px;
+  line-height: var(--base-line-height);
+  position: relative;
+  transition: background-color 0.25s, color 0.25s, padding-right 0.25s;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.contact-form__submit-btn::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M24 12.16L18.24 6.4v4.24H0v3.04h18.24v4.24z' /%3E%3C/svg%3E");
+  position: absolute;
+  width: 1.45em;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 0;
+  transition: right 0.25s;
+}
+
+.contact-form__submit-btn:is(:hover, :focus-visible) {
+  padding-right: 55px;
+  opacity: 1;
+  transition: opacity 1s, background-color 0.3s, color 0.3s, padding-right 0.3s;
+}
+
+.contact-form__submit-btn:is(:hover, :focus-visible)::after {
+  right: 16px;
+  transition: right 0.3s;
+}
+
+.contact-form__spam-detection-disclaimer {
+  font-size: 0.95rem;
+  line-height: var(--base-line-height);
+  letter-spacing: var(--base-letter-spacing);
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form__name-email-container {
+    display: initial;
+  }
+}
