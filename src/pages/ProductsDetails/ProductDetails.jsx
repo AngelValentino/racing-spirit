@@ -21,7 +21,7 @@ const ProductDetails = () => {
       </section>
       <section className="product-details-recommended">
         <h2 className="product-details-recommended__title">You may also like</h2>
-        <Products key={id + 1} url={productsUrl} addClass="recommended-products-list-grid"/>
+        <Products key={id + 1} url={productsUrl} addClass="recommended-products-list-grid" />
         <ProductCarousel key={id} hidden={true} />
       </section>
     </div>

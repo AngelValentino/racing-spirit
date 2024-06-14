@@ -15,7 +15,6 @@ const ProductBreadcrumbs = ({ jacket }) => {
         </li>
       </ul>
     </nav>
-
   );
 }
  

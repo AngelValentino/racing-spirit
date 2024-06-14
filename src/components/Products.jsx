@@ -4,7 +4,6 @@ import SkeletonProductsList from "../skeletons/SkeletonProductsList";
 import ErrorMessage from "./ErrorMessage";
 import { useRef } from "react";
 
-
 const Products = ({ url, carousel, addClass }) => {
   const { data: jackets, loading, error } = useFetch(url);
   const shuffle = useRef(false)

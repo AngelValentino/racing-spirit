@@ -2,12 +2,9 @@ import { Link } from "react-router-dom";
 import { formatCurrency } from "../utils/formatCurrency";
 
 const Product = ({ jacket }) => {
-
   return ( 
     <li className="product-preview">
-      <Link to={`/jackets/${jacket.id}`} onClick={() => {
-     
-      }}> 
+      <Link to={`/jackets/${jacket.id}`}> 
         <div className="product-preview__image-wrapper">
           <img className="product-preview__image" src={jacket.images[0].regular} alt={jacket.title} />
           <img aria-hidden="true" className="product-preview__image-secondary" src={jacket.images[1].regular} alt='' />

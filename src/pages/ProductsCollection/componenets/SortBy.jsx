@@ -1,20 +1,22 @@
 const SortBy = ({ setUrl, productsUrl }) => {
+  function handleSelect(e) {
+    switch (e.target.value) {
+      case 'featured':
+        setUrl(productsUrl);
+        break;
+      case 'price-descending':
+        setUrl(productsUrl + '?_sort=price&_order=desc');
+        break;
+      case 'price-ascending':
+        setUrl(productsUrl + '?_sort=price');
+        break;
+    }
+  }
+ 
   return ( 
     <div className="sort-by">
       <label className="visually-hidden" htmlFor="sort-by__select">Sort products.</label>
-      <select className="sort-by__select" name="sort-by" id="sort-by__select" onChange={(e) => {
-        switch (e.target.value) {
-          case 'featured':
-            setUrl(productsUrl);
-            break;
-          case 'price-descending':
-            setUrl(productsUrl + '?_sort=price&_order=desc');
-            break;
-          case 'price-ascending':
-            setUrl(productsUrl + '?_sort=price');
-            break;
-        }
-      }}>
+      <select className="sort-by__select" name="sort-by" id="sort-by__select" onChange={handleSelect}>
         <option value="featured">Featured</option>
         <option value="price-descending">Price, high to low</option>
         <option value="price-ascending">Price, low to high</option>

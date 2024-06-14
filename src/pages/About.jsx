@@ -32,7 +32,6 @@ const About = () => {
 
   const handleClearSearchInputAtEsc = (e) => e.key === 'Escape' && clearSearchInput();
 
-
   return ( 
     <>
       <header>  

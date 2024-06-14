@@ -17,20 +17,19 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo, autoPlay }) => {
           className="hero-slider__main-img-container"
         >
           {i === 0 
-          ? 
-            <>
-              <video id="hero-slider__item-1" onClick={() => console.log('click')} className="hero-slider__main-img" autoPlay muted loop ref={heroVideo}>
-                <source src={url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <p className="visually-hidden">A video of a man riding a motorcycle around the desert.</p>
-            </>
-          : <img 
-              id={`hero-slider__item-${i + 1}`}
-              className="hero-slider__main-img hero-slider__main-img-displaced"
-              src={url} 
-              alt={alt} 
-            />
+            ? <>
+                <video id="hero-slider__item-1" onClick={() => console.log('click')} className="hero-slider__main-img" autoPlay muted loop ref={heroVideo}>
+                  <source src={url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p className="visually-hidden">A video of a man riding a motorcycle around the desert.</p>
+              </>
+            : <img 
+                id={`hero-slider__item-${i + 1}`}
+                className="hero-slider__main-img hero-slider__main-img-displaced"
+                src={url} 
+                alt={alt} 
+              />
           }
           <HeroText 
             title={title}
