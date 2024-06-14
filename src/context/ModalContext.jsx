@@ -17,12 +17,7 @@ export function ModalProvider({children}) {
 
   const openModal = (modalType) => {
     setIsOpen(true);
-    if (modalType === 'cart') {
-      setIsCart(true);
-    }
-    if (modalType === 'menu') {
-      setIsCart(false);
-    }
+    setIsCart(modalType === 'cart');
   }
 
   const closeModal = () => {

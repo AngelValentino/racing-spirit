@@ -9,19 +9,35 @@ const HeroSlider = () => {
   const checkCurrentSlide = useRef(0);
   const heroVideo = useRef(null);
   const [isProgressBarStyled, setIsProgressBarStyled] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(true);
 
-  const autoplay = true;
+  // AutoPlay stops when the user tabs out of the page and restarts when they come back.
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        // User tabbed back into the page
+        setAutoPlay(true);
+        setImgIndex(0);
+      } else {
+        // User tabbed out from the page
+        setAutoPlay(false);
+        heroVideo.current.currentTime = 0;
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
 
   function showPrevImage() {
-    setImgIndex((index) => index === 0 ? heroImgsData.length - 1 : index - 1);
+    setImgIndex(index => index === 0 ? heroImgsData.length - 1 : index - 1);
   }
 
   function showNextImage() {
-    setImgIndex((index) => index === heroImgsData.length - 1 ? 0 : index + 1);
+    setImgIndex(index => index === heroImgsData.length - 1 ? 0 : index + 1);
   }
 
   const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(showNextImage, showPrevImage);
-
 
   function getProgressBarStyle() {
     if (isProgressBarStyled && imgIndex !== 0) {
@@ -37,35 +53,38 @@ const HeroSlider = () => {
   
   useEffect(() => {
     let intervalTim;
+    let progressBarTim
     /* Delay to allow the browser to reset the width, also appears 
     just after the hero button. 
     1500ms - HeroTittle(500ms) + HeroButton(1500ms)* Both timers start 
     at the same time so it finnally becomes 1500ms */
-    const progressBarTim = setTimeout(() => {
-      setIsProgressBarStyled(true);
-    }, 1500)
-
-    // Reset hero video
-    if (imgIndex === 0) {
-      heroVideo.current.currentTime = 0;
-      intervalTim = autoplay && setInterval(() => {
-        showNextImage();
-      }, 12500);
+    if (autoPlay) {
+      progressBarTim = setTimeout(() => {
+        setIsProgressBarStyled(true);
+      }, 1500)
+  
+      // Reset hero video
+      if (imgIndex === 0) {
+        heroVideo.current.currentTime = 0;
+        intervalTim = setInterval(() => {
+          showNextImage();
+        }, 12500);
+      } 
+      //Timeout for images
+      else {
+        // 5000ms + 1500ms to wait for the hero title and progress bar to appear
+        intervalTim = setInterval(() => {
+          showNextImage();
+        }, 6500);
+      }
     } 
-    //Timeout for images
-    else {
-      // 5000ms + 1500ms to wait for the hero title and progress bar to appear
-      intervalTim = autoplay && setInterval(() => {
-        showNextImage();
-      }, 6500);
-    }
 
     return () => {
       clearInterval(intervalTim);
       clearTimeout(progressBarTim);
       setIsProgressBarStyled(false);
     };
-  }, [imgIndex]);
+  }, [imgIndex, autoPlay]);
 
   return ( 
     <header>
@@ -76,7 +95,12 @@ const HeroSlider = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <HeroImgs checkCurrentSlide={checkCurrentSlide} imgIndex={imgIndex} heroVideo={heroVideo}/>
+          <HeroImgs 
+            autoPlay={autoPlay} 
+            checkCurrentSlide={checkCurrentSlide} 
+            imgIndex={imgIndex}
+            heroVideo={heroVideo}
+          />
         </div>
         <div className="hero-slider__navigation-btns-container">
           <NavigationBtns imgIndex={imgIndex} setImgIndex={setImgIndex} />

@@ -10,8 +10,6 @@ export function useShoppingCart() {
 export function ShoppingCartProvider({children}) {
   const [cartItems, setCartItems] = useLocalStorage('cartItems', []);
 
-  console.log(cartItems);
-
   const cartQuantity = cartItems.reduce((acc, item) => item.quantity + acc, 0);
 
   function addToCart(id, title, price, imgUrl, size) {

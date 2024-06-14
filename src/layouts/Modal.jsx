@@ -2,9 +2,8 @@ import { useModal } from "../context/ModalContext";
 import Cart from "./Cart/Cart";
 import { useEffect, useRef } from "react";
 import SlideMenu from "./SlideMenu/SlideMenu";
-
 import { Link } from "react-router-dom";
-import '../styles/modal.css'
+import '../styles/modal.css';
 
 const Modal = () => {
   const { 
@@ -67,11 +66,7 @@ const Modal = () => {
   return ( 
     <>
       {isOpen && 
-        <div  className="modal-container" onClick={(e) => {
-          if (e.target.matches('.modal-overlay')) {
-            closeModal();
-          }
-        }}>
+        <div className="modal-container" onClick={e => e.target.matches('.modal-overlay') && closeModal()}>
           <div ref={modalContent} className="modal-content" onKeyDown={trapFocus}>
             <section className="modal-header">
               <h1 className="modal-title">{ isCart 
@@ -92,7 +87,7 @@ const Modal = () => {
           </div>
           <div ref={modalOverlay} className="modal-overlay"></div>
         </div>
-        }
+      }
     </>
   );
 }

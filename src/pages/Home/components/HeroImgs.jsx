@@ -1,7 +1,7 @@
 import HeroText from "./HeroText";
 import { heroImgsData } from "../../../data/heroImgsData";
 
-const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo }) => {
+const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo, autoPlay }) => {
 
   return ( 
     <>
@@ -29,6 +29,7 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo }) => {
             heroTitle={heroTitle} 
             imgIndex={imgIndex}
             i={i}
+            autoPlay={autoPlay}
           />
         </div>
       ))}
