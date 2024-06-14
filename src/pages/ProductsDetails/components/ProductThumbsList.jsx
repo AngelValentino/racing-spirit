@@ -4,6 +4,10 @@ const ProductThumbsList = ({jacket, imgIndex, className, setImgIndex}) => {
     {jacket.images.map((img, i) => (
       <li key={img.small}>
           <img 
+            role="tab"
+            aria-controls={`product-preview-slider__item-${i + 1}`}
+            aria-selected={i === imgIndex}
+            aria-label={`Show image ${i + 1}.`}
             tabIndex="0" 
             className={className}
             style={{border: i === imgIndex ? '2px solid #000' : null}}

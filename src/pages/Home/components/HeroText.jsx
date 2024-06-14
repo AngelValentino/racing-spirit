@@ -34,9 +34,6 @@ const HeroText = ({ i, right, title, btnText, imgIndex, autoPlay }) => {
           </h1>
         </div>
         <Link
-          // Just in case, if innert attribute doesn't end up fully hidding it
-          aria-hidden={imgIndex !== i}
-          tabIndex={imgIndex !== i ? '-1' : '0'}
           style={imgIndex === i && isButtonStyled ? {opacity: 1} : {visibility: 'hidden'}} 
           className="hero-slider__hero-btn" to="/jackets" 
         >

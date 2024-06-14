@@ -12,7 +12,7 @@ const ProductInfo = ({ jacket }) => {
       <ProductBreadcrumbs jacket={jacket}/>
       <div className="product-details-container">
         <ProductPreviewSlider data={jacket}/>
-        <div className="product-details-info">
+        <section className="product-details-info">
           <h1 className="product-details__title">{jacket.title}</h1>
           <h2 className="product-details__price">{formatCurrency(jacket.price)}</h2>
           <p className="product-details__policies">
@@ -26,7 +26,7 @@ const ProductInfo = ({ jacket }) => {
             btnClass="accordion__product-details-title-btn"
             ulClass="accordion-product-details"
           />
-        </div>
+        </section>
       </div>
     </>
   );

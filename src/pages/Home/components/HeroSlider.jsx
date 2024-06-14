@@ -88,8 +88,8 @@ const HeroSlider = () => {
 
   return ( 
     <header>
-      <div className="hero-slider">
-        <div 
+      <section aria-roledescription="carousel" className="hero-slider">
+        <div
           className="hero-slider__main-img-slider-container"     
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
@@ -112,7 +112,7 @@ const HeroSlider = () => {
         <div className="hero-slider__progress-bar-container">
           <div className="hero-slider__progress-bar" style={getProgressBarStyle()}></div>
         </div>
-      </div>
+      </section>
     </header>
   );
 }

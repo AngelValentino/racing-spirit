@@ -7,6 +7,9 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo, autoPlay }) => {
     <>
       {heroImgsData.map(({ url, alt, title, btnText }, i) => (
         <div 
+          aria-roledescription="slide"
+          aria-label={`${i + 1} of ${heroImgsData.length}`}
+          role="tabpanel"
           aria-hidden={imgIndex !== i} 
           inert={imgIndex !== i ? 'true' : null}
           style={{transform: `translateX(${-100 * imgIndex}%)`}} 
@@ -14,11 +17,19 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo, autoPlay }) => {
           className="hero-slider__main-img-container"
         >
           {i === 0 
-          ? <video onClick={() => console.log('click')} className="hero-slider__main-img" autoPlay muted loop src={url} ref={heroVideo}/> 
+          ? 
+            <>
+              <video id="hero-slider__item-1" onClick={() => console.log('click')} className="hero-slider__main-img" autoPlay muted loop ref={heroVideo}>
+                <source src={url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p className="visually-hidden">A video of a man riding a motorcycle around the desert.</p>
+            </>
           : <img 
+              id={`hero-slider__item-${i + 1}`}
               className="hero-slider__main-img hero-slider__main-img-displaced"
               src={url} 
-              alt={`${alt} ${i + 1}`} 
+              alt={alt} 
             />
           }
           <HeroText 
