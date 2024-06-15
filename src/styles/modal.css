@@ -150,8 +150,10 @@
 }
 
 .cart-item__title h2 {
-  font-size: 1.125em;
+  font-size: 1.05em;
   font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
 }
 
 .cart-item__size {

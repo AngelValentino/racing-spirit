@@ -3,7 +3,7 @@ import { useShoppingCart } from "../../../context/ShoppingCartContext";
 import { formatCurrency } from "../../../utils/formatCurrency";
 import { Link } from "react-router-dom";
 import CartItemQty from "./CartItemQty";
-import OrderNote from "../../../components/OrderNote";
+import OrderNote from "./OrderNote";
 
 const CartItemsList = ({ closeBtn }) => {
   const { 

@@ -11,7 +11,7 @@ const NavigationBtns = ({ imgIndex, setImgIndex }) => {
               aria-controls={`hero-slider__item-${i + 1}`}
               aria-selected={i === imgIndex}
               aria-label={`Show image ${i + 1}.`}
-              style={i === imgIndex ? {backgroundColor: 'black'} : {backgroundColor: 'white'}}
+              style={i === imgIndex ? {backgroundColor: '#fff'} : {backgroundColor: '#ffffff5f'}}
               className="hero-slider__navigation-btn" 
               onClick={() => {
                 setImgIndex(i);

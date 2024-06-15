@@ -106,8 +106,16 @@ const HeroSlider = () => {
           <NavigationBtns imgIndex={imgIndex} setImgIndex={setImgIndex} />
         </div>
         <div className="hero-slider__arrow-btns-container">
-          <button aria-label="Show previous image." className="hero-slider__prev-btn" onClick={showPrevImage}>left</button>
-          <button aria-label="Show next image." className="hero-slider__next-btn" onClick={showNextImage}>right</button>
+          <button aria-label="Show previous image." className="hero-slider__prev-btn" onClick={showPrevImage}>
+            <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" fillRule="evenodd" d="m16.75 17l-7.5-5l7.5-5a.901.901 0 1 0-1-1.5l-8.502 5.668a1 1 0 0 0 0 1.664L15.75 18.5a.901.901 0 1 0 1-1.5" />
+            </svg>
+          </button>
+          <button aria-label="Show next image." className="hero-slider__next-btn" onClick={showNextImage}>
+            <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" fillRule="evenodd" d="m7.25 17l7.5-5l-7.5-5a.901.901 0 1 1 1-1.5l8.502 5.668a1 1 0 0 1 0 1.664L8.25 18.5a.901.901 0 1 1-1-1.5" />
+            </svg>
+          </button>
         </div>
         <div className="hero-slider__progress-bar-container">
           <div className="hero-slider__progress-bar" style={getProgressBarStyle()}></div>
@@ -116,5 +124,5 @@ const HeroSlider = () => {
     </header>
   );
 }
- 
+
 export default HeroSlider;

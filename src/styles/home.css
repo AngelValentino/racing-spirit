@@ -138,21 +138,25 @@
 }
 
 .hero-slider__navigation-btn {
-  border: 2px solid #000;
-  width: 15px;
-  height: 15px;
+  background-color: #ffffff5f;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-}
-
-.hero-slider__navigation-btn:focus-visible {
-  outline: 1px solid #000;
 }
 
 .hero-slider__prev-btn, 
 .hero-slider__next-btn {
-  background-color: black;
-  color: white;
+  background-color: #fff;
+  color: #000;
   padding: 10px;
+  border-radius: 50%;
+  line-height: 0;
+  box-shadow: 0 5px 5px #0000001a;
+}
+
+.hero-slider__prev-btn svg, 
+.hero-slider__next-btn svg {
+  width: 1.25em;
 }
 
 .hero-slider__prev-btn {
@@ -288,12 +292,13 @@
     transition: right 0.5s;
   }
 
-  .hero-slider__navigation-btn:is(:hover, :focus-visible) {
+  .hero-slider__prev-btn:is(:hover, :focus-visible), 
+  .hero-slider__next-btn:is(:hover, :focus-visible) {
     transform: scale(1.1);
   }
 
-  .hero-slider__arrow-btns-container button:is(:hover, :focus-visible) {
-    background-color: red;
+  .hero-slider__navigation-btn:is(:hover, :focus-visible) {
+    transform: scale(1.1);
   }
   /*END OF HERO SLIDER */
 
@@ -320,8 +325,33 @@
 
 /* END OF HOVER CAPABLE DEVICES */
 
+/* ACTIVE */
+
+.hero-slider__prev-btn:active, 
+.hero-slider__next-btn:active {
+  transform: scale(1);
+}
+
+@media screen and (hover: none) {
+  .hero-slider__prev-btn:active, 
+  .hero-slider__next-btn:active {
+    transform: scale(1.1);
+  }
+}
+
+/* END OF ACTIVE */
 
 @media screen and (max-width: 600px) {
+  /* HERO SLIDER */
+  .hero-slider__arrow-btns-container {
+    right: 20px;
+  }
+
+  .hero-slider__prev-btn svg, 
+  .hero-slider__next-btn svg {
+    width: 1em;
+  }
+
   .hero-slider__navigation-btns-list {
     padding: var(--base-mobile-padding);
   }
@@ -342,7 +372,9 @@
   .hero-slider__hero-btn::after {
     width: 1.5em;
   }
+  /* END OF HERO SLIDER */
 
+  /* MAIN HOME CAROUSEL */
   .main-home__carousel-section-btn-container {
     text-align: center;
     margin: 40px 0 65px;
@@ -353,4 +385,5 @@
     grid-template-columns: 1fr;
     grid-auto-rows: 150px;
   }
+  /* END OF MAIN HOME CAROUSEL */
 }

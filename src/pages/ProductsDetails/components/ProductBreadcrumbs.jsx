@@ -11,7 +11,7 @@ const ProductBreadcrumbs = ({ jacket }) => {
           <Link to="/jackets">Jackets</Link>
         </li>
         <li aria-current="page">
-          { jacket.title }
+          <p className="breadcrumb__current-page-product">{ jacket.title }</p>
         </li>
       </ul>
     </nav>

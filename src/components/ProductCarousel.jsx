@@ -28,7 +28,7 @@ const ProductCarousel = ({ hidden }) => {
         nextBtn.current.style.display = 'none';
     } 
     else if (currentScrollLeft < maxScrollLeft) {
-      nextBtn.current.style.display = 'flex';
+      nextBtn.current.style.display = 'initial';
     }
 
     if (currentScrollLeft === 0) {
@@ -36,7 +36,7 @@ const ProductCarousel = ({ hidden }) => {
         prevBtn.current.style.display = 'none';
     } 
     else if (currentScrollLeft !== 0)
-      prevBtn.current.style.display = 'flex';
+      prevBtn.current.style.display = 'initial';
   }
 
   return ( 
