@@ -30,7 +30,7 @@
 .contact-form__email-label,
 .contact-form__message-label {
   font-size: var(--base-font-size);
-  margin: 0 0 10px;
+  padding: 0 0 10px;
   display: block;
   line-height: var(--base-line-height);
 }
