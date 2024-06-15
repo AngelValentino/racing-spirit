@@ -17,11 +17,9 @@ const Modal = () => {
   } = useModal();
   const closeBtn = useRef(null);
 
-  function closeModalAtEsc(e) {
-    if (e.key === 'Escape') {
-      closeModal();
-    }
-  }
+  const closeModalAtEsc = e => e.key === 'Escape' && closeModal();
+
+  const closeModalAtOverlayClick = e => e.target.matches('.modal-overlay') && closeModal();
 
   function trapFocus(e) {
     const focusableLms = modalContent.current.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
@@ -55,7 +53,7 @@ const Modal = () => {
       document.body.style.overflow = 'hidden';
       modalContent.current.style.right = 0;
       modalOverlay.current.style.opacity = 1;
-    } 
+    }  
 
     return () => {
       clearTimeout(timeoutId.current);
@@ -66,7 +64,7 @@ const Modal = () => {
   return ( 
     <>
       {isOpen && 
-        <div className="modal-container" onClick={e => e.target.matches('.modal-overlay') && closeModal()}>
+        <div className="modal-container" onClick={closeModalAtOverlayClick}>
           <div ref={modalContent} className="modal-content" onKeyDown={trapFocus}>
             <section className="modal-header">
               <h1 className="modal-title">

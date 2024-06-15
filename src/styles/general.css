@@ -179,20 +179,18 @@ body {
 /* END OF NAVBAR */
 
 /* MAIN */
-/* TODO main class needs to be refactored to match each page */
 
 main {
   margin: 60px auto;
   max-width: 1300px;
   padding: 0 40px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .main-home {
   margin: 60px auto;
   max-width: none;
   padding: 0;
-  min-height: 100vh;
   margin: 0;
 }
 
@@ -206,9 +204,18 @@ main {
   max-width: 920px;
 }
 
+.main-contact {
+  margin: 100px auto 175px;
+  max-width: 920px;
+}
+
 @media screen and (max-width: 600px) {
   main {
     padding: var(--base-mobile-padding);
+    margin: 30px auto;
+  }
+
+  .main-contact {
     margin: 30px auto;
   }
 

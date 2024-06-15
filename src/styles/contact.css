@@ -1,7 +1,3 @@
-.contact {
-  margin: 100px 0 175px;
-}
-
 .contact-page-title {
   margin-bottom: 50px;
   text-align: center;
@@ -13,9 +9,5 @@
 @media screen and (max-width: 600px) {
   .contact-page-title {
     font-size: 1.9rem;
-  }
-
-  .contact {
-    margin: 0;
   }
 }

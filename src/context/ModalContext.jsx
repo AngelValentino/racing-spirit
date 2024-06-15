@@ -7,7 +7,7 @@ export function useModal() {
   return useContext(ModalContext);
 }
 
-export function ModalProvider({children}) {
+export function ModalProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isCart, setIsCart] = useState(false);
   const lastFocusableLm = useRef(null);
@@ -15,19 +15,21 @@ export function ModalProvider({children}) {
   const modalOverlay = useRef(null);
   const timeoutId = useRef(null);
 
-  const openModal = (modalType) => {
+  const openModal = modalType => {
     setIsOpen(true);
     setIsCart(modalType === 'cart');
   }
 
   const closeModal = () => {
     document.body.style.overflow = 'auto';
-    modalContent.current.style.right = '-500px';
+    modalContent.current.style.right = '-' + (modalContent.current.offsetWidth + 50) + 'px';
     modalOverlay.current.style.opacity = 0;
+    modalContent.current.style.transition = 'right 0.25s';
+    modalOverlay.current.style.transition = 'opacity 0.25s';
     timeoutId.current = setTimeout(() => {
       setIsOpen(false);
       lastFocusableLm.current.focus();
-    }, 500);
+    }, 250);
   }
 
   return (

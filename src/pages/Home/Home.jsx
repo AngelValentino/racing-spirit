@@ -6,13 +6,8 @@ import { Link } from "react-router-dom";
 import { gridProductsImagesData } from "../../data/gridProductsImagesData";
 
 const Home = () => {
-  useEffect(() => {
-    document.body.querySelector('main').classList.add('main-home');
-    return () => document.body.querySelector('main').classList.remove('main-home');
-  }, [])
-
   return ( 
-    <>
+    <main className="main-home">
       <HeroSlider />
       <div className="main-home__content">
         <section className="main-home__carousel-section">
@@ -30,7 +25,7 @@ const Home = () => {
           ))}
         </section>
       </div>
-    </>
+    </main>
   );
 }
  

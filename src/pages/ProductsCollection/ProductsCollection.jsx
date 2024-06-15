@@ -8,7 +8,7 @@ const ProductsCollection = () => {
   const [ url, setUrl ] = useState(productsUrl)
 
   return ( 
-    <>
+    <main>
       <header>
         <h1 className="products-collection-title">Jackets</h1> 
       </header>
@@ -16,7 +16,7 @@ const ProductsCollection = () => {
         <SortBy setUrl={setUrl} productsUrl={productsUrl} />
       </div>
       <Products url={url} addClass="products-list-grid"/>
-    </>
+    </main>
   );
 }
  

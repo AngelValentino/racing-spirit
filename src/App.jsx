@@ -15,16 +15,14 @@ const App = () => {
       <ShoppingCartProvider>
         <ModalProvider>
           <Navbar />
-          <main>
-            <Routes>
-              <Route index element={<Home />}/>
-              <Route path="jackets" element={<ProductsCollection />}/>
-              <Route path="about" element={<About />}/>
-              <Route path="contact" element={<Contact />}/>
-              <Route path="jackets/:id" element={<ProductDetails />}/>
-              <Route path="*" element={<NotFound/>}/>
-            </Routes>
-          </main>
+          <Routes>
+            <Route index element={<Home />}/>
+            <Route path="jackets" element={<ProductsCollection />}/>
+            <Route path="about" element={<About />}/>
+            <Route path="contact" element={<Contact />}/>
+            <Route path="jackets/:id" element={<ProductDetails />}/>
+            <Route path="*" element={<NotFound/>}/>
+          </Routes>
           <Footer />
         </ModalProvider>
       </ShoppingCartProvider>

@@ -41,13 +41,13 @@ const HeroSlider = () => {
 
   function getProgressBarStyle() {
     if (isProgressBarStyled && imgIndex !== 0) {
-      return {width: '105%'};
+      return { width: '105%' };
     } 
     else if (isProgressBarStyled) {
-      return {width: '103%', transition: 'width 11s linear'};
+      return { width: '103%', transition: 'width 11s linear' };
     } 
     else {
-      return {width: 0, transition: 'none'};
+      return { width: 0, transition: 'none' };
     }
   }
   

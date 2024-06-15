@@ -8,11 +8,6 @@ const About = () => {
   const searchIcon = useRef(null);
   const closeBtn = useRef(null);
 
-  useEffect(() => {
-    document.body.querySelector('main').classList.add('main-about');
-    return () => document.body.querySelector('main').classList.remove('main-about');
-  }, []);
-
   function showCloseBtn() {
     searchIcon.current.style.display = 'none';
     closeBtn.current.style.display = 'initial'
@@ -20,7 +15,7 @@ const About = () => {
 
   function hideCloseBtn() {
     searchIcon.current.style.display = 'initial';
-    closeBtn.current.style.display = 'none'
+    closeBtn.current.style.display = 'none';
   }
 
   const handleSearch = (e) => e.target.value !== '' ? showCloseBtn() : hideCloseBtn(); 
@@ -33,7 +28,7 @@ const About = () => {
   const handleClearSearchInputAtEsc = (e) => e.key === 'Escape' && clearSearchInput();
 
   return ( 
-    <>
+    <main className="main-about">
       <header>  
         <h1 className="faqs-page-title">FAQ's</h1>
       </header>
@@ -101,7 +96,7 @@ const About = () => {
           btnClass="accordion__faqs-title-btn"
         />
       </section>
-    </>
+    </main>
   );
 }
  
