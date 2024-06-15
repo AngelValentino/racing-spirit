@@ -19,7 +19,6 @@
   line-height: var(--base-line-height);
 }
 
-
 .contact-form__name-input:focus,
 .contact-form__email-input:focus,
 .contact-form__message-textarea:focus {
@@ -67,25 +66,35 @@
   transition: right 0.25s;
 }
 
-.contact-form__submit-btn:is(:hover, :focus-visible) {
-  padding-right: 55px;
-  opacity: 1;
-  transition: opacity 1s, background-color 0.3s, color 0.3s, padding-right 0.3s;
-}
-
-.contact-form__submit-btn:is(:hover, :focus-visible)::after {
-  right: 16px;
-  transition: right 0.3s;
-}
-
 .contact-form__spam-detection-disclaimer {
   font-size: 0.95rem;
   line-height: var(--base-line-height);
   letter-spacing: var(--base-letter-spacing);
 }
 
+/* HOVER CAPABLE DEVICES */
+
+@media screen and (hover: hover) {
+  .contact-form__submit-btn:is(:hover, :focus-visible) {
+    padding-right: 55px;
+    opacity: 1;
+    transition: opacity 1s, background-color 0.3s, color 0.3s, padding-right 0.3s;
+  }
+  
+  .contact-form__submit-btn:is(:hover, :focus-visible)::after {
+    right: 16px;
+    transition: right 0.3s;
+  }
+}
+
+/* END OF HOVER CAPABLE DEVICES */
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 600px) {
   .contact-form__name-email-container {
     display: initial;
   }
 }
+
+/* END OF MEDIA QUERIES */

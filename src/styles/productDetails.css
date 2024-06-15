@@ -237,11 +237,6 @@
   outline: 2px solid #fff;
 }
 
-.product-details__size-label:hover {
-  outline: 2px solid #000;
-  background-color: #f7f7f7;
-}
-
 .product-details__size-input:focus-visible + .product-details__size-label {
   outline: 2px solid #000;
   background-color: #f7f7f7;
@@ -301,10 +296,6 @@
   margin: 0 0 25px;
   transition: background-color var(--base-transition-duration);
   border: 1px solid #ffc520;
-}
-
-.product-details__submit-payment:is(:hover, :focus-visible) {
-  background-color: #f6b600;
 }
 
 .product-details__payment-img {
@@ -390,6 +381,11 @@
     background-size: var(--slide-underline-hover), var(--slide-underline-hover);
   }
 
+  .product-details__size-label:hover {
+    outline: 2px solid #000;
+    background-color: #f7f7f7;
+  }
+
   .product-details__submit-size-btn:is(:hover, :focus-visible)::after {
     right: 30px;
     transition: right 0.30s;
@@ -397,6 +393,10 @@
   
   .product-details__submit-size-btn:is(:hover, :focus-visible) {
     padding-right: 50px;
+  }
+
+  .product-details__submit-payment:is(:hover, :focus-visible) {
+    background-color: #f6b600;
   }
 
   .product-details__more-payments-link:is(:hover, :focus-visible) {

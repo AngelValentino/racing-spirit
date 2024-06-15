@@ -64,11 +64,6 @@
   transition: opacity var(--base-transition-duration);
 }
 
-.faqs-title__close-icon-btn:hover svg {
-  opacity: 1;
-}
-
-
 .faqs-title__search-input:focus {
   outline: none;
   border: 1px solid #8c8c8c;
@@ -91,8 +86,22 @@
  width: 1.35em;
 }
 
+/* HOVER CAPABLE DEVICES */
+
+@media screen and (hover: hover) {
+  .faqs-title__close-icon-btn:is(:hover, :focus-visible) svg {
+    opacity: 1;
+  }
+}
+
+/* END OF HOVER CAPABLE DEVICES */
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 600px) {
   .faqs-page-title {
     margin-bottom: 50px;
   }
 }
+
+/* END OF MEDIA QUERIES */

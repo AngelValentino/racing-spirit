@@ -180,10 +180,6 @@
   background-position-x: 0%;
 }
 
-.accordion-faqs a:hover {
-  background-size: 100% 2px, 100% 2px;
-}
-
 .address__text-spacing {
   margin: 5px 0;
   border: none;
@@ -203,7 +199,11 @@
 
 @media screen and (hover: hover) {
   /* FAQ'S */
-  .accordion__faqs-title-btn:hover .accordion__plus-icon {
+  .accordion-faqs a:is(:hover, :focus-visible) {
+    background-size: 100% 2px, 100% 2px;
+  }
+
+  .accordion__faqs-title-btn:is(:hover, :focus-visible) .accordion__plus-icon {
     opacity: 1;
   }
   /* END OF FAQ'S */
