@@ -1,4 +1,4 @@
-import '../styles/loaders.css'
+import '../styles/loaders.css';
 
 const BouncingBallsLoader = () => {
   return ( 

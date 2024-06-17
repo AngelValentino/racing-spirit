@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Accordion from "../components/Accordion";
 import { frequentAskedQuestions } from "../data/frequentAskedQuestions";
 import '../styles/about.css';
@@ -18,14 +18,14 @@ const About = () => {
     closeBtn.current.style.display = 'none';
   }
 
-  const handleSearch = (e) => e.target.value !== '' ? showCloseBtn() : hideCloseBtn(); 
+  const handleSearch = e => e.target.value !== '' ? showCloseBtn() : hideCloseBtn(); 
 
   function clearSearchInput() {
     serachInput.current.value = '';
     hideCloseBtn();
   }
 
-  const handleClearSearchInputAtEsc = (e) => e.key === 'Escape' && clearSearchInput();
+  const handleClearSearchInputAtEsc = e => e.key === 'Escape' && clearSearchInput();
 
   return ( 
     <main className="main-about">

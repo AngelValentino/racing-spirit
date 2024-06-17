@@ -109,6 +109,15 @@ body {
   background-color: #fff;
 }
 
+.nav-menu__title {
+  justify-self: start;
+}
+
+.nav-menu__title a {
+  display: block;
+  line-height: 0;
+}
+
 .nav-menu__logo {
   width: 200px;
 }
@@ -213,6 +222,11 @@ main {
   min-height: 50vh;
 }
 
+.main-not-found {
+  font-family: "Poppins", sans-serif;
+  min-height: 50vh;
+}
+
 /* END OF MAIN */
 
 /* FOOTER */
@@ -248,13 +262,18 @@ footer h2 {
   justify-items: center;
 }
 
-.footer-title img {
-  width: 12.5em;
+.footer-title {
+  line-height: 0;
+  justify-self: end;
 }
 
 .footer-title a {
-  display: block;
+  display: inline-block;
   line-height: 0;
+}
+
+.footer-title img {
+  width: 12.5em;
 }
 
 .footer-title__desc {

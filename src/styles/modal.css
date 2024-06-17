@@ -49,6 +49,11 @@
   width: 5.3em;
 }
 
+.modal-title a {
+  display: block;
+  line-height: 0;
+}
+
 .modal__close-btn {
   display: flex;
   justify-content: center;

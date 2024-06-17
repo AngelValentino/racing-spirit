@@ -47,7 +47,7 @@ const ProductSizeForm = ({ jacket: {id, title, price, images} }) => {
       <button type="button" className="product-details__submit-payment">
         Buy with
         <span>
-          <img className="product-details__payment-img" src="../../images/paypal-logo.png" alt="paypal" />
+          <img className="product-details__payment-img" src="https://i.imgur.com/P9zxUpf.png" alt="paypal" />
         </span>
       </button>
       <div className="product-details__more-payments-container">
