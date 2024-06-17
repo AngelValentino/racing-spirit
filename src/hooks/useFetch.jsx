@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 const cache = {};
 
 const useFetch = url => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [ data, setData ] = useState(null);
+  const [ loading, setLoading ] = useState(true);
+  const [ error, setError ] = useState(null);
 
   useEffect(() => {
     // Search if the data exists in cache

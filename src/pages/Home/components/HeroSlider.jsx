@@ -5,11 +5,11 @@ import { heroImgsData } from "../../../data/heroImgsData";
 import NavigationBtns from "./NavigationBtns";
 
 const HeroSlider = () => {
-  const [imgIndex, setImgIndex] = useState(0);
+  const [ imgIndex, setImgIndex ] = useState(0);
   const checkCurrentSlide = useRef(0);
   const heroVideo = useRef(null);
-  const [isProgressBarStyled, setIsProgressBarStyled] = useState(false);
-  const [autoPlay, setAutoPlay] = useState(true);
+  const [ isProgressBarStyled, setIsProgressBarStyled ] = useState(false);
+  const [ autoPlay, setAutoPlay ] = useState(true);
 
   // AutoPlay stops when the user tabs out of the page and restarts when they come back.
   useEffect(() => {
@@ -61,7 +61,7 @@ const HeroSlider = () => {
     if (autoPlay) {
       progressBarTim = setTimeout(() => {
         setIsProgressBarStyled(true);
-      }, 1500)
+      }, 1500);
   
       // Reset hero video
       if (imgIndex === 0) {

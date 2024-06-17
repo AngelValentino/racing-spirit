@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const SlideMenuLink = ({url, closeModal, children}) => {
+const SlideMenuLink = ({ url, closeModal, children }) => {
   return ( 
     <li>
       <h2>

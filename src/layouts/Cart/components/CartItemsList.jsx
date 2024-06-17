@@ -6,10 +6,7 @@ import CartItemQty from "./CartItemQty";
 import OrderNote from "./OrderNote";
 
 const CartItemsList = ({ closeBtn }) => {
-  const { 
-    cartItems, 
-    removeFromCart 
-  } = useShoppingCart();
+  const { cartItems, removeFromCart } = useShoppingCart();
   const { closeModal } = useModal();
 
   return ( 

@@ -2,8 +2,8 @@ import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { formatCurrency } from "../../utils/formatCurrency";
 import CartItemsList from "./components/CartItemsList";
 
-const CartModal = ({closeBtn}) => {
-  const { cartItems, } = useShoppingCart();
+const CartModal = ({ closeBtn }) => {
+  const { cartItems } = useShoppingCart();
 
   return ( 
     <>

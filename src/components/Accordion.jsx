@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import '../styles/accordion.css';
 
 const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }) => {
-  const [accordionItems, setAccordionItems] = useState(null);
+  const [ accordionItems, setAccordionItems ] = useState(null);
 
   const isFaqs = ulClass === 'accordion-faqs';
 

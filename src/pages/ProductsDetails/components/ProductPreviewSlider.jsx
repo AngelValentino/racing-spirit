@@ -7,7 +7,7 @@ const ProductPreviewSlider = ({ data: jacket }) => {
   const prevBtn = useRef(null);
   const nextBtn = useRef(null);
   const carousel = useRef(null);
-  const [imgIndex, setImgIndex] = useState(0);
+  const [ imgIndex, setImgIndex ] = useState(0);
 
   useEffect(() => {
     if (imgIndex === carousel.current.children.length - 1) {

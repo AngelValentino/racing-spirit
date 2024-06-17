@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const Products = ({ url, carousel, addClass }) => {
   const { data: jackets, loading, error } = useFetch(url);
-  const shuffle = useRef(false)
+  const shuffle = useRef(false);
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {

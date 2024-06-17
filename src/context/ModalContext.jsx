@@ -8,8 +8,8 @@ export function useModal() {
 }
 
 export function ModalProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isCart, setIsCart] = useState(false);
+  const [ isOpen, setIsOpen ] = useState(false);
+  const [ isCart, setIsCart ] = useState(false);
   const lastFocusableLm = useRef(null);
   const modalContent = useRef(null);
   const modalOverlay = useRef(null);

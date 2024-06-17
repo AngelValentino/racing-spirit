@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const HeroText = ({ i, right, title, btnText, imgIndex, autoPlay }) => {
-  const [isTitleStyled, setIsTitleStyled] = useState(false);
-  const [isButtonStyled, setIsButtonStyled] = useState(false);
+  const [ isTitleStyled, setIsTitleStyled ] = useState(false);
+  const [ isButtonStyled, setIsButtonStyled ] = useState(false);
 
   useEffect(() => {
     const titleTim = setTimeout(() => {

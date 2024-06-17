@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const useSwipe = (onSwipeLeft, onSwipeRight, minSwipeDistance = 25) => {
-  const [touchStartX, setTouchStartX] = useState(null);
-  const [touchStartY, setTouchStartY] = useState(null);
-  const [touchEndX, setTouchEndX] = useState(null);
-  const [touchEndY, setTouchEndY] = useState(null);
+  const [ touchStartX, setTouchStartX ] = useState(null);
+  const [ touchStartY, setTouchStartY ] = useState(null);
+  const [ touchEndX, setTouchEndX ] = useState(null);
+  const [ touchEndY, setTouchEndY ] = useState(null);
 
   const handleTouchStart = (e) => {
     setTouchStartX(e.targetTouches[0].clientX);
