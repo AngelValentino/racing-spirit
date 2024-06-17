@@ -1,11 +1,12 @@
 import '../../styles/productDetails.css'
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import SkeletonProductDetails from '../../skeletons/SkeletonProductDetails';
 import ErrorMessage from '../../components/ErrorMessage';
 import ProductInfo from './components/ProductInfo';
 import Products from '../../components/Products';
 import ProductCarousel from '../../components/ProductCarousel';
+import BouncingBallsLoader from '../../loaders/BouncingBallsLoader';
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -15,7 +16,7 @@ const ProductDetails = () => {
   return ( 
     <main>
       <section className="product-details-wrapper">
-        { loading && <SkeletonProductDetails /> }
+        { loading && <div className="product-details__loader-container"><BouncingBallsLoader /></div> }
         { error && <ErrorMessage error={error} /> }
         { (!loading && !error) && <ProductInfo jacket={jacket} /> } 
       </section>

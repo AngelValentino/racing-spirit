@@ -13,10 +13,7 @@ const SkeletonElement = ({ type, addClass, width, height }) => {
     }
   }
   
-  const styles = {
-    width: width,
-    height: height
-  }
+  const styles = { width: width, height: height }
 
   return ( 
     <div style={styles} className={renderType()} role="alert" aria-busy="true" aria-live="polite" aria-label="Loading..."></div>

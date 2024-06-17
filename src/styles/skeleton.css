@@ -6,12 +6,8 @@
 }
 
 @keyframes skeleton-loading {
-  from {
-    background-color: #eee;
-  }
-  to {
-    background-color: #fafafa;
-  }
+  from { background-color: #eee }
+  to { background-color: #fafafa }
 }
 
 /* SKELETON ELEMENTS */
@@ -111,22 +107,6 @@
 
 /* END OF SKELETON MODIFIERS */
 
-/* PRODUCT DETAILS SKELETON */
-
-.skeleton-product-details__sizes {
-  margin: 55px 0 40px;
-  display: flex;
-  gap: 10px;
-}
-
-@media screen and (max-width: 750px) {
-  .skeleton-product-details__breadcrumb {
-    width: 50%;
-  }
-}
-
-/* END OF PRODUCT DETAILS SKELETON */
-
 /* ERROR MESSAGE */
 
 .error__container {
@@ -155,6 +135,5 @@
     display: none;
   }
 }
-
 
 /* END OF ERROR MESSAGE */
