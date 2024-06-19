@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import '../styles/accordion.css';
-
-const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }) => {
+import Highlighter from "../pages/About/components/Highlighter";
+const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, query }) => {
   const [ accordionItems, setAccordionItems ] = useState(null);
 
   const isFaqs = ulClass === 'accordion-faqs';
@@ -44,14 +44,17 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass }
             style={getButtonStyle(fact)}
             onClick={() => toggle(fact)}
           >
-            {isFaqs ? <h3 className="accordion__faqs-title">{fact.title}</h3> : <h2 className="accordion__product-details-title">{fact.title.toUpperCase()}</h2>}
             {isFaqs 
-              ?
-                <svg aria-hidden="true" focusable="false" role="img" className={fact.toggled ? 'accordion__plus-icon accordion__plus-icon--open' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              ? <h3 className="accordion__faqs-title">
+                  <Highlighter highlight={query}>{fact.title}</Highlighter>
+                </h3> 
+              : <h2 className="accordion__product-details-title">{fact.title.toUpperCase()}</h2>
+            }
+            {isFaqs 
+              ? <svg aria-hidden="true" focusable="false" role="img" className={fact.toggled ? 'accordion__plus-icon accordion__plus-icon--open' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                 </svg>
-              :
-                <svg aria-hidden="true" focusable="false" role="img" className={fact.toggled ? 'accordion__chevron accordion__chevron--open' : 'accordion__chevron'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              : <svg aria-hidden="true" focusable="false" role="img" className={fact.toggled ? 'accordion__chevron accordion__chevron--open' : 'accordion__chevron'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                 </svg>
             }

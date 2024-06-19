@@ -47,11 +47,15 @@
 }
 
 .accordion-faqs li:first-child .accordion__faqs-title-btn {
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0 ;
 }
 
 .accordion-faqs li:last-child .accordion__faqs-title-btn {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px ;
+}
+
+.accordion-faqs li:only-child .accordion__faqs-title-btn {
+  border-radius: 10px;
 }
 
 /* END OF ACCORDION TITLE  */

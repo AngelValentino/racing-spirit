@@ -87,6 +87,18 @@
  width: 1.35em;
 }
 
+.highlighted {
+  background-color: #fbe725;
+}
+
+.no-faqs-found {
+  color: #646464;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem
+}
+
 /* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
