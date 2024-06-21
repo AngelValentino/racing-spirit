@@ -4,9 +4,6 @@
   display: flex;
   padding-top: 100px;
   gap: 0.4rem;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 
 .bouncer div {

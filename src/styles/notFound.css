@@ -19,7 +19,7 @@
 .not-found-header__link {
   text-decoration: none;
   background: var(--slide-in-and-back-visible);
-  background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
+  background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
   background-size: 0% 2px, 100% 2px;
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;
@@ -50,7 +50,7 @@
 .not-found-carousel__link {
   text-decoration: none;
   background: var(--slide-in-and-back-visible);
-  background-image: linear-gradient(#1c1c1c, #1c1c1c), linear-gradient(#cccccc, #cccccc);
+  background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
   background-size: 0% 2px, 100% 2px;
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;

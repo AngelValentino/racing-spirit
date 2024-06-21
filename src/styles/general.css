@@ -32,7 +32,13 @@ fieldset {
 
 html {
   font-size: 16px;
-  --text-main-color: #1c1d1d;
+  --base-text-color: #1c1d1d;
+  --text-secondary: #646464;
+  --text-tertiary: #e8e8e1;
+  --base-black: #1c1d1d;
+  --base-border-color: #e8e8e1;
+  --base-red: #ff4f33;
+  --base-green: #008000;
   --base-max-width: 1300px;
   --base-desktop-padding: 0 40px;
   --base-mobile-padding: 0 20px;
@@ -53,7 +59,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--text-main-color);
+  color: var(--base-text-color);
   min-width: 320px;
 }
 
@@ -71,6 +77,60 @@ body {
   clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
   clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
   white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+.arrow-btn-v1 {
+  overflow: hidden;
+  letter-spacing: var(--base-letter-spacing);
+  padding: 11px 20px;
+  line-height: var(--base-line-height);
+  position: relative;
+  transition: opacity 1s, background-color 0.25s, color 0.25s, padding-right 0.25s;
+  background-color: var(--base-black);
+  color: #fff;
+}
+
+.arrow-btn-v2 {
+  overflow: hidden;
+  padding: 11px 20px;
+  position: relative;
+  transition: padding-right 0.30s;
+  background-color: var(--base-black);
+  color: #fff;
+  width: 100%;
+}
+
+.arrow-btn-v1::after, .arrow-btn-v2::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M24 12.16L18.24 6.4v4.24H0v3.04h18.24v4.24z' /%3E%3C/svg%3E");
+  position: absolute;
+  width: 1.45em;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 0;
+  transition: right 0.25s;
+}
+
+@media screen and (hover: hover) {
+  .arrow-btn-v1:is(:hover, :focus-visible) {
+    padding-right: 55px;
+    opacity: 1;
+    transition: opacity 1s, background-color 0.5s, color 0.5s, padding-right 0.5s;
+  }
+  
+  .arrow-btn-v1:is(:hover, :focus-visible)::after {
+    right: 16px;
+    transition: right 0.5s;
+  }
+
+  .arrow-btn-v2:is(:hover, :focus-visible) {
+    padding-right: 50px;
+  }
+  
+  .arrow-btn-v2:is(:hover, :focus-visible)::after {
+    right: 30px;
+    transition: right 0.30s;
+  }
 }
 
 /* MAIN */

@@ -115,7 +115,7 @@
 
 .error__message {
   padding: 20px 50px;
-  background-color: #ff4f33;
+  background-color: var(--base-red);
   color: #fff;
   border-radius: 2px;
   width: 100%;

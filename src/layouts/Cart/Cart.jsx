@@ -25,7 +25,7 @@ const CartModal = ({ closeBtn }) => {
           <span className="cart-total__price">{formatCurrency(cartItems.reduce((acc, currItem) => acc + currItem.price * currItem.quantity, 0))}</span>
         </h2>
         <small className="cart-footer__small-text">Shipping, taxes, and discount codes calculated at checkout.</small>
-        <button className="cart-footer__checkout-btn">Check out</button>
+        <button className="arrow-btn-v2 cart-footer__checkout-btn">Check out</button>
       </section>
     </>
   );

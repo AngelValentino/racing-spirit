@@ -43,7 +43,7 @@ const ProductSizeForm = ({ jacket: {id, title, price, images} }) => {
         </svg>
         <p>Free worldwide shipping on orders over £314 / €368 / $400</p>
       </div>
-      <button className="product-details__submit-size-btn" type="submit">Add to cart</button>
+      <button className="arrow-btn-v2 product-details__submit-size-btn" type="submit">Add to cart</button>
       <button type="button" className="product-details__submit-payment">
         Buy with
         <span>

@@ -80,7 +80,7 @@
 
 .faqs-section-title__svg {
   width: 1.45em;
-  color: #646464;
+  color: var(--text-secondary);
 }
 
 .faqs-star-svg {
@@ -92,7 +92,7 @@
 }
 
 .no-faqs-found {
-  color: #646464;
+  color: var(--text-secondary);
   text-align: center;
   margin-top: 50px;
   font-family: "Poppins", sans-serif;

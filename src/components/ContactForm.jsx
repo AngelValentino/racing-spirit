@@ -18,7 +18,7 @@ const ContactForm = () => {
       </div>
       <label className="contact-form__message-label" htmlFor="contact-form__message-textarea">Message</label>
       <textarea required className="contact-form__message-textarea" name="message" id="contact-form__message-textarea"></textarea>
-      <button className="contact-form__submit-btn" type="submit">Send</button>
+      <button className="arrow-btn-v1 contact-form__submit-btn" type="submit">Send</button>
       <br />
       <p className="contact-form__spam-detection-disclaimer">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
     </form>
