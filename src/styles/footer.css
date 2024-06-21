@@ -1,0 +1,222 @@
+/* FOOTER */
+
+footer {
+  background-color: #1c1d1d;
+  color: #fff;
+  padding: 80px 0 40px;
+  font-size: 1rem;
+  --footer-base-text: 0.95em;
+  --footer-base-title: 1.125em;
+  --footer-medium-text: 1.05em;
+}
+
+.footer-content-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+footer h2 {
+  font-size: var(--footer-base-title);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  color: #e8e8e1;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0 0 50px;
+  justify-items: center;
+}
+
+.footer-title {
+  line-height: 0;
+  justify-self: end;
+}
+
+.footer-title a {
+  display: inline-block;
+  line-height: 0;
+}
+
+.footer-title img {
+  width: 12.5em;
+}
+
+.footer-title__desc {
+  color: #e8e8e1;
+  line-height: var(--base-line-height);
+  letter-spacing: var(--base-letter-spacing);
+  font-size: var(--footer-base-text);
+}
+
+.footer-links__list {
+  list-style-type: none;
+}
+
+.footer-links__list a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--footer-medium-text);
+  margin-bottom: 14px;
+  background: var(--slide-in-and-back);
+  background-image: linear-gradient(#fff, #fff);
+  transition: background-size var(--base-underline-transition-duration) ease-in-out;
+}
+
+.footer-newsletter__desc {
+  line-height: var(--base-line-height);
+  letter-spacing: var(--base-letter-spacing);
+  margin: 0 0 20px 0;
+  font-size: var(--footer-base-text);
+}
+
+.footer-newsletter__input-wrapper {
+  position: relative;
+  margin: 0 0 10px 0;
+}
+
+.footer-newsletter__email-label {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer-newsletter__email-icon {
+  width: 1.56em;
+  color: white;
+}
+
+.footer-newsletter__input {
+  padding: 8px 10px 8px 45px;
+  width: 100%;
+  background-color: #1c1d1d;
+  border: 1px solid rgba(255, 255, 255, .12);
+  font-size: var(--footer-medium-text);
+}
+
+.footer-newsletter__input:focus::placeholder {
+  color: #fff;
+}
+
+.footer-newsletter__input:focus {
+  outline: 1px solid #fff;
+}
+
+.footer-newsletter__btn {
+  width: 100%;
+  background-color: #e8e8e1;
+  color: black;
+  padding: 8px 10px;
+  font-weight: bold;
+  font-size: var(--footer-medium-text);
+  transition: background-color var(--base-transition-duration), color var(--base-transition-duration);
+}
+
+.footer__social-links {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social-links a {
+  color: inherit;
+  display: block;
+  line-height: 0;
+  transition: transform var(--base-transition-duration), opacity var(--base-transition-duration);
+}
+
+.footer__social-links svg {
+  width: 1.8em;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+.list-payments {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+}
+
+/* END OF FOOTER */
+
+/* HOVER CAPABLE DEVICES */
+
+@media screen and (hover: hover) {
+  .footer-links__list a:is(:hover, :focus-visible) {
+    background-size: var(--slide-underline-hover);
+  }
+
+  .footer-newsletter__btn:is(:hover, :focus-visible) {
+    background-color: #ff4f33;
+    color: #fff;
+  }
+
+  .footer__social-links a:is(:hover, :focus-visible) {
+    transform: translateY(-5px);
+    opacity: 0.9;
+  }
+}
+
+/* END OF HOVER CAPABLE DEVICES */
+
+/* ACTIVE */
+
+  .footer-links__list a:active {
+    background-size: 100% 0.1em;
+  }
+
+  .footer-newsletter__btn:active {
+    background-color: #ff4f33;
+    color: #fff;
+  }
+
+/* END OF ACTIVE */
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 920px) {
+  .footer-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-links {
+    align-self: end;
+  }
+
+  .footer-social {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-info {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .footer-links {
+    align-self: start;
+  }
+
+  .footer-social {
+    align-self: start;
+  }
+}
+
+/* END OF MEDIA QUERIES */

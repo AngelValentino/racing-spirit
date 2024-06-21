@@ -3,6 +3,7 @@ import { useModal } from "../../context/ModalContext";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import MenuButton from "./components/MenuButton";
 import CartButton from "./components/CartButton";
+import '../../styles/navbar.css';
 
 const Navbar = () => {
   const { openModal } = useModal();

@@ -3,6 +3,7 @@ import PaymentsList from "../../components/PaymentsList";
 import FooterTitle from "./components/FooterTitle";
 import FooterMenuLinks from "./components/FooterMenuLinks";
 import FooterNewsletter from "./components/FooterNewsletter";
+import '../../styles/footer.css';
 
 const Footer = () => {
   return ( 
