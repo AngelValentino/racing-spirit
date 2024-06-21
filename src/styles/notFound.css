@@ -16,16 +16,6 @@
   font-size: 0.95rem;
 }
 
-.not-found-header__link {
-  text-decoration: none;
-  background: var(--slide-in-and-back-visible);
-  background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
-  background-size: 0% 2px, 100% 2px;
-  transition: background-size var(--base-underline-transition-duration) ease-in-out;
-  text-decoration: none;
-  color: inherit;
-}
-
 /* END OF NOT FOUND HEADER */
 
 /* NOT FOUND CAROUSEL */
@@ -48,28 +38,10 @@
 }
 
 .not-found-carousel__link {
-  text-decoration: none;
-  background: var(--slide-in-and-back-visible);
-  background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
-  background-size: 0% 2px, 100% 2px;
-  transition: background-size var(--base-underline-transition-duration) ease-in-out;
-  text-decoration: none;
-  color: inherit;
   justify-self: end;
 }
 
 /* END OF NOT FOUND CAROUSEL */
-
-/* HOVER CAPABLE DEVICES */
-
-@media screen and (hover: hover) {
-  .not-found-header__link:is(:hover, :focus-visible), 
-  .not-found-carousel__link:is(:hover, :focus-visible) {
-    background-size: 100% 2px, 100% 2px;
-  }
-}
-
-/* END OF HOVER CAPABLE DEVICES */
 
 /* MEDIA QUERIES */
 

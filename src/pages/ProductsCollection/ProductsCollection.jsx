@@ -10,7 +10,7 @@ const ProductsCollection = () => {
   return ( 
     <main>
       <header>
-        <h1 className="products-collection-title">Jackets</h1> 
+        <h1 className="page-title products-collection-title">Jackets</h1> 
       </header>
       <div className="products-collection-filters">
         <SortBy setUrl={setUrl} productsUrl={productsUrl} />

@@ -65,6 +65,8 @@ body {
 
 /* END OF RESET */
 
+/** REUSABLE COMPONENTS AND CLASSES */
+
 .visually-hidden { 
   border: 0;
   padding: 0;
@@ -79,28 +81,18 @@ body {
   white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
-.arrow-btn-v1 {
-  overflow: hidden;
-  letter-spacing: var(--base-letter-spacing);
-  padding: 11px 20px;
-  line-height: var(--base-line-height);
-  position: relative;
-  transition: opacity 1s, background-color 0.25s, color 0.25s, padding-right 0.25s;
-  background-color: var(--base-black);
-  color: #fff;
-}
+/* AROW BUTTON COMPONENT */
 
-.arrow-btn-v2 {
+.arrow-btn {
   overflow: hidden;
   padding: 11px 20px;
   position: relative;
+  background-color: var(--base-black);
   transition: padding-right 0.30s;
-  background-color: var(--base-black);
   color: #fff;
-  width: 100%;
-}
+} 
 
-.arrow-btn-v1::after, .arrow-btn-v2::after {
+.arrow-btn::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M24 12.16L18.24 6.4v4.24H0v3.04h18.24v4.24z' /%3E%3C/svg%3E");
   position: absolute;
   width: 1.45em;
@@ -111,16 +103,25 @@ body {
   transition: right 0.25s;
 }
 
+.arrow-btn-v1 {
+  letter-spacing: var(--base-letter-spacing);
+  line-height: var(--base-line-height);
+}
+
+.arrow-btn-v2 {
+  width: 100%;
+} 
+
 @media screen and (hover: hover) {
   .arrow-btn-v1:is(:hover, :focus-visible) {
     padding-right: 55px;
     opacity: 1;
-    transition: opacity 1s, background-color 0.5s, color 0.5s, padding-right 0.5s;
+    transition: padding-right 0.3s;
   }
   
   .arrow-btn-v1:is(:hover, :focus-visible)::after {
     right: 16px;
-    transition: right 0.5s;
+    transition: right 0.3s;
   }
 
   .arrow-btn-v2:is(:hover, :focus-visible) {
@@ -129,9 +130,66 @@ body {
   
   .arrow-btn-v2:is(:hover, :focus-visible)::after {
     right: 30px;
-    transition: right 0.30s;
+    transition: right 0.3s;
   }
 }
+
+.arrow-btn:active {
+  opacity: 0.7 !important;
+  transition: all var(--base-transition-duration) !important;
+}
+
+/* END OF AROW BUTTON COMPONENT */
+
+/* CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
+
+.slide-in-and-back-visible-underline {
+  background: var(--slide-in-and-back-visible);
+  background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
+  /* if em is used instead of px, weird bugs will happen with the
+  underline width at resizing, especially for smaller size text */
+  background-size: 0% 2px, 100% 2px;
+  transition: background-size var(--base-underline-transition-duration) ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.slide-in-and-back-visible-underline:is(:hover, :focus-visible) {
+  background-size: 100% 2px, 100% 2px;
+}
+
+.slide-in-and-out-visible-underline {
+  background: var(--slide-in-and-out-visible);
+  background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
+  /* if em is used instead of px, weird bugs will happen with the
+  underline width at resizing, especially for smaller size text */
+  background-size: 0% 2px, 100% 2px;
+  transition: background-size var(--base-underline-transition-duration) ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.slide-in-and-out-visible-underline:is(:hover, :focus-visible) {
+  background-size: 100% 2px, 100% 2px;
+  background-position-x: 0%;
+}
+
+/* END OF CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
+
+/* PAGE TITLE COMPONENT */
+
+.page-title {
+  font-size: var(--base-page-title);
+  text-align: center;
+  margin: 0 0 50px;
+  font-weight: 900;
+  letter-spacing: 0.025rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* END OF PAGE TITLE COMPONENT */
+
+/** END OF REUSABLE COMPONENTS AND CLASSES */
 
 /* MAIN */
 
@@ -194,6 +252,11 @@ main {
     margin: 60px auto 30px;
   }
   /* END OF MAIN */
+
+  .page-title {
+    font-size: 1.9rem;
+    margin: 0 0 30px;
+  }
 }
 
 /* END OF MEDIA QUERIES */

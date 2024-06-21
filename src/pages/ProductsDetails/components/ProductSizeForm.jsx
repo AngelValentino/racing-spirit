@@ -43,7 +43,7 @@ const ProductSizeForm = ({ jacket: {id, title, price, images} }) => {
         </svg>
         <p>Free worldwide shipping on orders over £314 / €368 / $400</p>
       </div>
-      <button className="arrow-btn-v2 product-details__submit-size-btn" type="submit">Add to cart</button>
+      <button className="arrow-btn-v2 arrow-btn product-details__submit-size-btn" type="submit">Add to cart</button>
       <button type="button" className="product-details__submit-payment">
         Buy with
         <span>
@@ -51,7 +51,7 @@ const ProductSizeForm = ({ jacket: {id, title, price, images} }) => {
         </span>
       </button>
       <div className="product-details__more-payments-container">
-        <a className="product-details__more-payments-link" href="#">More payment options</a>
+        <a className="slide-in-and-out-visible-underline product-details__more-payments-link" href="#">More payment options</a>
       </div>
     </form>
   );

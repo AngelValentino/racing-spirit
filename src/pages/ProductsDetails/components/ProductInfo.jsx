@@ -16,7 +16,7 @@ const ProductInfo = ({ jacket }) => {
           <h1 className="product-details__title">{jacket.title}</h1>
           <h2 className="product-details__price">{formatCurrency(jacket.price)}</h2>
           <p className="product-details__policies">
-            Tax included. <Link className="product-details__policies-shipping-link" to="/about">Shipping</Link> calculated at checkout.
+            Tax included. <Link className="slide-in-and-back-visible-underline product-details__policies-shipping-link" to="/about">Shipping</Link> calculated at checkout.
           </p>
           <ProductSizeForm jacket={jacket}/>
           <Accordion 

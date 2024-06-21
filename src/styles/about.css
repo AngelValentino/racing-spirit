@@ -1,10 +1,5 @@
 .faqs-page-title {
-  font-family: "Poppins", sans-serif;
-  font-size: var(--base-page-title);
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 75px;
-  padding: 0 10px;
+  margin-bottom: 75px !important;
 }
 
 .faqs-nav {
@@ -113,7 +108,7 @@
 
 @media screen and (max-width: 600px) {
   .faqs-page-title {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
   }
 }
 

@@ -34,7 +34,7 @@ const About = () => {
   return ( 
     <main className="main-about">
       <header>  
-        <h1 className="faqs-page-title">FAQ's</h1>
+        <h1 className="page-title faqs-page-title">FAQ's</h1>
       </header>
       <FaqsSearchBar query={query} setQuery={setQuery} />
       { checkEmptyFaqs() && <p className="no-faqs-found">No search results found</p>} 

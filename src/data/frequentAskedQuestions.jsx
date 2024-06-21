@@ -54,7 +54,7 @@ export const frequentAskedQuestions = {
             <br />
               You Should have an email with a tracking number, clicking the number should take you directly to the tracking link. If for some reason it doesn't, you can track your order here
               <br />
-              <a href="https://web.parcelhub.net/tracking/">https://web.parcelhub.net/tracking/</a>
+              <a className="slide-in-and-back-visible-underline" href="https://web.parcelhub.net/tracking/">https://web.parcelhub.net/tracking/</a>
             </p>
             <p>
               Once in your country Whistl will hand it to a national courier service to deliver to your door, this can also be found on the tracking link above.
@@ -88,7 +88,7 @@ export const frequentAskedQuestions = {
             <p>
               Tracking can be found in your dispatch email with a tracking number, click that or track it here
               <br />
-              <a href="https://web.parcelhub.net/tracking/">https://web.parcelhub.net/tracking/</a>
+              <a className="slide-in-and-back-visible-underline" href="https://web.parcelhub.net/tracking/">https://web.parcelhub.net/tracking/</a>
             </p>
             <p>
               <strong>
@@ -121,7 +121,7 @@ export const frequentAskedQuestions = {
               All orders are dispatched via Landmark Global and given to a national courier to deliver to your door.
             </p>
             <p>
-            Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a href="https://track.landmarkglobal.com/">here</a>.
+            Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
             </p>
             <p>
               <strong>
@@ -168,7 +168,7 @@ export const frequentAskedQuestions = {
         return (
           <>
             <p>
-              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a href="https://track.landmarkglobal.com/">here</a>.
+              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
               <br />
               If you havent seen an email with the subject line, "it's on its way" please check your spam folder.
               <br />
@@ -207,9 +207,9 @@ export const frequentAskedQuestions = {
             <p>
               See more details at
               <br />
-              <a href="https://www.klarna.com/">Klarna</a>
+              <a className="slide-in-and-back-visible-underline" href="https://www.klarna.com/">Klarna</a>
               <br />
-              <a href="https://www.clearpay.com/">Clearpay</a>
+              <a className="slide-in-and-back-visible-underline" href="https://www.clearpay.com/">Clearpay</a>
             </p>
           </>
         );
@@ -239,7 +239,7 @@ export const frequentAskedQuestions = {
         return (
           <>
             <p>
-              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a href="https://track.landmarkglobal.com/">here</a>.
+              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
               <br />
               If you haven't seen an email with the subject line, "it's on its way" please check your spam folder.If your still not sure, email <strong>racingSpirit@gmail.com</strong>.
             </p>
@@ -292,7 +292,7 @@ export const frequentAskedQuestions = {
               We are very sorry to hear this, we ready to help with anything!
             </p>
             <p>
-              Email <a href="mailto:racingSpirit@gmail.com">racingSpirit@gmail.com</a>
+              Email <a className="slide-in-and-back-visible-underline" href="mailto:racingSpirit@gmail.com">racingSpirit@gmail.com</a>
             </p>
             <p>
               and we will resolve anything needed as quickly as possible.
@@ -311,7 +311,7 @@ export const frequentAskedQuestions = {
               We are ready to help with anything!
             </p>
             <p>
-              Email <a href="mailto:racingSpirit@gmail.com">racingSpirit@gmail.com</a>
+              Email <a className="slide-in-and-back-visible-underline" href="mailto:racingSpirit@gmail.com">racingSpirit@gmail.com</a>
             </p>
             <p>
               and we will resolve anything needed as quickly as possible.

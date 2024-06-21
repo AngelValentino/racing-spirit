@@ -13,7 +13,7 @@ const Home = () => {
         <section className="main-home__carousel-section">
           <ProductCarousel />
           <div className="main-home__carousel-section-btn-container">
-            <Link to="/jackets" className="arrow-btn-v1 main-home__carousel-section-btn">View all</Link>
+            <Link to="/jackets" className="arrow-btn-v1 arrow-btn main-home__carousel-section-btn">View all</Link>
           </div>
         </section>
         <section className="main-home__grid-products-links">

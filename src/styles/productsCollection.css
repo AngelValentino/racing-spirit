@@ -1,12 +1,3 @@
-.products-collection-title {
-  font-size: var(--base-page-title);
-  text-align: center;
-  margin:  0 0 50px;
-  font-weight: 900;
-  letter-spacing: 0.025rem;
-  font-family: "Poppins", sans-serif;
-}
-
 /* SORT BY */
 
 .products-collection-filters {
@@ -163,14 +154,6 @@
   .sort-by {
     grid-column: 2 / 3;
   } 
-}
-
-@media screen and (max-width: 600px) {
-  .products-collection-title {
-    font-size: 1.9rem;
-    margin:  0 0 30px;
-    font-family: "Poppins", sans-serif;
-  }
 }
 
 @media screen and (max-width: 500px) {

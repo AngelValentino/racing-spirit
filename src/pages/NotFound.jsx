@@ -8,12 +8,12 @@ const NotFound = () => {
       <header className="not-found-header">
         <h1 className="not-found-header__title">404 Page Not Found</h1>
         <p className="not-found-header__desc">The page you were looking for does not exist.</p>
-        <Link className="not-found-header__link" to="/">Continue shopping</Link>
+        <Link className="slide-in-and-back-visible-underline not-found-header__link" to="/">Continue shopping</Link>
       </header>
       <section className="not-found-carousel">
         <div className="not-found-carousel__title-container">
           <h2 className="not-found-carousel__title">Popular picks</h2>
-          <Link to="/jackets" className="not-found-carousel__link">View all</Link>
+          <Link to="/jackets" className="slide-in-and-back-visible-underline not-found-carousel__link">View all</Link>
         </div>
         <ProductCarousel />
       </section>

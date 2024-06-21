@@ -35,7 +35,7 @@ const HeroText = ({ i, right, title, btnText, imgIndex, autoPlay }) => {
         </div>
         <Link
           style={imgIndex === i && isButtonStyled ? { opacity: 1 } : { visibility: 'hidden' }} 
-          className="arrow-btn-v1 hero-slider__hero-btn" to="/jackets" 
+          className="arrow-btn-v1 arrow-btn hero-slider__hero-btn" to="/jackets" 
         >
           {btnText.toUpperCase()}
         </Link>
