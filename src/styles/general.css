@@ -112,33 +112,6 @@ body {
   width: 100%;
 } 
 
-@media screen and (hover: hover) {
-  .arrow-btn-v1:is(:hover, :focus-visible) {
-    padding-right: 55px;
-    opacity: 1;
-    transition: padding-right 0.3s;
-  }
-  
-  .arrow-btn-v1:is(:hover, :focus-visible)::after {
-    right: 16px;
-    transition: right 0.3s;
-  }
-
-  .arrow-btn-v2:is(:hover, :focus-visible) {
-    padding-right: 50px;
-  }
-  
-  .arrow-btn-v2:is(:hover, :focus-visible)::after {
-    right: 30px;
-    transition: right 0.3s;
-  }
-}
-
-.arrow-btn:active {
-  opacity: 0.7 !important;
-  transition: all var(--base-transition-duration) !important;
-}
-
 /* END OF AROW BUTTON COMPONENT */
 
 /* CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
@@ -154,10 +127,6 @@ body {
   color: inherit;
 }
 
-.slide-in-and-back-visible-underline:is(:hover, :focus-visible) {
-  background-size: 100% 2px, 100% 2px;
-}
-
 .slide-in-and-out-visible-underline {
   background: var(--slide-in-and-out-visible);
   background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
@@ -167,11 +136,6 @@ body {
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;
   color: inherit;
-}
-
-.slide-in-and-out-visible-underline:is(:hover, :focus-visible) {
-  background-size: 100% 2px, 100% 2px;
-  background-position-x: 0%;
 }
 
 /* END OF CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
@@ -229,6 +193,54 @@ main {
 }
 
 /* END OF MAIN */
+
+/* HOVER CAPABLE DEVICES */
+
+@media screen and (hover: hover) {
+  /* ARROW BUTTON COMPONENT */
+  .arrow-btn-v1:is(:hover, :focus-visible) {
+    padding-right: 55px;
+    opacity: 1;
+    transition: padding-right 0.3s;
+  }
+  
+  .arrow-btn-v1:is(:hover, :focus-visible)::after {
+    right: 16px;
+    transition: right 0.3s;
+  }
+
+  .arrow-btn-v2:is(:hover, :focus-visible) {
+    padding-right: 50px;
+  }
+  
+  .arrow-btn-v2:is(:hover, :focus-visible)::after {
+    right: 30px;
+    transition: right 0.3s;
+  }
+  /* END OF ARROW BUTTON COMPONENT */
+
+  /* CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
+
+  .slide-in-and-back-visible-underline:is(:hover, :focus-visible) {
+    background-size: 100% 2px, 100% 2px;
+  }
+  
+  .slide-in-and-out-visible-underline:is(:hover, :focus-visible) {
+    background-size: 100% 2px, 100% 2px;
+    background-position-x: 0%;
+  }
+  /* END OF CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
+}
+
+/* END OF HOVER CAPABLE DEVICES */
+
+/* ACTIVE */
+
+.arrow-btn:active {
+  opacity: 0.7 !important;
+}
+
+/* END OF ACTIVE */
 
 /* MEDIA QUERIES */
 

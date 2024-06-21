@@ -250,7 +250,7 @@
 @media screen and (hover: hover) {
   /* HERO SLIDER */
   .hero-slider__hero-btn:is(:hover, :focus-visible) {
-    background-color: #fff !important;
+    background-color: #fff;
     color: #000;
     opacity: 1;
     text-shadow: none;
@@ -295,6 +295,19 @@
   .hero-slider__prev-btn:active, 
   .hero-slider__next-btn:active {
     transform: scale(1.1);
+  }
+}
+
+.hero-slider__hero-text .hero-slider__hero-btn:active {
+  transition: opacity 0s, background-color 0.25s, color 0.25s, padding-right 0.25s;
+}
+
+@media screen and (hover: none) {
+  .hero-slider__hero-text .hero-slider__hero-btn:active {
+    background-color: #fff;
+    opacity: 1 !important;
+    color: var(--base-text-color);
+    text-decoration: none;
   }
 }
 
