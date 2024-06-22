@@ -4,6 +4,7 @@ import SocialIconsList from "../../components/SocialIconsList";
 
 const SlideMenu = () => {
   const { closeModal } = useModal();
+  
   return ( 
     <>
       <section className="slide-menu-links">

@@ -203,6 +203,10 @@ footer h2 {
 }
 
 @media screen and (max-width: 600px) {
+  .footer-content-wrapper {
+    padding: 0 20px;
+  }
+
   .footer-info {
     grid-template-columns: 1fr;
     justify-items: center;

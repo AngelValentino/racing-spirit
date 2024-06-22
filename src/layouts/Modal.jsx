@@ -76,7 +76,7 @@ const Modal = () => {
                 }
               </h1>
               <button aria-label="Close modal." title="Close" ref={closeBtn} className="modal__close-btn" onClick={closeModal}>
-                <svg className="modal__close-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <svg className="modal__close-icon" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path fill="currentColor" d="m4.3 2.9l12.8 12.8l-1.4 1.4L2.9 4.3z" />
                   <path fill="currentColor" d="M17.1 4.3L4.3 17.1l-1.4-1.4L15.7 2.9z" />
                 </svg>

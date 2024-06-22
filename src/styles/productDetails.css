@@ -147,7 +147,6 @@
 }
 
 .slider-controls__carousel {
-  white-space: nowrap;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;

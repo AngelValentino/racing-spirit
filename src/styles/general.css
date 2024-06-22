@@ -76,8 +76,8 @@ body {
   width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
-  clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+  clip: rect(1px, 1px, 1px, 1px); /* maybe deprecated but we need to support legacy browsers */
+  clip-path: inset(50%); /* modern browsers, clip-path works inwards from each corner */
   white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
@@ -194,6 +194,31 @@ main {
 
 /* END OF MAIN */
 
+/* ERROR MESSAGE */
+
+.error__container {
+  margin-top: 50px;
+}
+
+.error__message {
+  padding: 20px 50px;
+  background-color: var(--base-red);
+  color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin:  0 auto;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.carousel:has(.error__message) .error__container {
+  margin: 0;
+}
+
+/* END OF ERROR MESSAGE */
+
 /* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
@@ -243,6 +268,12 @@ main {
 /* END OF ACTIVE */
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+  .hidden-error-message {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 600px) {
   html {

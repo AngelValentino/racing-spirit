@@ -6,12 +6,12 @@ const useSwipe = (onSwipeLeft, onSwipeRight, minSwipeDistance = 25) => {
   const [ touchEndX, setTouchEndX ] = useState(null);
   const [ touchEndY, setTouchEndY ] = useState(null);
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = e => {
     setTouchStartX(e.targetTouches[0].clientX);
     setTouchStartY(e.targetTouches[0].clientY);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = e => {
     setTouchEndX(e.targetTouches[0].clientX);
     setTouchEndY(e.targetTouches[0].clientY);
   };

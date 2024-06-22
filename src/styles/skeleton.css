@@ -106,34 +106,3 @@
 }
 
 /* END OF SKELETON MODIFIERS */
-
-/* ERROR MESSAGE */
-
-.error__container {
-  margin-top: 50px;
-}
-
-.error__message {
-  padding: 20px 50px;
-  background-color: var(--base-red);
-  color: #fff;
-  border-radius: 2px;
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-  margin:  0 auto;
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.carousel:has(.error__message) .error__container {
-  margin: 0;
-}
-
-@media screen and (max-width: 1000px) {
-  .hidden-error-message {
-    display: none;
-  }
-}
-
-/* END OF ERROR MESSAGE */

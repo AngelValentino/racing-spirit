@@ -16,7 +16,7 @@ const ProductThumbsList = ({jacket, imgIndex, className, setImgIndex}) => {
             onClick={() => {
               setImgIndex(i);
             }}
-            onKeyDown={(e) => {
+            onKeyDown={e => {
               if (e.key === 'Enter') {
                 setImgIndex(i);
               }

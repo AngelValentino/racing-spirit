@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import ProductCarousel from "../../components/ProductCarousel";
 import HeroSlider from "./components/HeroSlider";
 import '../../styles/home.css'

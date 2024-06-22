@@ -3,12 +3,11 @@ import '../styles/accordion.css';
 import Highlighter from "../pages/About/components/Highlighter";
 const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, query }) => {
   const [ accordionItems, setAccordionItems ] = useState(null);
-
   const isFaqs = ulClass === 'accordion-faqs';
 
   useEffect(() => {
     if (factsData) {
-      // Returns toggled proptery for all facts, first is defaulted to true if isFaqs is false
+      // Returns toggled property for all facts, first is defaulted to true if isFaqs is false
       setAccordionItems([ 
         ...factsData.map((fact, i) => (
           { ...fact, toggled: isFaqs ? false : i === 0 }
@@ -21,14 +20,14 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
 
   // Opens or closes the current item and checks if it has to keep the others open or not
   function toggle(clickedItem) {
-    setAccordionItems((prevItems) => [ 
+    setAccordionItems(prevItems => [ 
       ...prevItems.map(fact => (
         { ...fact, toggled: checkToggled(clickedItem, fact)}
       )) 
     ]);
   }
 
-  const getButtonStyle = (fact) => {
+  const getButtonStyle = fact => {
     if (fact.toggled) return { backgroundColor: '#fff' };
     return isFaqs ? { backgroundColor: '#fafafa' } : { backgroundColor: '#fff' };
   };
@@ -51,10 +50,10 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
               : <h2 className="accordion__product-details-title">{fact.title.toUpperCase()}</h2>
             }
             {isFaqs 
-              ? <svg aria-hidden="true" focusable="false" role="img" className={fact.toggled ? 'accordion__plus-icon accordion__plus-icon--open' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              ? <svg aria-hidden="true" focusable="false" role="presentation" className={fact.toggled ? 'accordion__plus-icon accordion__plus-icon--open' : 'accordion__plus-icon'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                 </svg>
-              : <svg aria-hidden="true" focusable="false" role="img" className={fact.toggled ? 'accordion__chevron accordion__chevron--open' : 'accordion__chevron'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              : <svg aria-hidden="true" focusable="false" role="presentation" className={fact.toggled ? 'accordion__chevron accordion__chevron--open' : 'accordion__chevron'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                 </svg>
             }

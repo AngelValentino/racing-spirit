@@ -7,7 +7,7 @@ export function useShoppingCart() {
   return useContext(ShoppingCartContext);
 }
 
-export function ShoppingCartProvider({children}) {
+export function ShoppingCartProvider({ children }) {
   const [ cartItems, setCartItems ] = useLocalStorage('cartItems', []);
 
   const cartQuantity = cartItems.reduce((acc, item) => item.quantity + acc, 0);
@@ -15,9 +15,9 @@ export function ShoppingCartProvider({children}) {
   function addToCart(id, title, price, imgUrl, size) {
     const newId = id + size;
 
-    setCartItems((currItems) => {
-      if (currItems.find((item) => item.variantId === newId && item.size === size)) {
-        return currItems.map((item) => {
+    setCartItems(currItems => {
+      if (currItems.find(item => item.variantId === newId && item.size === size)) {
+        return currItems.map(item => {
           if (item.variantId === newId) {
             return { ...item, quantity: item.quantity + 1 };
           } 
@@ -33,11 +33,11 @@ export function ShoppingCartProvider({children}) {
   }
 
   function editQuantity(id, quantity) {
-    setCartItems((currItems) => {
-      if (quantity < 1 && currItems.find((item) => item.variantId === id))  {
-        return currItems.filter((item) => item.variantId !== id);
+    setCartItems(currItems => {
+      if (quantity < 1 && currItems.find(item => item.variantId === id))  {
+        return currItems.filter(item => item.variantId !== id);
       }
-      return currItems.map((item) => {
+      return currItems.map(item => {
         if (item.variantId === id) {
           return { ...item, quantity: quantity };
         } 
@@ -62,8 +62,8 @@ export function ShoppingCartProvider({children}) {
   }
 
   function increaseCartQuantity(id) {
-    setCartItems((currItems) => {
-      return currItems.map((item) => {
+    setCartItems(currItems => {
+      return currItems.map(item => {
         if (item.variantId === id) {
           return { ...item, quantity: item.quantity + 1 };
         } 
@@ -75,12 +75,12 @@ export function ShoppingCartProvider({children}) {
   }
 
   function decreaseCartQuantity(id) {
-    setCartItems((currItems) => {
-      if (currItems.find((item) => item.variantId === id).quantity === 1) {
-        return currItems.filter((item) => item.variantId !== id);
+    setCartItems(currItems => {
+      if (currItems.find(item => item.variantId === id).quantity === 1) {
+        return currItems.filter(item => item.variantId !== id);
       } 
       else {
-        return currItems.map((item) => {
+        return currItems.map(item => {
           if (item.variantId === id) {
             return { ...item, quantity: item.quantity - 1 };
           } 
@@ -93,9 +93,7 @@ export function ShoppingCartProvider({children}) {
   }
 
   function removeFromCart(id) {
-    setCartItems((currItems) => {
-      return currItems.filter((item) => item.variantId !== id);
-    });
+    setCartItems(currItems => currItems.filter(item => item.variantId !== id));
   }
 
   return (

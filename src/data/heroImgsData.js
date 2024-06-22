@@ -3,7 +3,7 @@ export const heroImgsData = [
     url: 'https://i.imgur.com/xp5W88T.mp4',
     alt: 'text',
     title: 'Motocross inspired collection',
-    btnText: 'shop'
+    btnText: 'shop now'
   },
   {
     url: 'https://i.imgur.com/rsms2Uk.jpg',

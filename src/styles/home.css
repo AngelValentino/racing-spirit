@@ -75,6 +75,7 @@
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   will-change: bottom;
+  margin: 0 0 8px;
 }
 
 .hero-slider__hero-title.hero-slider__hero-title-right {
