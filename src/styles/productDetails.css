@@ -338,12 +338,6 @@
   column-gap: 30px;
 }
 
-@media screen and (max-width: 800px) {
-  .recommended-products-list-grid {
-    display: none;
-  }
-}
-
 /* END OF RECOMMENDED PRODUCTS */
 
 /* HOVER CAPABLE DEVICES */
@@ -424,6 +418,12 @@
     display: flex;
     position: relative;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .recommended-products-list-grid {
+    display: none;
   }
 }
 
