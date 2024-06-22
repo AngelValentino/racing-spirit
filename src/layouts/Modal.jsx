@@ -71,7 +71,7 @@ const Modal = () => {
                 { isCart 
                   ? 'Cart' 
                   : <Link aria-label="Go to home." title="Home" to="/" onClick={closeModal}>
-                      <img aria-hidden="true" src="https://i.imgur.com/kLOpHbk.png" />
+                      <img aria-hidden="true" role="presentation" src="https://i.imgur.com/kLOpHbk.png" />
                     </Link>
                 }
               </h1>
