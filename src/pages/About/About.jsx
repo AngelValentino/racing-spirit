@@ -1,6 +1,6 @@
+import '../../styles/about.css';
 import { useState, useEffect } from "react";
 import { frequentAskedQuestions } from "../../data/frequentAskedQuestions";
-import '../../styles/about.css';
 import FaqsSection from "./components/FaqsSection";
 import FaqsSearchBar from "./components/FaqsSearchBar";
 
@@ -8,21 +8,29 @@ const About = () => {
   const [ query, setQuery ] = useState('');
   const [ filteredItems, setFilteredItems ] = useState(frequentAskedQuestions);
 
+  // Helper function to remove whitespace from a string
   const removeWhiteSpace = str => str.replace(/\s+/g, '');
 
+  // Helper function to format a string to lowercase and trim white space
   const formatString = str => str.toLowerCase().trim();
 
+  // Checks if 'val' includes 'searchVal' after optional whitespace removal.
   const isStrFound = (val, searchVal, searchValNoWhiteSpace) => formatString(val).includes(searchValNoWhiteSpace ? removeWhiteSpace(formatString(searchVal)) : formatString(searchVal));
 
+  // Filter FAQs items based on the search query
   useEffect(() => {
-    const newFilteredItems = {};
+    const newFilteredItems = {}; // Initialize new filtered items object
+
+    // Filter items in each section based on the search query
     for (const section in frequentAskedQuestions) {
       newFilteredItems[section] = frequentAskedQuestions[section]
         .filter(item => isStrFound(item.title, query) || isStrFound(section, query, true));
     }
-    setFilteredItems(newFilteredItems);
+
+    setFilteredItems(newFilteredItems); // Update filteredItems state with the filtered items
   }, [query]);
 
+  // Check if all FAQs sections are empty
   function checkEmptyFaqs() {
     return (
       filteredItems.delivery.length === 0 &&

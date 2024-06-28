@@ -70,17 +70,17 @@
 
 /* SLIDE MENU */
 
-.slide-menu-links ul {
+.mobile-menu-links ul {
   list-style-type: none;
   margin: 0 var(--modal-content-sides-margin);
   padding: 20px 0;
 }
 
-.slide-menu-links li {
+.mobile-menu-links li {
   border-bottom: 1px solid var(--base-border-color);
 }
 
-.slide-menu-links a {
+.mobile-menu-links a {
   color: inherit;
   text-decoration: none;
   padding: 20px 0;
@@ -88,16 +88,16 @@
   transition: color var(--base-transition-duration);
 }
 
-.slide-menu-links h2 {
+.mobile-menu-links h2 {
   font-size: 1.45em;
   font-weight: normal;
 }
 
-.slide-menu-links a.active {
+.mobile-menu-links a.active {
   font-weight: 700;
 }
 
-.slide-menu__social-links {
+.mobile-menu__social-links {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -106,13 +106,13 @@
   list-style-type: none;
 }
 
-.slide-menu__social-links a {
+.mobile-menu__social-links a {
   color: inherit;
   line-height: 0;
   display: block
 }
 
-.slide-menu__social-links svg {
+.mobile-menu__social-links svg {
   width: 1.75em;
   transition: color var(--base-transition-duration);
 }
@@ -347,23 +347,23 @@
   /* END OF MODAL  */
 
   /* SLIDE MENU */
-  .slide-menu-links a:is(:hover, :focus-visible) {
+  .mobile-menu-links a:is(:hover, :focus-visible) {
     color: var(--base-green);
   }
 
-  .slide-menu__social-links .social-icons__instagram-link:is(:hover, :focus-visible) svg {
+  .mobile-menu__social-links .social-icons__instagram-link:is(:hover, :focus-visible) svg {
     color: #fbad50;
   }
   
-  .slide-menu__social-links .social-icons__facebook-link:is(:hover, :focus-visible) svg {
+  .mobile-menu__social-links .social-icons__facebook-link:is(:hover, :focus-visible) svg {
     color: #316FF6;
   }
   
-  .slide-menu__social-links .social-icons__twitter-link:is(:hover, :focus-visible) svg {
+  .mobile-menu__social-links .social-icons__twitter-link:is(:hover, :focus-visible) svg {
     color: #1DA1F2;
   }
   
-  .slide-menu__social-links .social-icons__youtube-link:is(:hover, :focus-visible) svg {
+  .mobile-menu__social-links .social-icons__youtube-link:is(:hover, :focus-visible) svg {
     color: #FF0000;
   }
   /* END OF SLIDE MENU */

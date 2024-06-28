@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
 import '../styles/accordion.css';
+import { useState, useEffect } from "react";
 import Highlighter from "../pages/About/components/Highlighter";
+
 const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, query }) => {
   const [ accordionItems, setAccordionItems ] = useState(null);
-  const isFaqs = ulClass === 'accordion-faqs';
+  const isFaqs = ulClass === 'accordion-faqs'; // Check if the accordion is for FAQs
 
   useEffect(() => {
     if (factsData) {
@@ -16,6 +17,7 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
     }
   }, [factsData]);
 
+  // Determines if an item should be toggled or not
   const checkToggled = (clickedItem, fact) => clickedItem.id === fact.id ? !fact.toggled : !keepOthersOpen ? false : fact.toggled;
 
   // Opens or closes the current item and checks if it has to keep the others open or not
@@ -27,6 +29,7 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
     ]);
   }
 
+  // Get button style based on toggled state
   const getButtonStyle = fact => {
     if (fact.toggled) return { backgroundColor: '#fff' };
     return isFaqs ? { backgroundColor: '#fafafa' } : { backgroundColor: '#fff' };

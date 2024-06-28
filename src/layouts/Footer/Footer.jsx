@@ -1,9 +1,9 @@
+import '../../styles/footer.css';
 import SocialIconsList from "../../components/SocialIconsList";
 import PaymentsList from "../../components/PaymentsList";
 import FooterTitle from "./components/FooterTitle";
 import FooterMenuLinks from "./components/FooterMenuLinks";
 import FooterNewsletter from "./components/FooterNewsletter";
-import '../../styles/footer.css';
 
 const Footer = () => {
   return ( 
@@ -14,12 +14,12 @@ const Footer = () => {
           <FooterMenuLinks />
           <FooterNewsletter />
           <div className="footer-social">
-            <SocialIconsList listClass="footer__social-links"/>
+            <SocialIconsList listClass="footer__social-links" />
           </div>
         </div>
         <div className="footer-copyright">
           <PaymentsList />
-          <small>	&#169; {new Date().getFullYear()} Racing Spirit</small>
+          <small>&#169; {new Date().getFullYear()} Racing Spirit</small>
         </div>
       </div>
     </footer>

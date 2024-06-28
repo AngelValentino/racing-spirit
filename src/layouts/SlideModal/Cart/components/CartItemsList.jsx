@@ -1,13 +1,13 @@
-import { useModal } from "../../../context/ModalContext";
-import { useShoppingCart } from "../../../context/ShoppingCartContext";
-import { formatCurrency } from "../../../utils/formatCurrency";
+import { useModal } from "../../../../context/ModalContext";
+import { useShoppingCart } from "../../../../context/ShoppingCartContext";
+import { formatCurrency } from "../../../../utils/formatCurrency";
 import { Link } from "react-router-dom";
 import CartItemQty from "./CartItemQty";
 import OrderNote from "./OrderNote";
 
-const CartItemsList = ({ closeBtn }) => {
-  const { cartItems, removeFromCart } = useShoppingCart();
-  const { closeModal } = useModal();
+const CartItemsList = () => {
+  const { cartItems, removeFromCart, cartQuantity } = useShoppingCart();
+  const { closeModal, closeBtnRef } = useModal();
 
   return ( 
     <>
@@ -26,7 +26,10 @@ const CartItemsList = ({ closeBtn }) => {
                 <div className="cart-item__qty-input-container">
                   <CartItemQty quantity={quantity} variantId={variantId}/>
                   <button aria-label="Delete item." title="Delete item" className="cart-item__remove-item-btn" onClick={() => {
-                    closeBtn.current.focus();
+                    /* If the cart is empty and the user attempts to focus again, 
+                    the focus moves beyond the cart's boundaries. This line of code ensures 
+                    that the focus remains confined within the cart. */
+                    if (cartQuantity === 1) closeBtnRef.current.focus();
                     removeFromCart(variantId);
                   }}>
                     <svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

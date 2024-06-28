@@ -1,11 +1,13 @@
 import '../styles/contactForm.css';
 
+function handleSubmit(e) {
+  e.preventDefault();
+  e.target.reset();
+}
+
 const ContactForm = () => {
   return ( 
-    <form className="contact-form" onSubmit={e => {
-      e.preventDefault();
-      e.target.reset();
-    }}>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="contact-form__name-email-container">
         <div> 
           <label className="contact-form__name-label" htmlFor="contact-form__name-input">Name</label>

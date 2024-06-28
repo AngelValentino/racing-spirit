@@ -17,10 +17,12 @@ const ProductDetails = () => {
       <section className="product-details-wrapper">
         { loading && <div className="product-details__loader-container"><BouncingBallsLoader /></div> }
         { error && <ErrorMessage error={error} /> }
+        {/* Adding a key forces the component re-render on route change */}
         { (!loading && !error) && <ProductInfo key={id} jacket={jacket} /> } 
       </section>
       <section className="product-details-recommended">
         <h2 className="product-details-recommended__title">You may also like</h2>
+        {/* Adding a key forces the component re-render on route change */}
         <Products key={id + 1} url={productsUrl} addClass="recommended-products-list-grid" />
         <ProductCarousel key={id} hidden={true} />
       </section>

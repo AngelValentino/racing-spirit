@@ -1,8 +1,8 @@
+import '../../styles/home.css'
+import { Link } from 'react-router-dom';
+import { gridProductsImagesData } from '../../data/gridProductsImagesData';
 import ProductCarousel from "../../components/ProductCarousel";
 import HeroSlider from "./components/HeroSlider";
-import '../../styles/home.css'
-import { Link } from "react-router-dom";
-import { gridProductsImagesData } from "../../data/gridProductsImagesData";
 
 const Home = () => {
   return ( 

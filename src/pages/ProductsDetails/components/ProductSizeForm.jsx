@@ -1,10 +1,10 @@
 import { useShoppingCart } from "../../../context/ShoppingCartContext";
 import { useModal } from "../../../context/ModalContext";
 import { useState } from "react";
-import SizeButton from "./SizeButton";
 import { availableSizes } from "../../../data/availableSizes";
+import SizeButton from "./SizeButton";
 
-const ProductSizeForm = ({ jacket: {id, title, price, images} }) => {
+const ProductSizeForm = ({ jacket: { id, title, price, images } }) => {
   const { addToCart } = useShoppingCart();
   const { openModal } = useModal();
   const [ selectedOption, setSelectedOption ] = useState('S');

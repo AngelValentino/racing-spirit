@@ -5,15 +5,19 @@ const HeroText = ({ i, right, title, btnText, imgIndex, autoPlay }) => {
   const [ isTitleStyled, setIsTitleStyled ] = useState(false);
   const [ isButtonStyled, setIsButtonStyled ] = useState(false);
 
+  // Handle animation timings and cleanup
   useEffect(() => {
+    // Timeout for title animation
     const titleTim = setTimeout(() => {
       setIsTitleStyled(true);
     }, 500);
 
+    // Timeout for button animation
     const buttonTim = setTimeout(() => {
       setIsButtonStyled(true);
     }, 1500);
 
+    // Cleanup function to clear timeouts and reset animation states
     return () => {
       clearTimeout(titleTim);
       clearTimeout(buttonTim);

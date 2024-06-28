@@ -7,7 +7,7 @@ const Product = ({ jacket }) => {
       <Link to={`/jackets/${jacket.id}`}> 
         <div className="product-preview__image-wrapper">
           <img className="product-preview__image" src={jacket.images[0].regular} alt={jacket.title} />
-          <img aria-hidden="true" className="product-preview__image-secondary" src={jacket.images[1].regular} alt='' />
+          <img aria-hidden="true" role="presentation" className="product-preview__image-secondary" src={jacket.images[1].regular} alt='' />
         </div>
         <h2 className="product-preview__title">{jacket.title}</h2>
         <h3 className="product-preview__price">{formatCurrency(jacket.price)}</h3>

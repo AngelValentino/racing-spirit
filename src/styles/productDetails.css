@@ -47,7 +47,7 @@
   display: inline;
 }
 
-.breadcrumb__current-page-product {
+.product-breadcrumbs__current-page-product {
   display: inline-block;
   font-weight: 500;
 }

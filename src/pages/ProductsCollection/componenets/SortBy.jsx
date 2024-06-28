@@ -2,12 +2,15 @@ const SortBy = ({ setUrl, productsUrl }) => {
   function handleSelect(e) {
     switch (e.target.value) {
       case 'featured':
+        // Set URL to default products URL (reset sorting)
         setUrl(productsUrl);
         break;
       case 'price-descending':
+        // Set URL to sort products by descending price
         setUrl(productsUrl + '?_sort=price&_order=desc');
         break;
       case 'price-ascending':
+        // Set URL to sort products by ascending price
         setUrl(productsUrl + '?_sort=price');
         break;
     }

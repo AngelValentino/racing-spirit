@@ -9,7 +9,7 @@ const ProductImgsList = ({jacket, imgIndex}) => {
           id={`product-preview-slider__item-${i + 1}`}
           className="product-image" 
           aria-hidden={imgIndex !== i} 
-          style={{translate: `${-100 * imgIndex}%`}} 
+          style={{ translate: `${-100 * imgIndex}%` }} 
           key={img.regular} 
           src={img.regular} 
           alt={`${jacket.title} ${i + 1}`} 

@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
+import { heroImgsData } from "../../../data/heroImgsData";
 import useSwipe from "../../../hooks/useSwipe";
 import HeroImgs from "./HeroImgs";
-import { heroImgsData } from "../../../data/heroImgsData";
 import NavigationBtns from "./NavigationBtns";
 
 const HeroSlider = () => {
   const [ imgIndex, setImgIndex ] = useState(0);
-  const checkCurrentSlide = useRef(0);
-  const heroVideo = useRef(null);
   const [ isProgressBarStyled, setIsProgressBarStyled ] = useState(false);
   const [ autoPlay, setAutoPlay ] = useState(true);
+  const heroVideoRef = useRef(null);
 
   // AutoPlay stops when the user tabs out of the page and restarts when they come back.
   useEffect(() => {
@@ -21,7 +20,7 @@ const HeroSlider = () => {
       } else {
         // User tabbed out from the page
         setAutoPlay(false);
-        heroVideo.current.currentTime = 0;
+        heroVideoRef.current.currentTime = 0; // Reset video playback
       }
     };
 
@@ -37,50 +36,56 @@ const HeroSlider = () => {
     setImgIndex(index => index === heroImgsData.length - 1 ? 0 : index + 1);
   }
 
+  // Custom hook for swipe functionality
   const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(showNextImage, showPrevImage);
 
+  // Calculate progress bar styling
   function getProgressBarStyle() {
+    // If progress bar is styled and not on the first image, expand width 105%
     if (isProgressBarStyled && imgIndex !== 0) {
       return { width: '105%' };
     } 
+    // If progress bar is styled and is on the first image, expand width 103%
     else if (isProgressBarStyled) {
       return { width: '103%', transition: 'width 11s linear' };
     } 
+    // If progress bar is not styled, set width to 0 with no transition
     else {
       return { width: 0, transition: 'none' };
     }
   }
   
   useEffect(() => {
-    let intervalTim;
+    let intervalId;
     let progressBarTim
     /* Delay to allow the browser to reset the width, also appears 
     just after the hero button. 
     1500ms - HeroTittle(500ms) + HeroButton(1500ms)* Both timers start 
     at the same time so it finnally becomes 1500ms */
     if (autoPlay) {
+      // Timeout to delay progress bar appearance
       progressBarTim = setTimeout(() => {
-        setIsProgressBarStyled(true);
+        setIsProgressBarStyled(true); // Start progress bar after timeout
       }, 1500);
   
-      // Reset hero video
+      // First carousel slide
       if (imgIndex === 0) {
-        heroVideo.current.currentTime = 0;
-        intervalTim = setInterval(() => {
+        heroVideoRef.current.currentTime = 0; // Reset hero video
+        intervalId = setInterval(() => {
           showNextImage();
-        }, 12500);
+        }, 12500); // Timeout for video
       } 
-      //Timeout for images
+      // Other slides
       else {
         // 5000ms + 1500ms to wait for the hero title and progress bar to appear
-        intervalTim = setInterval(() => {
+        intervalId = setInterval(() => {
           showNextImage();
-        }, 6500);
+        }, 6500); // Timeout for images
       }
     } 
 
     return () => {
-      clearInterval(intervalTim);
+      clearInterval(intervalId);
       clearTimeout(progressBarTim);
       setIsProgressBarStyled(false);
     };
@@ -97,9 +102,8 @@ const HeroSlider = () => {
         >
           <HeroImgs 
             autoPlay={autoPlay} 
-            checkCurrentSlide={checkCurrentSlide} 
             imgIndex={imgIndex}
-            heroVideo={heroVideo}
+            heroVideoRef={heroVideoRef}
           />
         </div>
         <div className="hero-slider__navigation-btns-container">

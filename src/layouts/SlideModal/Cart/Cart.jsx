@@ -1,8 +1,8 @@
-import { useShoppingCart } from "../../context/ShoppingCartContext";
-import { formatCurrency } from "../../utils/formatCurrency";
+import { useShoppingCart } from "../../../context/ShoppingCartContext";
+import { formatCurrency } from "../../../utils/formatCurrency";
 import CartItemsList from "./components/CartItemsList";
 
-const CartModal = ({ closeBtn }) => {
+const Cart = () => {
   const { cartItems } = useShoppingCart();
 
   return ( 
@@ -10,7 +10,7 @@ const CartModal = ({ closeBtn }) => {
       <section className="items-container">
         {cartItems.length === 0 
           ? <p>Your cart is currently empty.</p> 
-          : <CartItemsList closeBtn={closeBtn} /> 
+          : <CartItemsList /> 
         }
       </section>
         {cartItems.length !== 0 && 
@@ -34,4 +34,4 @@ const CartModal = ({ closeBtn }) => {
   );
 }
  
-export default CartModal;
+export default Cart;

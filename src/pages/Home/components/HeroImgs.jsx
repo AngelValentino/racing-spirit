@@ -1,7 +1,7 @@
 import HeroText from "./HeroText";
 import { heroImgsData } from "../../../data/heroImgsData";
 
-const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo, autoPlay }) => {
+const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideoRef, autoPlay }) => {
 
   return ( 
     <>
@@ -18,7 +18,7 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideo, autoPlay }) => {
         >
           {i === 0 
             ? <>
-                <video id="hero-slider__item-1" className="hero-slider__main-img" autoPlay muted loop ref={heroVideo}>
+                <video id="hero-slider__item-1" className="hero-slider__main-img" autoPlay muted loop ref={heroVideoRef}>
                   <source src={url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

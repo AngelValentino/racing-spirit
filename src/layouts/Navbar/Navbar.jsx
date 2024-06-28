@@ -1,14 +1,9 @@
+import '../../styles/navbar.css';
 import { Link, NavLink } from "react-router-dom";
-import { useModal } from "../../context/ModalContext";
-import { useShoppingCart } from "../../context/ShoppingCartContext";
 import MenuButton from "./components/MenuButton";
 import CartButton from "./components/CartButton";
-import '../../styles/navbar.css';
 
 const Navbar = () => {
-  const { openModal } = useModal();
-  const { cartQuantity } = useShoppingCart();
-
   return ( 
     <>
       <div className="announcement">
@@ -33,8 +28,8 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="nav-menu__btns">
-            <MenuButton openModal={openModal} menuType="menu"/>
-            <CartButton openModal={openModal} menuType="cart" cartQuantity={cartQuantity}/>
+            <MenuButton />
+            <CartButton />
           </div>
         </nav>
       </header>

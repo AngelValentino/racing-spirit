@@ -1,4 +1,4 @@
-import { useShoppingCart } from "../../../context/ShoppingCartContext";
+import { useShoppingCart } from "../../../../context/ShoppingCartContext";
 
 const CartItemQty = ({ quantity, variantId }) => {
   const { 
@@ -25,7 +25,7 @@ const CartItemQty = ({ quantity, variantId }) => {
         type="number" 
         id={`cart-item__qty-input-${variantId}`}
         name="quantity" 
-        ref={lm => { if (lm) lm.value = quantity }} 
+        ref={lm => { lm && (lm.value = quantity) }} // Set input to the current product quantity
         onBlur={e => handleEditQuantity(e, variantId, quantity)} 
         onKeyDown={handleEditQuantityOnEnter}
       />

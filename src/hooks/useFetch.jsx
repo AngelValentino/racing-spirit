@@ -8,40 +8,41 @@ const useFetch = url => {
   const [ error, setError ] = useState(null);
 
   useEffect(() => {
-    // Search if the data exists in cache
+    // Check if the data for the given URL is already in the cache
     if (cache[url]) {
       setData(cache[url]);
       setLoading(false);
       return;
     }
 
+    // Create an AbortController to allow aborting the fetch request
     const abortCont = new AbortController();
+    // Reset loading state and clear any previous errors for edge cases
     setLoading(true);
     setError(null);
 
-    setTimeout(() => {
-      fetch(url, { signal: abortCont.signal })
-        .then(res => {
-          if (!res.ok) throw Error(`Couldn't fetch the products data. ${res.statusText} ${res.status}`);
-          return res.json();
-        })
-        .then(data => {
-          // Set cache
-          cache[url] = data;
-          // Set Data
-          setData(data);
-          setError(null);
-        })
-        .catch(err => {
-          // If the error is an AbortError, do nothing
-          if (err.name === 'AbortError') return;
-          console.error(err);
-          setError(err.message);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }, 1000);
+    // Fetch data from the given URL
+    fetch(url, { signal: abortCont.signal })
+    .then(res => {
+      if (!res.ok) throw Error(`Couldn't fetch the products data. ${res.statusText} ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      // Set cache
+      cache[url] = data;
+      // Set Data
+      setData(data);
+      setError(null);
+    })
+    .catch(err => {
+      // If the error is an AbortError, do nothing
+      if (err.name === 'AbortError') return;
+      console.error(err);
+      setError(err.message);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
  
     return () => abortCont.abort();
 

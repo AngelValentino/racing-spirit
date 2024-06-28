@@ -1,6 +1,6 @@
+import '../styles/notFound.css';
 import { Link } from "react-router-dom";
 import ProductCarousel from "../components/ProductCarousel";
-import '../styles/notFound.css';
 
 const NotFound = () => {
   return ( 
