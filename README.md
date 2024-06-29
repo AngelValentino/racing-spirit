@@ -736,7 +736,7 @@ const ProductPreviewSlider = ({ data: jacket }) => {
   // Manage arrow buttons visibility on scroll
   function handleScroll() {
     const currentScrollLeft = carouselRef.current.scrollLeft;
-    const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+    // const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
     
     // Scrolling to the right
     if (currentScrollLeft > lastScrollLeft) {

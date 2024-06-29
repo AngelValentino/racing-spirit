@@ -12,9 +12,10 @@ export default function ScrollToTop() {
     // If supported, set scroll restoration mode to manual to prevent browser's default behavior
     if (canControlScrollRestoration) window.history.scrollRestoration = 'manual';
     // Scroll to the top of the page
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    })
+    /* Clicking on recommended products in the details section causes the page 
+    to scroll to the top faster than the new product can ever render, resulting in subtle flickering. 
+    Ultimately, this may require replacing all loaders. */
+    window.scrollTo(0, 0);
   }, [pathname]);
   
   return null;
