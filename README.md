@@ -1,45 +1,10 @@
-<style>
-  pre {
-    max-height: 600px;
-    border-radius: 5px !important;
-    scrollbar-width: thin;
-  }
-
-  blockquote {
-    padding: 20px !important;
-  }
-
-  .green-quote {  
-    border-left: 5px solid #00f285;
-    background: #00f2851a;
-  }
-
-  .blue-quote {
-    border-left: 5px solid #0085f2;
-    background: #0085f21a;
-  }
-
-  .pink-quote {
-    border-left: 5px solid #f20085;
-    background: #f200851a;
-  }
-  
-  .orange-quote {
-    border-left: 5px solid #f28b00;
-    background: #f28b001a;
-  }
-</style>
-
-
 # Racing Spirit
 
 Racing Spirit is an e-commerce **single-page application (SPA)**, developed from scratch using **HTML/CSS**, **JavaScript**, and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Racing Spirit ensures a seamless shopping experience, making it easy for customers to find and purchase the perfect motorcycle jacket.
 
 *Currently, the website uses **JSON server** as a mock back-end. In the future, it will be upgraded to use a real database with **Node.js** and **MongoDB.***
 
-<blockquote class="blue-quote">
-  Employing React best practices, I prioritized meticulous <strong>component organization</strong>, <strong>structured file management</strong>, and enforced <strong>immutability</strong>. My emphasis was especially on optimizing code for enhanced performance, readability and accessibility.
-</blockquote>
+> Employing React best practices, I prioritized meticulous **component organization**, **structured file management**, and enforced **immutability**. My emphasis was especially on optimizing code for enhanced performance, readability and accessibility.
 
 <br />
 
@@ -59,7 +24,7 @@ Racing Spirit is an e-commerce **single-page application (SPA)**, developed from
 * [Invalid Route](#invalid-route)
 
 * [Reusable Modal](#reusable-modal)
-  * [`<SlideModal />`](#slide-modal)
+  * [Rendering `<SlideModal />`](#slidemodal--rendering)
 
 * [Slider Components](#slider-components)
 	* [`<HeroSlider />`](#heroslider-)
@@ -67,8 +32,8 @@ Racing Spirit is an e-commerce **single-page application (SPA)**, developed from
 	* [`<ProductPreviewSlider />`](#productpreviewslider-)
 
 * [Accordion Component](#accordion-component)
-  * [Product Details `<Accordion />`](#accordion-component)
-  * [FAQs Search and `<Accordion />`](#faqs-accordion-and-search)
+  * [Product Details `<Accordion />`](#product-details-accordion-)
+  * [FAQs Search and `<Accordion />`](#faqs-search-and-accordion-)
 
 * [Future Improvements](#future-improvements)
 
@@ -83,10 +48,8 @@ Implemented a fully functional cart system leveraging a custom **localStorage ho
 
 ![Racing Spirit product details](https://i.imgur.com/yJYPfKu.jpeg)
 
-<blockquote class="pink-quote">
-  <h3 id="custom-localstorage-hook">Custom localStorage hook</h3>
-  Custom React hook that facilitates storing and retrieving data in the browser's <strong>localStorage</strong>.
-</blockquote>
+> ### Custom localStorage hook
+> Custom React hook that facilitates storing and retrieving data in the browser's **localStorage**.
 
 ```jsx
 import { useEffect, useState } from "react";
@@ -116,9 +79,8 @@ const useLocalStorage = (key, initialValue) => {
 export default useLocalStorage;
 ```
 
-<blockquote class="orange-quote">
-  <h3 id="cart-context">Cart Context</h3>Establishes a robust shopping cart system in React utilizing the <strong>useContext</strong> and <strong>createContext</strong> hooks for state management, coupled with a custom <strong>useLocalStorage</strong> hook to ensure persistent storage for cart data.
-</blockquote>
+> ### Cart Context
+> Establishes a robust shopping cart system in React utilizing the **useContext** and **createContext** hooks for state management, coupled with a custom **useLocalStorage** hook to ensure persistent storage for cart data.
 
 ```jsx
 import { createContext, useContext } from "react";
@@ -242,10 +204,8 @@ Each of these layouts/pages has been properly organized into **reusable componen
 
 ![Racing Spirit product carousel fetch error message](https://i.imgur.com/lbHSPTe.jpeg)
 
-<blockquote class="blue-quote">
-  <h3 id="loaders">Loaders</h3>
-  Utilized <code>&lt;skeletonElement /&gt;</code> </strong> and  <code>&lt;BouncingBallsLoader /&gt;</code> reusable components as loaders.
-</blockquote>
+> ### Loaders
+> Utilized `<skeletonElement />` and `<BouncingBallsLoader />` reusable components as loaders.
 
 ```jsx
 import '../styles/skeleton.css'
@@ -274,10 +234,8 @@ const SkeletonElement = ({ type, addClass, width, height }) => {
 export default SkeletonElement;
 ```
 
-<blockquote class="green-quote">
-  <h3 id="usefetch-hook">useFetch hook</h3>
-  This custom hook manages <strong>data fetching</strong> with state for data, loading, and error. It optimizes performance with <strong>caching</strong>, supports <strong>fetch cancellation</strong>, and handles errors effectively. This modular approach ensures efficient and reusable data fetching across the website.
-</blockquote>
+> ### useFetch hook
+> This custom hook manages **data fetching** with state for data, loading, and error. It optimizes performance with **caching**, supports **fetch cancellation**, and handles errors effectively. This modular approach ensures efficient and reusable data fetching across the website.
 
 ```jsx
 import { useEffect, useState } from "react";
@@ -455,10 +413,9 @@ export function ModalProvider({ children }) {
   );
 }
 ```
-<blockquote class="pink-quote">
-  <h3 id="slide-modal"><code>&lt;SlideModal /&gt;</code> Rendering</h3>
-  It uses conditional rendering to choose between rendering the <code>&lt;Cart /&gt;</code> or <code>&lt;MobileMenu /&gt;</code> components based on <strong>isCart</strong> state.
-</blockquote>
+
+> ### `<SlideModal />` Rendering
+> It uses conditional rendering to choose between rendering the `<Cart />` or `<MobileMenu />` components based on **isCart** state.
 
 ![Racing Spirit cart](https://i.imgur.com/XbHP97P.jpeg)
 
@@ -970,10 +927,8 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
 export default Accordion;
 ```
 
-<blockquote class="pink-quote">
-  <h3 id="productdetails-accordion">Product Details <code>&lt;Accordion /&gt;</code></h3>
-  Additionally, implemented <code>&lt;ContactForm /&gt;</code> component, a reusable and accessible form, which is utilized in both the accordion component and the contact us page.
-</blockquote>
+> ### Product Details `<Accordion />`
+> Additionally, implemented `<ContactForm />` component, a reusable and accessible form, which is utilized in both the accordion component and the contact us page.
 
 ![Racing Spirit product details accordion](https://i.imgur.com/fKNYzoa.jpeg)
 
@@ -981,10 +936,8 @@ export default Accordion;
 
 ![Racing Spirit contact page](https://i.imgur.com/f178HEW.jpeg)
 
-<blockquote class="orange-quote">
-  <h3 id="faqs-accordion-and-search">FAQ'S Search and <code>&lt;Accordion /&gt;</code></h3>
-  Moreover, implemented <strong>search functionality</strong> to FAQs which additionally includes <strong>text highlighting</strong> thanks to a dedicated <code>&lt;Highlighter /&gt;</code> component.
-</blockquote>
+> ### FAQs Search and `<Accordion />`
+> Moreover, implemented **search functionality** to FAQs which additionally includes **text highlighting** thanks to a dedicated `<Highlighter />` component.
 
 ```jsx
 import { Fragment } from "react";
@@ -1027,6 +980,7 @@ export default Highlighter;
 * Set up a server to fetch products from an actual database **(Node.js, Express, and MongoDB)**.
 * **Expand the number of jackets**; JSON Server currently supports up to 10kb, and I'm currently at 9.7kb.
 * Add authentication with **JWT** (JSON Web Tokens).
+* Implement an actual **fully functional cart** with payment options, checkout and product stock validation.
 * Ensure all forms are fully functional.
 * **Optimize loaders** for improved styling and user experience.
 * Add **filter functionality** to jackets and create dedicated pages for each category.
