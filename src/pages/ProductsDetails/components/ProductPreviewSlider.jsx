@@ -65,6 +65,8 @@ const ProductPreviewSlider = ({ data: jacket }) => {
     // Scrolling to the right and reached the maximum width
     else if (
       currentScrollLeft > lastScrollLeft && 
+      /* If (currentScrollLeft === maxScrollLeft &&) check is added, 
+      the nextBtn doesn't properly hide on Samsung mobile devices */
       imgIndex === carouselRef.current.children.length - 1
     ) {
       nextBtnRef.current.style.display = 'none'; // Hide next button

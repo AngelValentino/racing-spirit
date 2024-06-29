@@ -16,12 +16,14 @@ const ProductCarousel = ({ hidden }) => {
     carouselRef.current.scrollLeft -= carouselRef.current.children[0].offsetWidth + 30;
   }
 
+  // Adjusts visibility of carousel buttons based on scroll position
   function handleScroll() {
     const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
     const currentScrollLeft = carouselRef.current.scrollLeft;
 
     // Adjusting visibility of next button based on scroll position
-  
+    /* If (currentScrollLeft === maxScrollLeft) check is added, 
+    the nextBtn element doesn't properly hide on Samsung mobile devices. */
     if (currentScrollLeft < maxScrollLeft) {
       nextBtnRef.current.style.display = 'initial'; // Show next button when not scrolled to maximum width 
     }
