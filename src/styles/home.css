@@ -123,15 +123,16 @@
   margin: 0 auto;
   padding: var(--base-desktop-padding);
   display: flex;
-  gap: 10px;
+  gap: 12px;
   list-style: none;
   line-height: 0;
 }
 
+
 .hero-slider__navigation-btn {
   background-color: #ffffff5f;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
 }
 
@@ -329,6 +330,11 @@
     padding: var(--base-mobile-padding);
   }
 
+  .hero-slider__navigation-btn {
+    width: 12px;
+    height: 12px;
+  }
+  
   .hero-slider__hero-text {
     padding: var(--base-mobile-padding)
   }

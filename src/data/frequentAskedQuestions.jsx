@@ -121,7 +121,7 @@ export const frequentAskedQuestions = {
               All orders are dispatched via Landmark Global and given to a national courier to deliver to your door.
             </p>
             <p>
-            Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
+              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a aria-label="Track your order on landmarkglobal.com." className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
             </p>
             <p>
               <strong>
@@ -168,7 +168,7 @@ export const frequentAskedQuestions = {
         return (
           <>
             <p>
-              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
+              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a aria-label="Track your order on landmarkglobal.com." className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
               <br />
               If you havent seen an email with the subject line, "it's on its way" please check your spam folder.
               <br />
@@ -239,7 +239,7 @@ export const frequentAskedQuestions = {
         return (
           <>
             <p>
-              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
+              Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a aria-label="Track your order on landmarkglobal.com." className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
               <br />
               If you haven't seen an email with the subject line, "it's on its way" please check your spam folder.If your still not sure, email <strong>racingSpirit@gmail.com</strong>.
             </p>

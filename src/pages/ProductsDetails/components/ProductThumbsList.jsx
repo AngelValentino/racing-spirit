@@ -2,7 +2,7 @@ const ProductThumbsList = ({ jacket, imgIndex, className, setImgIndex }) => {
   return ( 
     <>
       {jacket.images.map((img, i) => (
-        <li key={img.small}>
+        <li role="presentation" key={img.small}>
             <img 
               role="tab"
               aria-controls={`product-preview-slider__item-${i + 1}`}
