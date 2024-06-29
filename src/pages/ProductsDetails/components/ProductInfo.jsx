@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../utils/formatCurrency";
-import { productDetailsFacts } from "../../../data/productDetailsFacts";
+import { productDetailsData } from "../../../data/productDetailsData";
 import ProductBreadcrumbs from "./ProductBreadcrumbs";
 import ProductPreviewSlider from "./ProductPreviewSlider";
 import ProductSizeForm from "./ProductSizeForm";
@@ -23,7 +23,7 @@ const ProductInfo = ({ jacket }) => {
           <Accordion 
             keepOthersOpen={true} 
             description={jacket.description} 
-            factsData={productDetailsFacts} 
+            factsData={productDetailsData} 
             btnClass="accordion__product-details-title-btn"
             ulClass="accordion-product-details"
           />
