@@ -1,6 +1,6 @@
-# Racing Spirit
+# [Racing Spirit](https://racing-spirit.pages.dev/)
 
-Racing Spirit is an e-commerce **single-page application (SPA)**, developed from scratch using **HTML/CSS**, **JavaScript**, and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Racing Spirit ensures a seamless shopping experience, making it easy for customers to find and purchase the perfect motorcycle jacket.
+Racing Spirit is an e-commerce **single-page application (SPA)**, featuring a JSON mock back-end, developed from scratch using **HTML/CSS**, **JavaScript** , and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Racing Spirit ensures a seamless shopping experience, making it easy for customers to find and purchase the perfect motorcycle jacket.
 
 *Currently, the website uses **JSON server** as a mock back-end. In the future, it will be upgraded to use a real database with **Node.js** and **MongoDB.***
 
