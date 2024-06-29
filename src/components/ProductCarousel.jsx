@@ -21,18 +21,19 @@ const ProductCarousel = ({ hidden }) => {
     const currentScrollLeft = carouselRef.current.scrollLeft;
 
     // Adjusting visibility of next button based on scroll position
-    if (currentScrollLeft === maxScrollLeft) {
-      nextBtnRef.current.style.display = 'none'; // Hide next button when scrolled to maximum width
-    } 
-    else if (currentScrollLeft < maxScrollLeft) {
+  
+    if (currentScrollLeft < maxScrollLeft) {
       nextBtnRef.current.style.display = 'initial'; // Show next button when not scrolled to maximum width 
     }
+    else {
+      nextBtnRef.current.style.display = 'none'; // Hide next button when scrolled to maximum width
+    } 
 
     // Adjusting visibility of previous button based on scroll position
     if (currentScrollLeft === 0) {
         prevBtnRef.current.style.display = 'none'; // Hide previous button when scrolled to initial width
     } 
-    else if (currentScrollLeft !== 0) {
+    else {
       prevBtnRef.current.style.display = 'initial'; // Show previous button when not scrolled to initial width
     }
   }
