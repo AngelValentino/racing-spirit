@@ -12,7 +12,9 @@ export default function ScrollToTop() {
     // If supported, set scroll restoration mode to manual to prevent browser's default behavior
     if (canControlScrollRestoration) window.history.scrollRestoration = 'manual';
     // Scroll to the top of the page
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    })
   }, [pathname]);
   
   return null;
