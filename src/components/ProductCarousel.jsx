@@ -32,8 +32,9 @@ const ProductCarousel = ({ hidden }) => {
     if (currentScrollLeft === 0) {
         prevBtnRef.current.style.display = 'none'; // Hide previous button when scrolled to initial width
     } 
-    else if (currentScrollLeft !== 0)
+    else if (currentScrollLeft !== 0) {
       prevBtnRef.current.style.display = 'initial'; // Show previous button when not scrolled to initial width
+    }
   }
 
   return ( 
