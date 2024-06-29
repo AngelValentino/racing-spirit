@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../utils/formatCurrency";
-import { productDetailsFacts } from "../../../data/productDetailsFacts.jsx";
+import { productDetailsFacts } from "../../../data/productDetailsFacts";
 import ProductBreadcrumbs from "./ProductBreadcrumbs";
 import ProductPreviewSlider from "./ProductPreviewSlider";
 import ProductSizeForm from "./ProductSizeForm";
