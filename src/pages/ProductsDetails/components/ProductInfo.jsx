@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../utils/formatCurrency";
-import { productDetailsFacts } from "../../../data/productDetailsFacts";
+import { productDetailsFacts } from "../../../data/productDetailsFacts.jsx";
 import ProductBreadcrumbs from "./ProductBreadcrumbs";
 import ProductPreviewSlider from "./ProductPreviewSlider";
 import ProductSizeForm from "./ProductSizeForm";
 import Accordion from "../../../components/Accordion";
-
-
-
-
 
 const ProductInfo = ({ jacket }) => {
   return ( 
