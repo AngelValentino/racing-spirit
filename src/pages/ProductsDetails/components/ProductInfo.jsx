@@ -6,7 +6,6 @@ import ProductPreviewSlider from "./ProductPreviewSlider";
 import ProductSizeForm from "./ProductSizeForm";
 import Accordion from "../../../components/Accordion";
 
-
 const ProductInfo = ({ jacket }) => {
   return ( 
     <>
