@@ -714,8 +714,8 @@ const ProductPreviewSlider = ({ data: jacket }) => {
     } 
     // Currently scrolling
     else {
-      prevBtnRef.current.style.display = 'flex'; // Show previous button
-      nextBtnRef.current.style.display = 'flex'; // Show next button
+      prevBtnRef.current.style.display = 'block'; // Show previous button
+      nextBtnRef.current.style.display = 'block'; // Show next button
     }
 
     // Check if the current image index is the last one in the carousel
@@ -740,14 +740,14 @@ const ProductPreviewSlider = ({ data: jacket }) => {
     
     // Scrolling to the right
     if (currentScrollLeft > lastScrollLeft) {
-      prevBtnRef.current.style.display = 'flex'; // Show previous button
+      prevBtnRef.current.style.display = 'block'; // Show previous button
     } 
     // Scrolling to the left
     else if (currentScrollLeft < lastScrollLeft) {
-      nextBtnRef.current.style.display = 'flex'; // Show next button
+      nextBtnRef.current.style.display = 'block'; // Show next button
     }
 
-    // Scrolling to the left and reached the initial width
+    // Scrolling to the left, reached the initial width and the user is on the first image
     if (
       currentScrollLeft < lastScrollLeft && 
       currentScrollLeft === 0 && 
@@ -755,7 +755,7 @@ const ProductPreviewSlider = ({ data: jacket }) => {
     ) {
       prevBtnRef.current.style.display = 'none'; // Hide previous button
     } 
-    // Scrolling to the right and reached the maximum width
+    // Scrolling to the right, reached the maximum width and the user is on the last image
     else if (
       currentScrollLeft > lastScrollLeft && 
       /* If (currentScrollLeft === maxScrollLeft &&) check is added, 

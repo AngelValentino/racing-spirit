@@ -128,9 +128,7 @@
   position: absolute;
   opacity: 0.8;
   background-color: #efefef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 0;
   color: #242424;
   border-radius: 2px;
   transition: background-color var(--base-transition-duration), color var(--base-transition-duration);
