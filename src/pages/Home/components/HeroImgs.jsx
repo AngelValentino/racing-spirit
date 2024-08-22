@@ -15,17 +15,17 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideoRef, autoPlay }) => {
           style={{transform: `translateX(${-100 * imgIndex}%)`}} 
           key={url} 
           className="hero-slider__main-img-container"
+          id={`hero-slider__item-${i + 1}`}
         >
           {i === 0 
             ? <>
-                <video id="hero-slider__item-1" className="hero-slider__main-img" autoPlay muted loop ref={heroVideoRef}>
+                <video className="hero-slider__main-img" autoPlay muted loop ref={heroVideoRef}>
                   <source src={url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <p className="visually-hidden">A video of a man riding a motorcycle around the desert.</p>
               </>
             : <img 
-                id={`hero-slider__item-${i + 1}`}
                 className="hero-slider__main-img hero-slider__main-img-displaced"
                 src={url} 
                 alt={alt} 
