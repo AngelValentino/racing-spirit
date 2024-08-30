@@ -982,12 +982,21 @@ export default Highlighter;
 ## Future Improvements
 
 * Set up a server to fetch products from an actual database **(Node.js, Express, and MongoDB)**.
+
 * **Expand the number of jackets**; JSON Server currently supports up to 10kb, and I'm currently at 9.7kb.
+
 * Add authentication with **JWT** (JSON Web Tokens).
+
 * Implement an actual **fully functional cart** with payment options, checkout and product stock validation.
+
 * Ensure all forms are fully functional.
+
 * **Optimize loaders** for improved styling and user experience.
+
 * Add **filter functionality** to jackets and create dedicated pages for each category.
+
 * Implement **progressive loading** for all images and videos to enhance accessibility and user experience.
+
 * Improve the **useFetch** hook by adding cache clearing after a certain amount of time.
+
 * Improve Product Details `<ProductPreviewSlider>` by adding a custom sticky scroll functionality, similar to DoomsdayCo's.
