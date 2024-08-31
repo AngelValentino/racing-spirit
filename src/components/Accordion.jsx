@@ -41,7 +41,7 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
         <li key={i}>
           <button 
             aria-expanded={fact.toggled} 
-            aria-controls={`accordion__section-${fact.title}`} 
+            aria-controls={`accordion__section-${fact.id}`} 
             className={`accordion__title-btn ${btnClass}`} 
             style={getButtonStyle(fact)}
             onClick={() => toggle(fact)}
@@ -64,7 +64,7 @@ const Accordion = ({ description, factsData, keepOthersOpen, ulClass, btnClass, 
           <div 
             inert={!fact.toggled ? 'true' : null}
             role="region" 
-            id={`accordion__section-${fact.title}`} 
+            id={`accordion__section-${fact.id}`} 
             aria-hidden={!fact.toggled} 
             className={fact.toggled ? 'accordion__content-container open-accordion-section' : 'accordion__content-container'}
           >
