@@ -18,7 +18,7 @@
 .header-nav {
   font-size: 1rem;
   position: sticky;
-  top: 0;
+  top: -25px;
   z-index: 10;
   border-bottom: 1px solid var(--base-border-color);
   background-color: #fff;
