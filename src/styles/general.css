@@ -198,7 +198,7 @@ body {
   transform-origin: center;
 }
 
-.slide-bg-from-bottom.fixed-height::after {
+.slide-bg-from-bottom::after {
   z-index: -1;
   transform: scaleX(1);
 }

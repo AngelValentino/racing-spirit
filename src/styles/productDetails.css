@@ -26,7 +26,6 @@
 /* PRODUCT BREADCRUMB */
 
 .product-breadcrumbs {
-  list-style: none;
   margin: 0 0 20px;
   font-size: 0.95em;
   line-height: var(--base-line-height);
@@ -72,7 +71,6 @@
   overflow-y: auto;
   scrollbar-width: none;
   height: 100%;
-  list-style: none;
 }
 
 .product-slider__vertical-thumb {
@@ -151,7 +149,6 @@
   scrollbar-width: none;
   display: flex;
   gap: 10px;
-  list-style: none;
 }
 
 .slider-controls__carousel li {

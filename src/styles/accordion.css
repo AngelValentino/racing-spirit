@@ -1,7 +1,3 @@
-.accordion {
-  list-style: none;
-}
-
 .accordion-product-details {
   font-size: 1rem;
 }
@@ -140,10 +136,6 @@
   max-width: 480px;
   margin: 0 auto;
   display: block;
-}
-
-.accordion__wash-care-list {
-  list-style: none
 }
 
 .accordion__wash-care-list svg {

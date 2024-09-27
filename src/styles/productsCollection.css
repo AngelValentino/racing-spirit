@@ -48,10 +48,6 @@
 
 /* PRODUCTS COLLECTION */
 
-.products-list-container {
-  list-style-type: none;
-}
-
 .products-list-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -66,8 +62,6 @@
 }
 
 .product-preview a {
-  color: inherit;
-  text-decoration: none;
   display: block;
 }
 

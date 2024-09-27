@@ -113,7 +113,6 @@ footer h2 {
 }
 
 .footer__social-links {
-  list-style-type: none;
   display: flex;
   gap: 10px;
 }
@@ -134,7 +133,6 @@ footer h2 {
 }
 
 .list-payments {
-  list-style-type: none;
   display: flex;
   gap: 8px;
   justify-content: center;
