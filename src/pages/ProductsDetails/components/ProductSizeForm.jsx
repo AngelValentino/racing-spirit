@@ -50,7 +50,7 @@ const ProductSizeForm = ({ jacket: { id, title, price, images } }) => {
         </span>
       </button>
       <div className="product-details__more-payments-container">
-        <a className="slide-in-and-out-visible-underline product-details__more-payments-link" href="#">More payment options</a>
+        <a className="product-details__more-payments-link slide-in-and-out underline fixed-height" href="#">More payment options</a>
       </div>
     </form>
   );

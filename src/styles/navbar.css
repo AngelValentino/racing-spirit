@@ -57,16 +57,11 @@
   font-size: 1.2em;
 }
 
-.nav-menu__links a {
+.nav-menu__link {
   transition: color var(--base-transition-duration);
-  color: inherit;
-  text-decoration: none;
-  background: var(--slide-middle-out);
-  background-image: linear-gradient(var(--base-green), var(--base-green));
-  transition: background-size var(--base-underline-transition-duration) ease-in-out, color var(--base-transition-duration);
 }
 
-.nav-menu__links a.active {
+.nav-menu__link.active {
   font-weight: 700;
 }
 
@@ -118,9 +113,8 @@
 /* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
-  .nav-menu__links a:is(:hover, :focus-visible) {
+  .nav-menu__link:is(:hover, :focus-visible) {
     color: var(--base-green);
-    background-size: var(--slide-underline-hover)
   }
 
   .menu-btn:is(:hover, :focus-visible) {
@@ -135,12 +129,6 @@
 /* END OF HOVER CAPABLE DEVICES */
 
 /* ACTIVE */
-
-  .nav-menu__links a:active {
-    color: var(--base-green);
-    background-size: 100% 0.1em;
-  }
-
   .menu-btn:active {
     opacity: 0.7;
   } 

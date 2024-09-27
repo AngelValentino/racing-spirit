@@ -35,11 +35,7 @@
 
 .product-breadcrumbs a {
   background: var(--slide-to-top);
-  background-image: linear-gradient(#d99a5a, #d99a5a);
-  background-size: 100% 2px;
-  transition: background-size var(--base-underline-transition-duration) ease-in-out, color var(--base-underline-transition-duration);
-  color: inherit;
-  text-decoration: none;
+  transition: color var(--base-underline-transition-duration);
   padding: 2px 5px;
 }
 
@@ -363,7 +359,6 @@
 
   /* PRODUCT DETAILS */
   .product-breadcrumbs a:is(:hover, :focus-visible) {
-    background-size: var(--slide-to-top-underline-hover);
     color: #fff;
   }
 

@@ -233,16 +233,14 @@
 
 .main-home__grid-product-link-title {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: absolute !important;
   left: 25px;
   bottom: 25px;
   font-size: 1.65em;
   font-weight: 900;
   letter-spacing: var(--base-letter-spacing);
-  background: var(--slide-in-and-back);
-  transition: background-size 0.25s ease-in-out, transform 0.5s;
+  transition: transform 0.5s;
   will-change: transform;
-  background-image: linear-gradient(#d99a5a, #d99a5a);
 }
 
 /* END OF GRID PRODUCTS LINKS */
@@ -278,9 +276,13 @@
 
   /* PRODUCTS LINKS GRID */
   .main-home__grid-product-link:is(:hover, :focus-visible) .main-home__grid-product-link-title {
-    background-size: var(--slide-underline-hover);
     transform: translateY(-10px);
   }
+
+  .main-home__grid-product-link:is(:hover, :focus-visible) .slide-in-and-back::after {
+    transform: scaleX(1);
+  }
+
   /* END OF PRODUCTS LINKS GRID */
 }
 

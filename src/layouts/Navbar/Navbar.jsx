@@ -18,13 +18,13 @@ const Navbar = () => {
           </h2>
           <ul className="nav-menu__links">
             <li>
-              <NavLink to="jackets">Jackets</NavLink>
+              <NavLink className="nav-menu__link slide-middle-out" to="jackets">Jackets</NavLink>
             </li>
             <li>
-              <NavLink to="about">About us</NavLink>
+              <NavLink className="nav-menu__link slide-middle-out" to="about">About us</NavLink>
             </li>
             <li>
-              <NavLink to="contact">Contact</NavLink>
+              <NavLink className="nav-menu__link slide-middle-out" to="contact">Contact</NavLink>
             </li>
           </ul>
           <div className="nav-menu__btns">

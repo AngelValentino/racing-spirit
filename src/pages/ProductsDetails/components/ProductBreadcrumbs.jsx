@@ -5,10 +5,10 @@ const ProductBreadcrumbs = ({ jacket }) => {
     <nav aria-label="Breadcrumbs">
       <ul className="product-breadcrumbs">
         <li>
-          <Link to="/">Home</Link>
+          <Link className="slide-bg-from-bottom fixed-height sienna-brown" to="/">Home</Link>
         </li>
         <li>
-          <Link to="/jackets">Jackets</Link>
+          <Link className="slide-bg-from-bottom fixed-height sienna-brown" to="/jackets">Jackets</Link>
         </li>
         <li aria-current="page">
           <p className="product-breadcrumbs__current-page-product">{jacket.title}</p>

@@ -6,13 +6,13 @@ const FooterMenuLinks = () => {
       <h2>MAIN MENU</h2>
       <ul className="footer-links__list">
         <li>
-          <Link to="jackets">Jackets</Link>
+          <Link className="slide-in-and-back" to="jackets">Jackets</Link>
         </li>
         <li>
-          <Link to="about">About us</Link>
+          <Link className="slide-in-and-back" to="about">About us</Link>
         </li>
         <li>
-          <Link to="contact">Contact</Link>
+          <Link className="slide-in-and-back" to="contact">Contact</Link>
         </li>
       </ul>
     </div>

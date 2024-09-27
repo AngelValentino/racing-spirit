@@ -19,7 +19,7 @@ const Home = () => {
           {gridProductsImagesData.map(({ url, alt, title }, i) => (
             <Link className="main-home__grid-product-link" key={i} to="/jackets">
               <img className="main-home__grid-product-link-img" src={url} alt={alt} />
-              <h2 className="main-home__grid-product-link-title">{title.toUpperCase()}</h2>
+              <h2 className="main-home__grid-product-link-title slide-in-and-back sienna-brown">{title.toUpperCase()}</h2>
             </Link>
           ))}
         </section>

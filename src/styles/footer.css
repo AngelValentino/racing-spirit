@@ -52,19 +52,11 @@ footer h2 {
   font-size: var(--footer-base-text);
 }
 
-.footer-links__list {
-  list-style-type: none;
-}
 
 .footer-links__list a {
   display: inline-block;
-  color: inherit;
-  text-decoration: none;
   font-size: var(--footer-medium-text);
   margin-bottom: 14px;
-  background: var(--slide-in-and-back);
-  background-image: linear-gradient(#fff, #fff);
-  transition: background-size var(--base-underline-transition-duration) ease-in-out;
 }
 
 .footer-newsletter__desc {
@@ -155,10 +147,6 @@ footer h2 {
 /* HOVER CAPABLE DEVICES */
 
 @media screen and (hover: hover) {
-  .footer-links__list a:is(:hover, :focus-visible) {
-    background-size: var(--slide-underline-hover);
-  }
-
   .footer-newsletter__btn:is(:hover, :focus-visible) {
     background-color: var(--base-red);
     color: #fff;
@@ -173,10 +161,6 @@ footer h2 {
 /* END OF HOVER CAPABLE DEVICES */
 
 /* ACTIVE */
-
-  .footer-links__list a:active {
-    background-size: 100% 0.1em;
-  }
 
   .footer-newsletter__btn:active {
     background-color: var(--base-red);

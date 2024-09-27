@@ -22,6 +22,20 @@ button, input, textarea {
   color: inherit;
 }
 
+::placeholder {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -47,7 +61,8 @@ html {
   --base-line-height: 1.6;
   --base-letter-spacing: 0.025em;
   --base-transition-duration: 0.15s;
-  --base-underline-transition-duration: 0.20s;
+  --base-underline-transition-duration: 0.3s;
+  /* Underline custom component method 2*/
   --slide-in-and-back: 0% 100% / 0% 0.1em no-repeat;
   --slide-in-and-back-visible: 0% 100% / 0% 0.1em no-repeat, 0% 100% / 100% 0.1em no-repeat;
   --slide-middle-out: 50% 100% / 0% 0.1em no-repeat;
@@ -55,6 +70,7 @@ html {
   --slide-to-top: 0% 100% / 100% 0.1em no-repeat;
   --slide-underline-hover: 100% 0.1em;
   --slide-to-top-underline-hover: 100% 100%;
+  /* End of underline custom component method 2*/
 }
 
 body {
@@ -114,8 +130,88 @@ body {
 
 /* END OF AROW BUTTON COMPONENT */
 
-/* CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
+/* CUSTOM TEXT UNDERLINE ANIMATION COMPONENT METHOD*/
 
+/* METHOD 1 */
+.slide-in-and-out,
+.slide-in-and-back,
+.slide-middle-out,
+.slide-bg-from-bottom {
+  position: relative;
+}
+
+.slide-in-and-out::after,
+.slide-in-and-out.underline::before,
+.slide-in-and-back::after,
+.slide-in-and-back.underline::before,
+.slide-middle-out::after,
+.slide-middle-out.underline::before,
+.slide-bg-from-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: currentColor;
+  border-radius: 1px;
+  transform: scaleX(0);
+}
+
+.slide-in-and-out.sienna-brown::after,
+.slide-in-and-out.underline.sienna-brown::before,
+.slide-in-and-back.sienna-brown::after,
+.slide-in-and-back.underline.sienna-brown::before,
+.slide-middle-out.sienna-brown::after,
+.slide-middle-out.underline.sienna-brown::before,
+.slide-bg-from-bottom.sienna-brown::after {
+  background-color: #d99a5a;
+}
+
+.slide-in-and-out.fixed-height::after,
+.slide-in-and-out.underline.fixed-height::before,
+.slide-in-and-back.fixed-height::after,
+.slide-in-and-back.underline.fixed-height::before,
+.slide-middle-out.fixed-height::after,
+.slide-middle-out.underline.fixed-height::before,
+.slide-bg-from-bottom.fixed-height::after {
+  height: 2px;
+}
+
+.slide-in-and-out::after,
+.slide-in-and-back::after,
+.slide-middle-out::after,
+.slide-bg-from-bottom::after {
+  transition: transform var(--base-underline-transition-duration), height var(--base-underline-transition-duration), background-color var(--base-underline-transition-duration);
+  will-change: transform, height;
+}
+
+.slide-in-and-out::after {
+  transform-origin: right;
+}
+
+.slide-in-and-back::after {
+  transform-origin: left;
+}
+
+.slide-middle-out::after {
+  transform-origin: center;
+}
+
+.slide-bg-from-bottom.fixed-height::after {
+  z-index: -1;
+  transform: scaleX(1);
+}
+
+.slide-in-and-out.underline::before,
+.slide-in-and-back.underline::before,
+.slide-middle-out.underline::before {
+  transform: scaleX(1);
+  opacity: 0.3;
+}
+
+/* METHOD 2 */
+/* This method works good with break-word */
 .slide-in-and-back-visible-underline {
   background: var(--slide-in-and-back-visible);
   background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
@@ -125,8 +221,10 @@ body {
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;
   color: inherit;
+  word-break: break-word;
 }
 
+/* This method works good with break-word */
 .slide-in-and-out-visible-underline {
   background: var(--slide-in-and-out-visible);
   background-image: linear-gradient(var(--base-text-color), var(--base-text-color)), linear-gradient(#cccccc, #cccccc);
@@ -136,9 +234,40 @@ body {
   transition: background-size var(--base-underline-transition-duration) ease-in-out;
   text-decoration: none;
   color: inherit;
+  word-break: break-word;
 }
 
-/* END OF CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
+@media screen and (hover: hover) {
+  /* METHDO 1 */
+  .slide-in-and-out:is(:hover, :focus-visible)::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .slide-in-and-back:is(:hover, :focus-visible)::after {
+    transform: scaleX(1);
+  }
+  
+  .slide-middle-out:is(:hover, :focus-visible)::after {
+    transform: scaleX(1);
+  }
+
+  .slide-bg-from-bottom:is(:hover, :focus-visible)::after {
+    height: 100%;
+  }
+
+  /* METHOD 2 */
+  .slide-in-and-back-visible-underline:is(:hover, :focus-visible) {
+    background-size: 100% 2px, 100% 2px;
+  }
+  
+  .slide-in-and-out-visible-underline:is(:hover, :focus-visible) {
+    background-size: 100% 2px, 100% 2px;
+    background-position-x: 0%;
+  }
+}
+
+/* END OF CUSTOM TEXT UNDERLINE ANIMATION COMPONENT METHOD 1 */
 
 /* PAGE TITLE COMPONENT */
 
@@ -243,18 +372,6 @@ main {
     transition: right 0.3s;
   }
   /* END OF ARROW BUTTON COMPONENT */
-
-  /* CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
-
-  .slide-in-and-back-visible-underline:is(:hover, :focus-visible) {
-    background-size: 100% 2px, 100% 2px;
-  }
-  
-  .slide-in-and-out-visible-underline:is(:hover, :focus-visible) {
-    background-size: 100% 2px, 100% 2px;
-    background-position-x: 0%;
-  }
-  /* END OF CUSTOM TEXT UNDERLINE ANIMATION COMPONENT */
 }
 
 /* END OF HOVER CAPABLE DEVICES */
