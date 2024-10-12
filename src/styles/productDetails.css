@@ -241,11 +241,6 @@
   outline: 2px solid #fff;
 }
 
-.product-details__size-input:focus-visible + .product-details__size-label {
-  outline: 2px solid #000;
-  background-color: #f7f7f7;
-}
-
 .product-details__size-input:checked + .product-details__size-label {
   outline: 2px solid #000;
 }
@@ -359,9 +354,12 @@
     color: #fff;
   }
 
-  .product-details__size-label:hover {
+  .product-details__size-input:checked + .product-details__size-label:hover {
+    cursor: default;
+  }
+
+  .product-details__size-input:not(:checked) + .product-details__size-label:is(:hover, :focus-visible) {
     outline: 2px solid #000;
-    background-color: #f7f7f7;
   }
 
   .product-details__submit-payment:is(:hover, :focus-visible) {
