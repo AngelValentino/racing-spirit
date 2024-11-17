@@ -33,12 +33,10 @@ footer h2 {
 
 .footer-title {
   line-height: 0;
-  justify-self: end;
 }
 
 .footer-title a {
   display: inline-block;
-  line-height: 0;
 }
 
 .footer-title img {
