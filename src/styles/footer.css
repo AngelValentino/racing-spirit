@@ -144,7 +144,7 @@ footer h2 {
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   .footer-newsletter__btn:is(:hover, :focus-visible) {
     background-color: var(--base-red);
     color: #fff;

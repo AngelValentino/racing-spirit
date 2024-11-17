@@ -180,7 +180,7 @@
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   /* FAQ'S */
   .accordion__faqs-title-btn:is(:hover, :focus-visible) .accordion__plus-icon {
     opacity: 1;

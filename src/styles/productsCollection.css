@@ -109,7 +109,7 @@
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   .product-preview a:is(:hover, :focus-visible) .product-preview__image-secondary {
     opacity: 1;
   }

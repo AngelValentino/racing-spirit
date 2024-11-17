@@ -111,7 +111,7 @@
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   .nav-menu__link:is(:hover, :focus-visible) {
     color: var(--base-green);
   }

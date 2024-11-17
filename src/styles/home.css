@@ -243,7 +243,7 @@
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   /* HERO SLIDER */
   .hero-slider__hero-btn:is(:hover, :focus-visible) {
     background-color: #fff;
@@ -291,7 +291,7 @@
   transform: scale(1);
 }
 
-@media screen and (hover: none) {
+@media screen and (pointer: coarse) and (hover: none) {
   .hero-slider__prev-btn:active, 
   .hero-slider__next-btn:active {
     transform: scale(1.1);
@@ -302,7 +302,7 @@
   transition: opacity 0s, background-color 0.25s, color 0.25s, padding-right 0.25s;
 }
 
-@media screen and (hover: none) {
+@media screen and (pointer: coarse) and (hover: none) {
   .hero-slider__hero-text .hero-slider__hero-btn:active {
     background-color: #fff;
     opacity: 1 !important;

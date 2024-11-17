@@ -96,7 +96,7 @@
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   .faqs-title__close-icon-btn:is(:hover, :focus-visible) svg {
     opacity: 1;
   }

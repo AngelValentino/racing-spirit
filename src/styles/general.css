@@ -237,7 +237,7 @@ body {
   word-break: break-word;
 }
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   /* METHDO 1 */
   .slide-in-and-out:is(:hover, :focus-visible)::after {
     transform: scaleX(1);
@@ -350,7 +350,7 @@ main {
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   /* ARROW BUTTON COMPONENT */
   .arrow-btn-v1:is(:hover, :focus-visible) {
     padding-right: 55px;

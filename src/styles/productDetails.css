@@ -333,7 +333,7 @@
 
 /* HOVER CAPABLE DEVICES */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   
   /* SLIDER CONTROLS */
   .slider-controls__prev-btn:is(:hover, :focus-visible), 
@@ -378,7 +378,7 @@
     transform: translateY(-50%) scale(1.1);
   }
 
-  @media screen and (hover: none) {
+  @media screen and (pointer: coarse) and (hover: none) {
     .slider-controls__prev-btn:active, 
     .slider-controls__next-btn:active {
       transform: translateY(-50%) scale(1.1);

@@ -328,7 +328,7 @@
 
 /* END OF CART */
 
-@media screen and (hover: hover) {
+@media screen and (pointer: fine) and (hover: hover) {
   /* MODAL */
     .modal__close-btn:is(:hover, :focus-visible) {
       color: var(--base-red);
