@@ -2,6 +2,7 @@ import { useShoppingCart } from "../../../context/ShoppingCartContext";
 import { useModal } from "../../../context/ModalContext";
 import { useState } from "react";
 import { availableSizes } from "../../../data/availableSizes";
+import { Link } from "react-router-dom";
 import SizeButton from "./SizeButton";
 
 const ProductSizeForm = ({ jacket: { id, title, price, images } }) => {
@@ -50,7 +51,7 @@ const ProductSizeForm = ({ jacket: { id, title, price, images } }) => {
         </span>
       </button>
       <div className="product-details__more-payments-container">
-        <a className="product-details__more-payments-link slide-in-and-out underline fixed-height" href="#">More payment options</a>
+        <Link className="product-details__more-payments-link slide-in-and-out underline fixed-height" to="/about">More payment options</Link>
       </div>
     </form>
   );
