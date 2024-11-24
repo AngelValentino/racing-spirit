@@ -12,20 +12,20 @@ import Footer from "./layouts/Footer/Footer";
 
 const App = () => { 
   return (
-      <ShoppingCartProvider>
-        <ModalProvider>
-          <Navbar />
-          <Routes>
-            <Route index element={<Home />}/>
-            <Route path="jackets" element={<ProductsCollection />}/>
-            <Route path="about" element={<About />}/>
-            <Route path="contact" element={<Contact />}/>
-            <Route path="jackets/:id" element={<ProductDetails />}/>
-            <Route path="*" element={<NotFound/>}/>
-          </Routes>
-          <Footer />
-        </ModalProvider>
-      </ShoppingCartProvider>
+    <ShoppingCartProvider>
+      <ModalProvider>
+        <Navbar />
+        <Routes>
+          <Route index element={<Home />}/>
+          <Route path="jackets" element={<ProductsCollection />}/>
+          <Route path="about" element={<About />}/>
+          <Route path="contact" element={<Contact />}/>
+          <Route path="jackets/:id" element={<ProductDetails />}/>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
+        <Footer />
+      </ModalProvider>
+    </ShoppingCartProvider>
   );
 }
  
