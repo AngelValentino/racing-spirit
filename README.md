@@ -28,9 +28,7 @@ This project draws inspiration from several sources that helped shape its develo
 - 🛰️ **Data Fetching with Hooks:** Custom hooks such as `useFetch` ensure efficient data management and smooth user interactions.
 - 🚦 **Proper Routing Handling:** Fully integrated React Router for managing routes and page navigation. It ensures dynamic content loading and smooth transitions between views.
 - 🏷️ **404 Page:** Custom-built NotFound page for handling invalid routes, providing a smooth and user-friendly experience even when users land on non-existent URLs.
-- 🧩 **Reusable Components:** Key components sich as the product accordion and contact form are designed to be reusable across multiple views.
-
-
+- 🧩 **Reusable Components:** Key components such as the product accordion and contact form are designed to be reusable across multiple views.
 
 ### 📊 Audit and Security Scores
 
