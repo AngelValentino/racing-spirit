@@ -80,9 +80,7 @@ To create an optimized build for production and preview it locally:
 ### Development Approach
 
 - **Goal:** A fully functional, accessible e-commerce site that showcases high-quality motorcycle jackets with dynamic content loading.
-  
 - **Crafted with Care:** Every feature has been developed with best practices, ensuring a clean, modular, and scalable codebase.
-  
 - **Accessible Event Handling:** Extensive use of React Context API, `useState`, and `useEffect` for managing state and component lifecycle events to ensure smooth interactions as well as integrating proper WAI-ARIA support..
 
 ### Current Limitations
