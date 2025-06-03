@@ -23,7 +23,7 @@ const HeroImgs = ({ imgIndex, heroBtn, heroTitle, heroVideoRef, autoPlay }) => {
                   <source src={url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <p className="visually-hidden">A video of a man riding a motorcycle around the desert.</p>
+                <p className="visually-hidden">{alt}</p>
               </>
             : <img 
                 className="hero-slider__main-img hero-slider__main-img-displaced"

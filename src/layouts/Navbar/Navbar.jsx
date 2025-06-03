@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className="nav-menu">
           <h2 className="nav-menu__title">
             <Link aria-label="Go to home." title="Home" to="/">
-              <img aria-hidden="true" role="presentation" className="nav-menu__logo" src="https://i.imgur.com/vsr1qhX.png" alt="" />
+              <img aria-hidden="true" role="presentation" className="nav-menu__logo" src="/assets/images/logos/horizontal-logo.png" alt="" />
             </Link>
           </h2>
           <ul className="nav-menu__links">

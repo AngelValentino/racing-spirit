@@ -22,7 +22,7 @@ const SlideModal = () => {
             { isCart 
               ? 'Cart' 
               : <Link aria-label="Go to home." title="Home" to="/" onClick={closeModal}>
-                  <img aria-hidden="true" role="presentation" src="https://i.imgur.com/kLOpHbk.png" />
+                  <img aria-hidden="true" role="presentation" src="/assets/images/logos/vertical-logo.png" />
                 </Link>
             }
           </h1>
