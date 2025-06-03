@@ -22,7 +22,7 @@ This project draws inspiration from several sources that helped shape its develo
 - 🏗️  **Modular Architecture:** Built with a clean React-based structure, following best practices for component-based development.
 - 📱 **Responsive, Dynamic Interface Across All Devices:** Fully responsive design using vanilla CSS and media queries to adapt seamlessly across desktops, tablets, mobiles, and more.
 - 🌍 **Accessibility Focus:** Features keyboard-navigable elements, ARIA support for screen readers, and an inclusive design approach.
-- ⚡ **Optimized Performance:** Built to be lightweight and fast with minimal dependencies, offering a near-instantaneous user experience thanks to optimized data fetching and caching.
+- ⚡ **Optimized Performance:** Optimized for speed with minimal dependencies, offering a fast user experience and near-perfect Google Lighthouse scores for performance, accessibility, best practices, and SEO.
 - 🛒 **Functional Cart System:** Custom-built cart using localStorage and React Context API to manage user selections across pages.
 - 🖼️ **Dynamic Product Display:** Product carousel, collection views, and detailed product previews using custom components.
 - 🛰️ **Data Fetching with Hooks:** Custom hooks such as `useFetch` ensure efficient data management and smooth user interactions.
@@ -36,7 +36,7 @@ This project draws inspiration from several sources that helped shape its develo
 
 Below are the actual audit and security test results demonstrating the project's performance and integrity.
 
-![Racing Spirit Google Lighthouse Audit](./docs/assets/images/project-audit-score.jpg)
+![Racing Spirit Google Lighthouse Audit](./docs/assets/images/app-audit.jpg)
 
 <br>
 
@@ -73,7 +73,9 @@ To create an optimized build for production and preview it locally:
     npm run preview
     ```
 
-## 🌱 Racing Spirit: Development Approach, Features, and Limitations
+<br>
+
+## 🌱 Racing Spirit: Evolution, Features and Limitations
 
 ### Development Approach
 
@@ -106,6 +108,21 @@ While the project follows modern development best practices, it currently uses a
 
 ## 🖼️ Additional Images
 
+![Racing Spirit screenshot](./docs/assets/images/hero-carousel.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/home-carousel.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/product-details.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/footer.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/jacket-selection.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/shopping-cart.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/faqs.jpg)
+
+![Racing Spirit screenshot](./docs/assets/images/not-found.jpg)
 
 <br>
 
