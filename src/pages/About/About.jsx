@@ -8,23 +8,26 @@ const About = () => {
   const [ query, setQuery ] = useState('');
   const [ filteredItems, setFilteredItems ] = useState(frequentAskedQuestions);
 
-  // Helper function to remove whitespace from a string
-  const removeWhiteSpace = str => str.replace(/\s+/g, '');
-
   // Helper function to format a string to lowercase and trim white space
   const formatString = str => str.toLowerCase().trim();
 
   // Checks if 'val' includes 'searchVal' after optional whitespace removal.
-  const isStrFound = (val, searchVal, searchValNoWhiteSpace) => formatString(val).includes(searchValNoWhiteSpace ? removeWhiteSpace(formatString(searchVal)) : formatString(searchVal));
+  const isStrFound = (val, searchVal) => formatString(val).includes(formatString(searchVal));
+
+  function camelCaseToWords(str) {
+    if (!str) return '';
+    return str
+      .replace(/([a-z])([A-Z])/g, '$1 $2') // insert space before capital letters
+  }
 
   // Filter FAQs items based on the search query
   useEffect(() => {
     const newFilteredItems = {}; // Initialize new filtered items object
 
     // Filter items in each section based on the search query
-    for (const section in frequentAskedQuestions) {
-      newFilteredItems[section] = frequentAskedQuestions[section]
-        .filter(item => isStrFound(item.title, query) || isStrFound(section, query, true));
+    for (const sectionKey in frequentAskedQuestions) {
+      newFilteredItems[sectionKey] = frequentAskedQuestions[sectionKey]
+        .filter(faqsItem => isStrFound(faqsItem.title, query) || isStrFound(camelCaseToWords(sectionKey), query));
     }
 
     setFilteredItems(newFilteredItems); // Update filteredItems state with the filtered items
