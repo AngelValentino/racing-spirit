@@ -7,7 +7,7 @@ const Navbar = () => {
   return ( 
     <>
       <div className="announcement">
-        <p className="announcement__text">Free Worldwide Shipping On Orders Over $400</p>
+        <p className="announcement__text">Portfolio UI demo project not affiliated with Racing spirit</p>
       </div>
       <header className="header-nav">
         <nav className="nav-menu">

@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div className="footer-copyright">
           <PaymentsList />
-          <small>&#169; {new Date().getFullYear()} Racing Spirit</small>
+          <small>This is a portfolio UI demo project and is not affiliated with Racing spirit</small>
         </div>
       </div>
     </footer>

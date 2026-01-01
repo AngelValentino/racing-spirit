@@ -22,7 +22,7 @@ const ContactForm = () => {
       <textarea required className="contact-form__message-textarea" name="message" id="contact-form__message-textarea"></textarea>
       <button className="arrow-btn-v1 arrow-btn contact-form__submit-btn" type="submit">Send</button>
       <br />
-      <p className="contact-form__spam-detection-disclaimer">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      <p className="contact-form__spam-detection-disclaimer">This is a portfolio UI demo, forms are purely for display and are not functional.</p>
     </form>
   );
 }
