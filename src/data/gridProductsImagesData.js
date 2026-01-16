@@ -15,7 +15,7 @@ export const gridProductsImagesData = [
     title: 'western'
   },
   {
-    url: '/assets/images/main-products-grid/motorcycle-flowers.jpg',
+    url: '/assets/images/main-products-grid/motorcycle-desert.jpg',
     alt: 'A man riding a motorcycle, with the sunset at his side, in the desert.',
     title: 'born to ride'
   }

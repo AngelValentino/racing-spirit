@@ -10,7 +10,7 @@ export const frequentAskedQuestions = {
               We sew and dispatch all products in-house ourselves. All orders are expected to ship within 3 business days and are tracked worldwide. We do our best to work as fast as we can, ensuring you receive your order quickly, efficiently, and of the best quality.
             </p>
             <p>Thanks</p>
-            <p>Racing Spirit</p>
+            <p>Spirit Racing</p>
           </>
         );
       } 
@@ -172,7 +172,7 @@ export const frequentAskedQuestions = {
               <br />
               If you havent seen an email with the subject line, "it's on its way" please check your spam folder.
               <br />
-              If you are still not sure, email <strong>racingSpirit@gmail.com</strong>.
+              If you are still not sure, email <strong>contact@spiritracing.com</strong>.
             </p>
           </>
         );
@@ -222,7 +222,7 @@ export const frequentAskedQuestions = {
         return (
           <>
             <p>
-              Of course, but be quick to email <strong>racingSpirit@gmail.com</strong>.
+              Of course, but be quick to email <strong>contact@spiritracing.com</strong>.
               <br />
               We can only make changes before your order is dispatched. If it has already been dispatched, unfortunately, you will need to initiate an exchange or return the item to address the issue.
             </p>
@@ -241,7 +241,7 @@ export const frequentAskedQuestions = {
             <p>
               Tracking can be found in your dispatch email with a tracking number starting with LT, click that or track it <a aria-label="Track your order on landmarkglobal.com." className="slide-in-and-back-visible-underline" href="https://track.landmarkglobal.com/">here</a>.
               <br />
-              If you haven't seen an email with the subject line, "it's on its way" please check your spam folder.If your still not sure, email <strong>racingSpirit@gmail.com</strong>.
+              If you haven't seen an email with the subject line, "it's on its way" please check your spam folder.If your still not sure, email <strong>contact@spiritracing.com</strong>.
             </p>
           </>
         );
@@ -292,7 +292,7 @@ export const frequentAskedQuestions = {
               We are very sorry to hear this, we ready to help with anything!
             </p>
             <p>
-              Email <a className="slide-in-and-back-visible-underline" href="mailto:racingSpirit@gmail.com">racingSpirit@gmail.com</a>
+              Email <a className="slide-in-and-back-visible-underline" href="mailto:demo@example.com">contact@spiritracing.com</a>
             </p>
             <p>
               and we will resolve anything needed as quickly as possible.
@@ -311,7 +311,7 @@ export const frequentAskedQuestions = {
               We are ready to help with anything!
             </p>
             <p>
-              Email <a className="slide-in-and-back-visible-underline" href="mailto:racingSpirit@gmail.com">racingSpirit@gmail.com</a>
+              Email <a className="slide-in-and-back-visible-underline" href="mailto:demo@example.com">contact@spiritracing.com</a>
             </p>
             <p>
               and we will resolve anything needed as quickly as possible.

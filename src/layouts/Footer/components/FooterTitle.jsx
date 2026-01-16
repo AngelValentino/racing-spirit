@@ -8,7 +8,7 @@ const FooterTitle = () => {
           <img aria-hidden="true" role="presentation" src="/assets/images/logos/horizontal-logo-white.png" alt="" />
         </Link>
       </h2>
-      <p className="footer-title__desc">Embrace the unbridled character of the open road with Racing Spirit. Our motorcycle jackets merge raw freedom with refined craftsmanship. Each piece is a journey, woven with threads of resilience and style, ready to accompany you on every adventure.</p>
+      <p className="footer-title__desc">Embrace the unbridled character of the open road with Spirit Racing. Our motorcycle jackets merge raw freedom with refined craftsmanship. Each piece is a journey, woven with threads of resilience and style, ready to accompany you on every adventure.</p>
     </div>
   );
 }
