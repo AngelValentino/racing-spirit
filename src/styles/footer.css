@@ -130,6 +130,11 @@ footer h2 {
   text-align: center;
 }
 
+.footer-copyright__disclaimer-container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 .list-payments {
   display: flex;
   gap: 8px;

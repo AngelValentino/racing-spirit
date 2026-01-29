@@ -7,7 +7,7 @@ const Navbar = () => {
   return ( 
     <>
       <div className="announcement">
-        <p className="announcement__text">Portfolio UI demo project not affiliated with Racing spirit</p>
+        <p className="announcement__text">Portfolio UI demo project not affiliated with any brand or service</p>
       </div>
       <header className="header-nav">
         <nav className="nav-menu">

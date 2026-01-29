@@ -19,7 +19,9 @@ const Footer = () => {
         </div>
         <div className="footer-copyright">
           <PaymentsList />
-          <small>This is a portfolio UI demo project and is not affiliated with Racing spirit</small>
+          <div className="footer-copyright__disclaimer-container">
+            <small>Portfolio UI demo project. All logos, brands, and designs are the property of their respective owners. This project is not affiliated with or endorsed by any brand or service.</small>
+          </div>
         </div>
       </div>
     </footer>
