@@ -1,10 +1,10 @@
-# 🐎 Racing Spirit – A Motorcycle Jacket E-Commerce SPA
+# 🐎 Spirit Racing – A Motorcycle Jacket E-Commerce SPA
 
-![Racing Spirit Screenshot](./docs/assets/images/racing-spirit-screenshot.jpg)
+![Spirit Racing Screenshot](./docs/assets/images/racing-spirit-screenshot.png)
 
 ## 📋 About
 
-[Racing Spirit](https://racing-spirit.pages.dev/) is an e-commerce **single-page application (SPA)**, featuring a JSON mock back-end, developed from scratch using **HTML/CSS**, **JavaScript** , and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Racing Spirit ensures a seamless shopping experience.
+[Spirit Racing](https://racing-spirit.pages.dev/) is an e-commerce **single-page application (SPA)**, featuring a JSON mock back-end, developed from scratch using **HTML/CSS**, **JavaScript** , and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Spirit Racing ensures a seamless shopping experience.
 
 > Employing React best practices, I prioritized meticulous **component organization**, **structured file management**, and enforced **immutability**. My emphasis was especially on optimizing code for enhanced performance, readability and accessibility.
 
@@ -34,7 +34,7 @@ This project draws inspiration from several sources that helped shape its develo
 
 Below are the actual audit and security test results demonstrating the project's performance and integrity.
 
-![Racing Spirit Google Lighthouse Audit](./docs/assets/images/app-audit.jpg)
+![Spirit Racing Google Lighthouse Audit](./docs/assets/images/lightouse-audit.png)
 
 <br>
 
@@ -46,7 +46,7 @@ The following project was fully designed and built by me, from layout to logic. 
 First, clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/AngelValentino/racing-spirit.git
+    git clone https://github.com/angelvalentino/racing-spirit.git
     ```
 
 1. **Install Dependencies**
@@ -73,7 +73,7 @@ To create an optimized build for production and preview it locally:
 
 <br>
 
-## 🌱 Racing Spirit: Evolution, Features and Limitations
+## 🌱 Spirit Racing: Evolution, Features and Limitations
 
 ### Development Approach
 
@@ -104,21 +104,21 @@ While the project follows modern development best practices, it currently uses a
 
 ## 🖼️ Additional Images
 
-![Racing Spirit screenshot](./docs/assets/images/hero-carousel.jpg)
+![Spirit Racing screenshot](./docs/assets/images/hero-carousel.png)
 
-![Racing Spirit screenshot](./docs/assets/images/home-carousel.jpg)
+![Spirit Racing screenshot](./docs/assets/images/home-carousel.png)
 
-![Racing Spirit screenshot](./docs/assets/images/product-details.jpg)
+![Spirit Racing screenshot](./docs/assets/images/product-details.png)
 
-![Racing Spirit screenshot](./docs/assets/images/footer.jpg)
+![Spirit Racing screenshot](./docs/assets/images/footer.png)
 
-![Racing Spirit screenshot](./docs/assets/images/jacket-selection.jpg)
+![Spirit Racing screenshot](./docs/assets/images/jacket-selection.png)
 
-![Racing Spirit screenshot](./docs/assets/images/shopping-cart.jpg)
+![Spirit Racing screenshot](./docs/assets/images/shopping-cart.png)
 
-![Racing Spirit screenshot](./docs/assets/images/faqs.jpg)
+![Spirit Racing screenshot](./docs/assets/images/faqs.png)
 
-![Racing Spirit screenshot](./docs/assets/images/not-found.jpg)
+![Spirit Racing screenshot](./docs/assets/images/not-found.png)
 
 <br>
 
@@ -126,7 +126,7 @@ While the project follows modern development best practices, it currently uses a
 
 Feel free to reach out for feedback, collaboration, or opportunities:
 
-- **GitHub**: [AngelValentino](https://github.com/AngelValentino)  
+- **GitHub**: [angelvalentino](https://github.com/angelvalentino)  
 - **Email**: angelvalentino294@gmail.com
 
 While I deeply value collaboration and community feedback, this project serves as a personal showcase of my software development and engineering skills. For that reason, I personally implement all features and improvements.
