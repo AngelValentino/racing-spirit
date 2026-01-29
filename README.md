@@ -4,7 +4,7 @@
 
 ## 📋 About
 
-[Spirit Racing](https://racing-spirit.pages.dev/) is an e-commerce **single-page application (SPA)**, featuring a JSON mock back-end, developed from scratch using **HTML/CSS**, **JavaScript** , and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Spirit Racing ensures a seamless shopping experience.
+[Spirit Racing](https://spirit-racing.netlify.app/) is an e-commerce **single-page application (SPA)**, featuring a JSON mock back-end, developed from scratch using **HTML/CSS**, **JavaScript** , and **React**. Inspired by [DoomsdayCo](https://doomsdayco.com/) design and featuring product images from [Iron Heart](https://www.ironheart.co.uk/). The platform offers a diverse range of high-quality jackets designed for both safety and style. With its **responsive**, **user-friendly**, and **accessible** interface, Spirit Racing ensures a seamless shopping experience.
 
 > Employing React best practices, I prioritized meticulous **component organization**, **structured file management**, and enforced **immutability**. My emphasis was especially on optimizing code for enhanced performance, readability and accessibility.
 
