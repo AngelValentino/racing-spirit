@@ -1,6 +1,6 @@
 # 🐎 Spirit Racing – A Motorcycle Jacket E-Commerce SPA
 
-![Spirit Racing Screenshot](./docs/assets/images/racing-spirit-screenshot.png)
+![Spirit Racing Screenshot](./docs/images/racing-spirit-screenshot.png)
 
 ## 📋 About
 
@@ -34,7 +34,7 @@ This project draws inspiration from several sources that helped shape its develo
 
 Below are the actual audit and security test results demonstrating the project's performance and integrity.
 
-![Spirit Racing Google Lighthouse Audit](./docs/assets/images/lightouse-audit.png)
+![Spirit Racing Google Lighthouse Audit](./docs/images/lightouse-audit.png)
 
 <br>
 
@@ -104,21 +104,21 @@ While the project follows modern development best practices, it currently uses a
 
 ## 🖼️ Additional Images
 
-![Spirit Racing screenshot](./docs/assets/images/hero-carousel.png)
+![Spirit Racing screenshot](./docs/images/hero-carousel.png)
 
-![Spirit Racing screenshot](./docs/assets/images/home-carousel.png)
+![Spirit Racing screenshot](./docs/images/home-carousel.png)
 
-![Spirit Racing screenshot](./docs/assets/images/product-details.png)
+![Spirit Racing screenshot](./docs/images/product-details.png)
 
-![Spirit Racing screenshot](./docs/assets/images/footer.png)
+![Spirit Racing screenshot](./docs/images/footer.png)
 
-![Spirit Racing screenshot](./docs/assets/images/jacket-selection.png)
+![Spirit Racing screenshot](./docs/images/jacket-selection.png)
 
-![Spirit Racing screenshot](./docs/assets/images/shopping-cart.png)
+![Spirit Racing screenshot](./docs/images/shopping-cart.png)
 
-![Spirit Racing screenshot](./docs/assets/images/faqs.png)
+![Spirit Racing screenshot](./docs/images/faqs.png)
 
-![Spirit Racing screenshot](./docs/assets/images/not-found.png)
+![Spirit Racing screenshot](./docs/images/not-found.png)
 
 <br>
 
